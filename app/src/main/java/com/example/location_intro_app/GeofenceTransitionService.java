@@ -8,6 +8,7 @@ import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -43,14 +44,14 @@ public class GeofenceTransitionService extends IntentService {
 
         int geoFenceTransition = geofencingEvent.getGeofenceTransition();
         // Check if the transition type is of interest
-        if ( geoFenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER) {
+        if ( geoFenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER || geoFenceTransition == Geofence.GEOFENCE_TRANSITION_DWELL) {
             // Get the geofence that were triggered
             List<Geofence> triggeringGeofences = geofencingEvent.getTriggeringGeofences();
 
             String geofenceTransitionDetails = getGeofenceTransitionDetails(geoFenceTransition, triggeringGeofences );
 
-            // Send notification details as a String
-            sendNotification( geofenceTransitionDetails );
+            // Play video and log
+            playVideo(geofenceTransitionDetails);
         }
     }
 
@@ -65,32 +66,18 @@ public class GeofenceTransitionService extends IntentService {
         String status = null;
         if ( geoFenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER )
             status = "Entering ";
-        else if ( geoFenceTransition == Geofence.GEOFENCE_TRANSITION_EXIT )
-            status = "Exiting ";
-        return status + TextUtils.join( ", ", triggeringGeofencesList);
+        return status + "GeoFence " + triggeringGeofencesList.get(0);
     }
 
-    private void sendNotification( String msg ) {
-        Log.i(TAG, "sendNotification: " + msg );
+    private void playVideo( String msg ) {
+        Log.i(TAG, "Playing video for: " + msg );
 
         // Intent to start the main Activity
-        Intent notificationIntent = MainActivity.makeNotificationIntent(
-                getApplicationContext(), msg
-        );
-
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(MainActivity.class);
-        stackBuilder.addNextIntent(notificationIntent);
-        PendingIntent notificationPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
-
-
-        // Creating and sending Notification
-        NotificationManager notificatioMng =
-                (NotificationManager) getSystemService( Context.NOTIFICATION_SERVICE );
-        notificatioMng.notify(
-                GEOFENCE_NOTIFICATION_ID,
-                createNotification(msg, notificationPendingIntent));
-
+        String videoURL = "https://www.youtube.com/watch?v=eoj_4XXoiEw";
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURL));
+        // set type for local videos
+//        intent.setDataAndType(Uri.parse(videoURL), "video/mp4");
+        startActivity(intent);
     }
 
     // Create notification
