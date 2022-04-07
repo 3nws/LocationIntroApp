@@ -44,37 +44,35 @@ public class GeofenceTransitionService extends IntentService {
 
         int geoFenceTransition = geofencingEvent.getGeofenceTransition();
         // Check if the transition type is of interest
-        if ( geoFenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER || geoFenceTransition == Geofence.GEOFENCE_TRANSITION_DWELL) {
+        if (geoFenceTransition == Geofence.GEOFENCE_TRANSITION_DWELL) {
             // Get the geofence that were triggered
             List<Geofence> triggeringGeofences = geofencingEvent.getTriggeringGeofences();
 
-            String geofenceTransitionDetails = getGeofenceTransitionDetails(geoFenceTransition, triggeringGeofences );
-
+            int idx = getGeofenceTransitionVideoIndex(geoFenceTransition, triggeringGeofences );
             // Play video and log
-            playVideo(geofenceTransitionDetails);
+            playVideo(idx);
         }
     }
 
 
-    private String getGeofenceTransitionDetails(int geoFenceTransition, List<Geofence> triggeringGeofences) {
+    private int getGeofenceTransitionVideoIndex(int geoFenceTransition, List<Geofence> triggeringGeofences) {
         // get the ID of each geofence triggered
         ArrayList<String> triggeringGeofencesList = new ArrayList<>();
         for ( Geofence geofence : triggeringGeofences ) {
-            triggeringGeofencesList.add( geofence.getRequestId() );
+            triggeringGeofencesList.add(geofence.getRequestId());
         }
 
-        String status = null;
-        if ( geoFenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER )
-            status = "Entering ";
-        return status + "GeoFence " + triggeringGeofencesList.get(0);
+        return Integer.parseInt(triggeringGeofencesList.get(0));
     }
 
-    private void playVideo( String msg ) {
-        Log.i(TAG, "Playing video for: " + msg );
-
+    private void playVideo(int i) {
+        i /= 2;
+        ArrayList<String> videoURLS = new ArrayList<>();
+        videoURLS.add("https://www.youtube.com/watch?v=eoj_4XXoiEw");
+        videoURLS.add("https://www.youtube.com/watch?v=UFP_UkDiWtU");
+        videoURLS.add("https://www.youtube.com/watch?v=YOiXB3qfEOE");
         // Intent to start the main Activity
-        String videoURL = "https://www.youtube.com/watch?v=eoj_4XXoiEw";
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURL));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURLS.get(i)));
         // set type for local videos
 //        intent.setDataAndType(Uri.parse(videoURL), "video/mp4");
         startActivity(intent);

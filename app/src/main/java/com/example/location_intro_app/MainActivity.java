@@ -333,7 +333,7 @@ public class MainActivity extends AppCompatActivity
 //    }
 
     private static final long GEO_DURATION = 60 * 60 * 1000;
-    private static final int LOITERING_DELAY = 30 * 1000;
+    private static final int LOITERING_DELAY = 10 * 1000;
     private static final float GEOFENCE_RADIUS = 500.0f; // in meters
 
     private void startGeofences() {
@@ -342,16 +342,14 @@ public class MainActivity extends AppCompatActivity
         ArrayList<Geofence> geofenceList = new ArrayList<>();
         for (int i = 0; i < geofenceLocations.length; i+=2) {
             geofenceList.add(new Geofence.Builder()
-                    .setRequestId(Integer.toString(i+1))
+                    .setRequestId(Integer.toString(i))
                     .setCircularRegion(
                             Double.parseDouble(geofenceLocations[i]),
                             Double.parseDouble(geofenceLocations[i+1]),
                             GEOFENCE_RADIUS
                     )
                     .setExpirationDuration(GEO_DURATION)
-                    .setLoiteringDelay(LOITERING_DELAY)
-                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER |
-                            Geofence.GEOFENCE_TRANSITION_DWELL)
+                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER)
                     .build());
         }
         ArrayList<GeofencingRequest> geofenceRequests = createGeofenceRequests(geofenceList);
@@ -376,7 +374,7 @@ public class MainActivity extends AppCompatActivity
         ArrayList<GeofencingRequest> geofencingRequests = new ArrayList<>();
         for (Geofence geofence:geofences) {
             geofencingRequests.add(new GeofencingRequest.Builder()
-                    .setInitialTrigger( GeofencingRequest.INITIAL_TRIGGER_ENTER )
+                    .setInitialTrigger( GeofencingRequest.INITIAL_TRIGGER_DWELL )
                     .addGeofence(geofence)
                     .build());
         }
@@ -441,9 +439,6 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
-
-    private final String KEY_GEOFENCE_LAT = "GEOFENCE LATITUDE";
-    private final String KEY_GEOFENCE_LON = "GEOFENCE LONGITUDE";
 
     // Saving GeoFence marker with prefs mng
 //    private void saveGeofence() {
