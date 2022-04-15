@@ -57,16 +57,12 @@ public class MapActivity extends AppCompatActivity
     private GoogleApiClient googleApiClient;
     private Location lastLocation;
 
-    private TextView textLat, textLong;
-
     private MapFragment mapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        textLat = findViewById(R.id.lat);
-        textLong = findViewById(R.id.lon);
 
         // initialize GoogleMaps
         initGMaps();
@@ -269,9 +265,6 @@ public class MapActivity extends AppCompatActivity
     }
 
     private void writeActualLocation(Location location) {
-        textLat.setText( "Lat: " + location.getLatitude() );
-        textLong.setText( "Long: " + location.getLongitude() );
-
         markerLocation(new LatLng(location.getLatitude(), location.getLongitude()));
     }
 

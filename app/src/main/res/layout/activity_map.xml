@@ -10,35 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.location_intro_app.MapActivity">
 
-    <!-- Line with Latitude and Longitude -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimaryDark"
-        android:paddingTop="5dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="5dp">
-
-        <!--Latitude-->
-        <TextView
-            android:id="@+id/lat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_weight="0.5"
-            android:text="Lat: " />
-
-        <!--Longitude-->
-        <TextView
-            android:id="@+id/lon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_weight="0.5"
-            android:text="Long: " />
-    </LinearLayout>
 
     <!--GoogleMap fragment-->
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
