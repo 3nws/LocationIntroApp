@@ -1,5 +1,7 @@
 package com.example.location_intro_app;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 
@@ -17,9 +19,13 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TabHost;
 
 import com.example.location_intro_app.ui.main.SectionsPagerAdapter;
@@ -36,6 +42,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.ZoomControls;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -63,7 +70,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements
@@ -86,12 +95,30 @@ public class MainActivity extends AppCompatActivity
 
     private MapFragment mapFragment;
 
+    Button btnType;
+    ZoomControls zoom;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        btnType=findViewById(R.id.btn_Type);
+        zoom=findViewById(R.id.zoom);
+
+        btnType.setOnClickListener(view -> {
+            if(map.getMapType()==GoogleMap.MAP_TYPE_SATELLITE){
+                map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                btnType.setText("Sat");
+            }else if((map.getMapType()==GoogleMap.MAP_TYPE_NORMAL)){
+                map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                btnType.setText("Map");
+            }
+        });
+        zoom.setOnZoomInClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomIn()));
+        zoom.setOnZoomOutClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomOut()));
 
         TabHost host = findViewById(R.id.tabHost);
         host.setup();
@@ -118,6 +145,12 @@ public class MainActivity extends AppCompatActivity
         spec = host.newTabSpec("Tab Three");
         spec.setContent(R.id.tab3);
         spec.setIndicator("Tab Three");
+        host.addTab(spec);
+
+        //Tab 4
+        spec = host.newTabSpec("Tab four");
+        spec.setContent(R.id.tab4);
+        spec.setIndicator("Tab Four");
         host.addTab(spec);
 
     }
@@ -232,6 +265,7 @@ public class MainActivity extends AppCompatActivity
         map = googleMap;
         map.setOnMapClickListener(this);
         map.setOnMarkerClickListener(this);
+        map.getUiSettings().setZoomControlsEnabled(true);
 //        map = googleMap;
 //
 //        // Add a marker in Sydney and move the camera

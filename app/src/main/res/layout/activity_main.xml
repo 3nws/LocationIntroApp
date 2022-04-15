@@ -50,11 +50,42 @@
                     android:id="@+id/map"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
+
+                <Button
+                    android:id="@+id/btn_Type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Sat" />
+
+                <ZoomControls
+                    android:id="@+id/zoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"></ZoomControls>
+            </LinearLayout>
+
+            <!-- Places Layout -->
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#5b89ff"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="This is tab 3" />
             </LinearLayout>
 
             <!-- Options Layout -->
             <LinearLayout
-                android:id="@+id/tab3"
+                android:id="@+id/tab4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#5b89ff"
@@ -63,7 +94,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="This is tab 3" />
+                    android:text="This is tab 4" />
             </LinearLayout>
         </FrameLayout>
     </RelativeLayout>
