@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
     private ActivityMainBinding binding;
 
     TabHost tabHost;
-    private static final String TAG = MapActivity.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     private GoogleMap map;
     private GoogleApiClient googleApiClient;

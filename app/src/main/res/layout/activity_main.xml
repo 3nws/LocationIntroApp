@@ -21,6 +21,7 @@
             android:layout_height="fill_parent"
             android:layout_marginBottom="50dp">
 
+            <!-- Home Layout -->
             <LinearLayout
                 android:id="@+id/tab1"
                 android:layout_width="match_parent"
@@ -35,6 +36,7 @@
 
             </LinearLayout>
 
+            <!-- Map Layout -->
             <LinearLayout
                 android:id="@+id/tab2"
                 android:layout_width="match_parent"
@@ -42,7 +44,7 @@
                 android:background="#da8200"
                 android:orientation="vertical">
 
-                <!--GoogleMap fragment-->
+                <!-- GoogleMap fragment -->
                 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
                     android:name="com.google.android.gms.maps.MapFragment"
                     android:id="@+id/map"
@@ -50,6 +52,7 @@
                     android:layout_height="match_parent"/>
             </LinearLayout>
 
+            <!-- Options Layout -->
             <LinearLayout
                 android:id="@+id/tab3"
                 android:layout_width="match_parent"
