@@ -112,24 +112,14 @@ public class MainActivity extends AppCompatActivity
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        btnType=findViewById(R.id.btn_Type);
         zoom=findViewById(R.id.zoom);
 
-        btnType.setOnClickListener(view -> {
-            if(map.getMapType()==GoogleMap.MAP_TYPE_SATELLITE){
-                map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                btnType.setText("Sat");
-            }else if((map.getMapType()==GoogleMap.MAP_TYPE_NORMAL)){
-                map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-                btnType.setText("Map");
-            }
-        });
         zoom.setOnZoomInClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomIn()));
         zoom.setOnZoomOutClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomOut()));
 
-        Toolbar toolbar1 = (Toolbar) findViewById(R.id.toolbar1);
-        Toolbar toolbar2 = (Toolbar) findViewById(R.id.toolbar2);
-        Toolbar toolbar3 = (Toolbar) findViewById(R.id.toolbar3);
+        Toolbar toolbar1 = findViewById(R.id.toolbar1);
+        Toolbar toolbar2 = findViewById(R.id.toolbar2);
+        Toolbar toolbar3 = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar1);
         setSupportActionBar(toolbar2);
         setSupportActionBar(toolbar3);
@@ -220,6 +210,17 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
 
         switch (item.getItemId()) {
+            case R.id.toggleType: {
+                if (map.getMapType() == GoogleMap.MAP_TYPE_SATELLITE){
+                    map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                    item.setTitle("Uydu stiline geç");
+                }
+                else{
+                    map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                    item.setTitle("Normal stile geç");
+                }
+                return true;
+            }
             case R.id.options: {
                 Intent i = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(i);
