@@ -1,10 +1,7 @@
 package com.example.location_intro_app;
 
+import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 
@@ -17,72 +14,45 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.MapStyleOptions;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.tabs.TabLayout;
 
 import androidx.appcompat.widget.Toolbar;
-import androidx.viewpager.widget.ViewPager;
+import androidx.preference.PreferenceManager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.text.Layout;
-import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TabHost;
 
-import com.example.location_intro_app.ui.main.SectionsPagerAdapter;
 import com.example.location_intro_app.databinding.ActivityMainBinding;
 import android.Manifest;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.location.Location;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.ZoomControls;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingRequest;
-import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import org.w3c.dom.Text;
-
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements
@@ -92,7 +62,7 @@ public class MainActivity extends AppCompatActivity
         OnMapReadyCallback,
         GoogleMap.OnMapClickListener,
         GoogleMap.OnMarkerClickListener,
-        ResultCallback<Status> {
+        ResultCallback<Status>{
 
     private ActivityMainBinding binding;
 
@@ -105,12 +75,16 @@ public class MainActivity extends AppCompatActivity
 
     private MapFragment mapFragment;
 
-    Button btnType;
     ZoomControls zoom;
+    public String mapStyle;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        mapStyle = prefs.getString("list_preference_1", "<unset>");
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -165,6 +139,8 @@ public class MainActivity extends AppCompatActivity
         TextView v2 = findViewById(R.id.textView2);
         TextView v3 = findViewById(R.id.textView3);
         v1.setShadowLayer(24,4,4,Color.BLACK);
+        v2.setShadowLayer(24,4,4,Color.BLACK);
+        v3.setShadowLayer(24,4,4,Color.BLACK);
 
         View layout = findViewById(R.id.constraintId);
         View content = layout.findViewById(R.id.backgroundId);
@@ -278,6 +254,8 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+
+
     // App cannot work without the permissions
     private void permissionsDenied() {
         Log.w(TAG, "permissionsDenied()");
@@ -298,20 +276,7 @@ public class MainActivity extends AppCompatActivity
         map.setOnMapClickListener(this);
         map.setOnMarkerClickListener(this);
         map.getUiSettings().setZoomControlsEnabled(true);
-
-//        try {
-//            // Customise the styling of the base map using a JSON object defined
-//            // in a raw resource file.
-//            boolean success = googleMap.setMapStyle(
-//                    MapStyleOptions.loadRawResourceStyle(
-//                            this, R.raw.style_json));
-//
-//            if (!success) {
-//                Log.e(TAG, "Style parsing failed.");
-//            }
-//        } catch (Resources.NotFoundException e) {
-//            Log.e(TAG, "Can't find style. Error: ", e);
-//        }
+        SetMapStyle(googleMap);
 //        map = googleMap;
 //
 //        // Add a marker in Sydney and move the camera
@@ -320,6 +285,48 @@ public class MainActivity extends AppCompatActivity
 //                .position(sydney)
 //                .title("Marker in Sydney"));
 //        map.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SetMapStyle(map);
+    }
+
+    private void SetMapStyle(GoogleMap googleMap) {
+        if(googleMap == null)
+            return;
+
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        mapStyle = prefs.getString("list_preference_1", "<unset>");
+
+        try {
+            // Customise the styling of the base map using a JSON object defined
+            // in a raw resource file.
+            int res;
+            if (mapStyle.equals("Gümüş")){
+                res = R.raw.silver_style;
+            } else if (mapStyle.equals("Retro")) {
+                res = R.raw.retro_style;
+            } else if (mapStyle.equals("Siyah Beyaz")) {
+                res = R.raw.dark_style;
+            } else if (mapStyle.equals("Gece")) {
+                res = R.raw.night_style;
+            } else if (mapStyle.equals("Patlıcan")) {
+                res = R.raw.aubergine_style;
+            } else {
+                res = R.raw.standard;
+            }
+            boolean success = googleMap.setMapStyle(
+                    MapStyleOptions.loadRawResourceStyle(
+                            this, res));
+
+            if (!success) {
+                Log.e(TAG, "Style parsing failed.");
+            }
+        } catch (Resources.NotFoundException e) {
+            Log.e(TAG, "Can't find style. Error: ", e);
+        }
     }
 
     @Override

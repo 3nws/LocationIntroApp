@@ -11,6 +11,14 @@
         <item>32.63949919</item>
         <item>Title 3</item>
     </string-array>
+    <string-array name="styles">
+        <item>Standart</item>
+        <item>Gümüş</item>
+        <item>Retro</item>
+        <item>Siyah Beyaz</item>
+        <item>Gece</item>
+        <item>Patlıcan</item>
+    </string-array>
     <string name="title_activity_main">MainActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
