@@ -1,5 +1,6 @@
 package com.example.location_intro_app;
 
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.location.Address;
@@ -14,6 +15,8 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
@@ -295,6 +298,20 @@ public class MainActivity extends AppCompatActivity
         map.setOnMapClickListener(this);
         map.setOnMarkerClickListener(this);
         map.getUiSettings().setZoomControlsEnabled(true);
+
+//        try {
+//            // Customise the styling of the base map using a JSON object defined
+//            // in a raw resource file.
+//            boolean success = googleMap.setMapStyle(
+//                    MapStyleOptions.loadRawResourceStyle(
+//                            this, R.raw.style_json));
+//
+//            if (!success) {
+//                Log.e(TAG, "Style parsing failed.");
+//            }
+//        } catch (Resources.NotFoundException e) {
+//            Log.e(TAG, "Can't find style. Error: ", e);
+//        }
 //        map = googleMap;
 //
 //        // Add a marker in Sydney and move the camera
@@ -408,24 +425,18 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-//    private Marker geoFenceMarker;
-//    private void markerForGeofence(LatLng latLng) {
-//        Log.i(TAG, "markerForGeofence("+latLng+")");
-//        String title = latLng.latitude + ", " + latLng.longitude;
-//        // Define marker options
-//        MarkerOptions markerOptions = new MarkerOptions()
-//                .position(latLng)
-//                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-//                .title(title);
-//        if ( map!=null ) {
-//            // Remove last geoFenceMarker
-//            if (geoFenceMarker != null)
-//                geoFenceMarker.remove();
-//
-//            geoFenceMarker = map.addMarker(markerOptions);
-//
-//        }
-//    }
+    private Marker geoFenceMarker;
+    private void markerForGeofence(LatLng latLng, String title) {
+        Log.i(TAG, "markerForGeofence("+latLng+")");
+        // Define marker options
+        MarkerOptions markerOptions = new MarkerOptions()
+                .position(latLng)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
+                .title(title);
+        if ( map!=null ) {
+            geoFenceMarker = map.addMarker(markerOptions);
+        }
+    }
 
     // Start Geofence creation process
 //    private void startGeofence() {
@@ -447,12 +458,16 @@ public class MainActivity extends AppCompatActivity
         Log.i(TAG, "startGeofences()");
         String[] geofenceLocations = getResources().getStringArray(R.array.geofenceLocations);
         ArrayList<Geofence> geofenceList = new ArrayList<>();
-        for (int i = 0; i < geofenceLocations.length; i+=2) {
+        for (int i = 0; i < geofenceLocations.length; i+=3) {
+            Double lat = Double.parseDouble(geofenceLocations[i]);
+            Double lon = Double.parseDouble(geofenceLocations[i+1]);
+            String title = geofenceLocations[i+2];
+            markerForGeofence(new LatLng(lat, lon), title);
             geofenceList.add(new Geofence.Builder()
                     .setRequestId(Integer.toString(i))
                     .setCircularRegion(
-                            Double.parseDouble(geofenceLocations[i]),
-                            Double.parseDouble(geofenceLocations[i+1]),
+                            lat,
+                            lon,
                             GEOFENCE_RADIUS
                     )
                     .setExpirationDuration(GEO_DURATION)
@@ -535,7 +550,7 @@ public class MainActivity extends AppCompatActivity
 
         String[] geofenceLocations = getResources().getStringArray(R.array.geofenceLocations);
         ArrayList<CircleOptions> circleOptions = new ArrayList<>();
-        for (int i = 0; i < geofenceLocations.length; i+=2) {
+        for (int i = 0; i < geofenceLocations.length; i+=3) {
             LatLng center = new LatLng(Double.parseDouble(geofenceLocations[i]), Double.parseDouble(geofenceLocations[i+1]));
             CircleOptions circleOption = new CircleOptions()
                     .center(center)
