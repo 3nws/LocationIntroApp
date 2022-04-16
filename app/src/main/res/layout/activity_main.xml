@@ -44,7 +44,7 @@
                     android:minHeight="?attr/actionBarSize"
                     android:theme="?attr/actionBarTheme" />
 
-                <include layout="@layout/content_scrolling" />
+                <include layout="@layout/content_tab1"/>
 
             </LinearLayout>
 

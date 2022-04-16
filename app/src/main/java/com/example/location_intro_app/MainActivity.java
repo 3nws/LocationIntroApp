@@ -22,6 +22,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.Layout;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -74,6 +75,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -105,7 +108,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -166,6 +168,14 @@ public class MainActivity extends AppCompatActivity
         spec.setIndicator("Tab Three");
         host.addTab(spec);
 
+        TextView v1 = findViewById(R.id.textView1);
+        TextView v2 = findViewById(R.id.textView2);
+        TextView v3 = findViewById(R.id.textView3);
+        v1.setShadowLayer(24,4,4,Color.BLACK);
+
+        View layout = findViewById(R.id.constraintId);
+        View content = layout.findViewById(R.id.backgroundId);
+        content.findViewById(R.id.backgroundId).setBackground(ContextCompat.getDrawable(this, R.drawable.bg));
     }
 
     // Create GoogleApiClient instance
