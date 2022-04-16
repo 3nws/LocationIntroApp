@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tabHost"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+
+
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
 
         <TabWidget
             android:id="@android:id/tabs"
@@ -26,13 +33,18 @@
                 android:id="@+id/tab1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#ffc916"
+                android:background="@color/white"
                 android:orientation="vertical">
 
-                <TextView
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="This is tab 1" />
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
+                <include layout="@layout/content_scrolling" />
 
             </LinearLayout>
 
@@ -45,6 +57,14 @@
                 android:orientation="vertical">
 
                 <!-- GoogleMap fragment -->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
                 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
                     android:name="com.google.android.gms.maps.MapFragment"
                     android:id="@+id/map"
@@ -77,25 +97,20 @@
                 android:background="#5b89ff"
                 android:orientation="vertical">
 
-            <TextView
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
+                <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="This is tab 3" />
             </LinearLayout>
 
-            <!-- Options Layout -->
-            <LinearLayout
-                android:id="@+id/tab4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#5b89ff"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="This is tab 4" />
-            </LinearLayout>
         </FrameLayout>
     </RelativeLayout>
 </TabHost>

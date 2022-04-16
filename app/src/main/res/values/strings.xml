@@ -11,4 +11,81 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="tanitim_metni1">
+        Safranbolu bozulmamış tarihi dokusu ve evleri ile ziyaret edenleri bir tarih yolculuğuna çıkarmaktadır.
+    </string>
+    <string name="tanitim_metni2">
+        Türkiye’nin UNESCO Dünya Miras Listesi’ne ilk giren değerlerinden biri olan Safranbolu, 1994 yılından beri bu listede yer almaktadır.
+    </string>
+    <string name="tanitim_metni3">
+        Dünyanın en pahalı baharatlarından olan ve yerleşime de ismini veren safranın en kalitelisi Safranbolu\'da yetişmektedir.
+    </string>
+    <string name="tanitim_metni4">
+        Safranbolu Tarihi
+
+        Bilinen tarihi MÖ 3000 yıllarına kadar giden Safranbolu sırası ile Hititler, Frigler, Lidyalılar, Persler, Helenistik Krallıklar, Romalılar, Selçuklular, Çobanoğulları, Candaroğulları ve Osmanlıların egemenlik kurdukları bir bölgede yer almaktadır.
+    </string>
+    <string name="tanitim_metni5">
+        Bugünkü yapısını 17. ve 18. yüzyıllarda kazanan Safranbolu, Türk şehir yapısına uygun olarak, zamana ve ihtiyaca bağlı gelişen, birbirine eklenerek büyüyen ve doğaya uyum sağlayıp onu koruyan niteliği ile dikkat çekmektedir.
+    </string>
+    <string name="tanitim_metni6">
+        Osmanlı Sivil Mimarisinin Güzide Örnekleri: Safranbolu Evleri
+
+        Safranbolu Evleri yüzlerce yıllık bir süreçte oluşan, Türk kent kültürünün günümüzde yaşanmasına katkıda bulunan önemli değerlerimizdendir. İlçe merkezinde 18. ve 19. yy. ile 20. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Bu eserlerin 800 kadarı yasal koruma altındadır. Evler Safranbolu´nun iki ayrı kesiminde gruplanmış durumdadır. Birincisi “Şehir” diye bilinen ve kışlık olarak kullanılan kesim, ikincisi “Bağlar” diye bilinen ve yazlık olarak kullanılan bölümdür.
+    </string>
+    <string name="tanitim_metni7">
+        Safranbolu evleri yalnızca mimarileri değil, konumlarıyla da Türk gelenekleri ve yaşam tarzı hakkında bilgi vermektedir. Evler yanında bulunan evin görüş açısını kapatmayacak ve güneş almasını engellemeyecek şekilde inşa edilmiştir.
+    </string>
+    <string name="tanitim_metni8">
+        Arnavut kaldırımlı yolların ise sel sularına karşı dayanıklı olması ve rutubeti en aza indirmek amacıyla eğimli yapıldıkları bilinmektedir.
+    </string>
+    <string name="tanitim_metni9">
+        Safranbolu’nun evleri sadece asırlara meydan okuyan duruşları ile değil, üstün sanat zevkini yansıtan mimarileri, tüm yapıya yayılmış incelikli ahşap işçilikleriyle de hayranlık uyandırıcıdır.
+    </string>
+    <string name="tanitim_metni10">
+        Bazıları müze olarak düzenlenmiş bu evlerde özellikle ahşap işlemeli tavanlar dikkat çekmektedir. Evlerin bir bölümünün içinde yer alan havuz ise bulunduğu odaya serin bir hava vermek ve yangınlara karşı tedbir amacıyla yerleştirilmiştir.
+    </string>
+    <string name="tanitim_metni11">
+        Dünyanın En Pahalı Baharatlarından Safranın Yetiştiği Topraklar
+
+        Safran çiçeğinin en kalitelisi, ismini de verdiği Safranbolu’da yetişmektedir. Yetiştirilmesi ve bakımı büyük emek isteyen safranın kendi ağırlığının yüz bin katı sıvıyı sarıya boyama potansiyeli olduğu bilinmektedir.
+    </string>
+    <string name="tanitim_metni12">
+        Ayrıca ilaç, gıda ve kozmetik sanayisinde de kullanılan safran dünyanın en pahalı baharatlarından biridir.
+
+        Safranbolu Lokumu: Benzersiz Lezzet
+
+        Türk Mutfak Kültürü’nün en önemli lezzetlerinden olan lokum konusunda isim yapmış yerleşimlerden biridir Safranbolu. Diğer lokumlara göre daha hafif olması, yapımında mineral bakımından zengin doğal Safranbolu sularının kullanılması şöhret kazanmasını sağlamıştır.
+    </string>
+    <string name="tanitim_metni13">
+        Bu nedenle Safranbolu’ya gelindiğinde mutlaka tadılması ve hediyelik olarak satın alınması gereken ürünlerin başında gelir.
+
+        Safranbolu’ ya Nasıl Gidilir?
+
+        İstanbul ve Ankara’dan Safranbolu’ya kara yolu ile ulaşabilmek mümkün. Her iki ilden düzenli olarak otobüs seferlerinin bulunduğu yerleşim İstanbul’a yaklaşık 5, Ankara’ya ise 2.5 saat uzaklıkta yer alıyor.
+
+        UNESCO Dünya Miras Listesi’ne Alınma Tarihi: 1994
+        Liste Sıra No: 614
+
+        Yeri: Karadeniz Bölgesi, Karabük
+        Kategori: Kültürel
+
+        Fotoğraflar: Tanıtma Genel Müdürlüğü, Gülcan Acar, Murat Öcal
+    </string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.location_intro_app;
 
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -16,6 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +29,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TabHost;
 
 import com.example.location_intro_app.ui.main.SectionsPagerAdapter;
@@ -102,6 +106,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -119,6 +124,20 @@ public class MainActivity extends AppCompatActivity
         });
         zoom.setOnZoomInClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomIn()));
         zoom.setOnZoomOutClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomOut()));
+
+        Toolbar toolbar1 = (Toolbar) findViewById(R.id.toolbar1);
+        Toolbar toolbar2 = (Toolbar) findViewById(R.id.toolbar2);
+        Toolbar toolbar3 = (Toolbar) findViewById(R.id.toolbar3);
+        setSupportActionBar(toolbar1);
+        setSupportActionBar(toolbar2);
+        setSupportActionBar(toolbar3);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Main Page");
+        }
+        toolbar1.inflateMenu(R.menu.main_menu);
+        toolbar2.inflateMenu(R.menu.main_menu);
+        toolbar3.inflateMenu(R.menu.main_menu);
+
 
         TabHost host = findViewById(R.id.tabHost);
         host.setup();
@@ -145,12 +164,6 @@ public class MainActivity extends AppCompatActivity
         spec = host.newTabSpec("Tab Three");
         spec.setContent(R.id.tab3);
         spec.setIndicator("Tab Three");
-        host.addTab(spec);
-
-        //Tab 4
-        spec = host.newTabSpec("Tab four");
-        spec.setContent(R.id.tab4);
-        spec.setIndicator("Tab Four");
         host.addTab(spec);
 
     }
@@ -197,6 +210,11 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
 
         switch (item.getItemId()) {
+            case R.id.options: {
+                Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(i);
+                return true;
+            }
             case R.id.exit: {
                 System.exit(0);
                 return true;
