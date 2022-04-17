@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity
 
     private ActivityMainBinding binding;
 
-    TabHost tabHost;
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private GoogleMap map;
@@ -106,10 +105,16 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar2 = findViewById(R.id.toolbar2);
         Toolbar toolbar3 = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar1);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("ANASAYFA");
+        }
         setSupportActionBar(toolbar2);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("HARİTA");
+        }
         setSupportActionBar(toolbar3);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Main Page");
+            getSupportActionBar().setTitle("MEKANLAR");
         }
         toolbar1.inflateMenu(R.menu.main_menu);
         toolbar2.inflateMenu(R.menu.main_menu);
@@ -122,13 +127,13 @@ public class MainActivity extends AppCompatActivity
         //Tab 1
         TabHost.TabSpec spec = host.newTabSpec("Tab One");
         spec.setContent(R.id.tab1);
-        spec.setIndicator("Tab One");
+        spec.setIndicator("ANASAYFA", getResources().getDrawable(R.drawable.home));
         host.addTab(spec);
 
         //Tab 2
         spec = host.newTabSpec("Tab Two");
         spec.setContent(R.id.tab2);
-        spec.setIndicator("Tab Two");
+        spec.setIndicator("HARİTA", getResources().getDrawable(R.drawable.map));
         host.addTab(spec);
 
         // initialize GoogleMaps
@@ -140,7 +145,7 @@ public class MainActivity extends AppCompatActivity
         //Tab 3
         spec = host.newTabSpec("Tab Three");
         spec.setContent(R.id.tab3);
-        spec.setIndicator("Tab Three");
+        spec.setIndicator("MEKANLAR", getResources().getDrawable(R.drawable.mosque));
         host.addTab(spec);
 
         TextView v1 = findViewById(R.id.textView1);

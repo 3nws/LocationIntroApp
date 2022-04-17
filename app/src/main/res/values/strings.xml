@@ -43,9 +43,9 @@
         <item>Patlıcan</item>
     </string-array>
     <array name="gridImages">
-        <item>@drawable/one</item>
-        <item>@drawable/two</item>
-        <item>@drawable/three</item>
+        <item>@drawable/evler1</item>
+        <item>@drawable/camiler1</item>
+        <item>@drawable/han1</item>
     </array>
     <array name="placeImages">
         <item>@array/safranbolu_evleri</item>
