@@ -52,6 +52,11 @@
         <item>@array/cami_kilise</item>
         <item>@array/han_hamam</item>
     </array>
+    <string-array name="videos">
+        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
+        <item>https://www.youtube.com/watch?v=-VEnxSfd63c</item>
+        <item>https://www.youtube.com/watch?v=OIsnejl5Sr8</item>
+    </string-array>
     <array name="safranbolu_evleri">
         <item>@drawable/evler1</item>
         <item>@drawable/evler2</item>

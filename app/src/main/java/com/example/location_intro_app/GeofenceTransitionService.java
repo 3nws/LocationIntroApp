@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.net.Uri;
 import android.text.TextUtils;
@@ -67,14 +68,10 @@ public class GeofenceTransitionService extends IntentService {
 
     private void playVideo(int i) {
         i /= 2;
-        ArrayList<String> videoURLS = new ArrayList<>();
-        videoURLS.add("https://www.youtube.com/watch?v=eoj_4XXoiEw");
-        videoURLS.add("https://www.youtube.com/watch?v=UFP_UkDiWtU");
-        videoURLS.add("https://www.youtube.com/watch?v=YOiXB3qfEOE");
+        String[] videoURLS;
+        videoURLS = getResources().getStringArray(R.array.videos);
         // Intent to start the main Activity
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURLS.get(i)));
-        // set type for local videos
-//        intent.setDataAndType(Uri.parse(videoURL), "video/mp4");
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURLS[i]));
         startActivity(intent);
     }
 

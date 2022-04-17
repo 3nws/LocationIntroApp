@@ -42,7 +42,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.location.Geofence;
@@ -57,7 +56,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
@@ -165,6 +163,7 @@ public class MainActivity extends AppCompatActivity
         for (int i=0;i<imagesArray.length();i++){
             gridImages.add(imagesArray.getDrawable(i));
         }
+        imagesArray.recycle();
         GridView gridview = findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this, gridImages));
 
@@ -189,6 +188,8 @@ public class MainActivity extends AppCompatActivity
                     images.add(itemDef.getResourceId(j, 0));
                 }
                 i.putIntegerArrayListExtra("images", images);
+                places.recycle();
+                itemDef.recycle();
                 startActivity(i);
             }
         });
