@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/drawable/button_image.xml" value="0.2945" />
+        <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/layout/activity_details.xml" value="0.25" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/layout/activity_map.xml" value="0.371875" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/layout/activity_youtube.xml" value="0.371875" />
@@ -14,6 +15,7 @@
         <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/layout/toolbar.xml" value="0.371875" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/layout/video_view.xml" value="0.371875" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/menu/main_menu.xml" value="0.371875" />
+        <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/menu/menu_details.xml" value="0.371875" />
         <entry key="..\:/Users/Enes/AndroidStudioProjects/location_intro_app/app/src/main/res/xml/root_preferences.xml" value="0.371875" />
       </map>
     </option>

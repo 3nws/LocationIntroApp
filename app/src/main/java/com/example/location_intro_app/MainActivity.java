@@ -38,6 +38,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.location.Geofence;
@@ -202,6 +203,16 @@ public class MainActivity extends AppCompatActivity
             }
             case R.id.options: {
                 Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(i);
+                return true;
+            }
+            case R.id.detay: {
+                Intent i = new Intent(MainActivity.this, DetailsActivity.class);
+                ArrayList<Integer> images = new ArrayList<>();
+                images.add(R.drawable.one);
+                images.add(R.drawable.two);
+                images.add(R.drawable.three);
+                i.putIntegerArrayListExtra("images", images);
                 startActivity(i);
                 return true;
             }
