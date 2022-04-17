@@ -13,27 +13,6 @@
         <item>Cami ve Kiliseler</item>
         <item>Han ve Hamamlar</item>
     </string-array>
-    <string-array name="styles">
-        <item>Standart</item>
-        <item>Gümüş</item>
-        <item>Retro</item>
-        <item>Siyah Beyaz</item>
-        <item>Gece</item>
-        <item>Patlıcan</item>
-    </string-array>
-    <array name="gridImages">
-        <item>@drawable/one</item>
-        <item>@drawable/two</item>
-        <item>@drawable/three</item>
-    </array>
-
-
-<!--    <array name="detailImages">-->
-<!--        <item>@drawable/one</item>-->
-<!--        <item>@drawable/two</item>-->
-<!--    </array>-->
-
-
     <string-array name="details">
         <item>
             Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
@@ -55,7 +34,35 @@
             Bulak Hamamı: Karabük merkez ilçede olup, tarihi kesin olarak bilinmemekle birlikte 1780 yılında yapıldığı tahmin edilmektedir. Osmanlı dönemi eseridir.
         </item>
     </string-array>
-
+    <string-array name="styles">
+        <item>Standart</item>
+        <item>Gümüş</item>
+        <item>Retro</item>
+        <item>Siyah Beyaz</item>
+        <item>Gece</item>
+        <item>Patlıcan</item>
+    </string-array>
+    <array name="gridImages">
+        <item>@drawable/one</item>
+        <item>@drawable/two</item>
+        <item>@drawable/three</item>
+    </array>
+    <array name="placeImages">
+        <item>@array/safranbolu_evleri</item>
+        <item>@array/cami_kilise</item>
+        <item>@array/han_hamam</item>
+    </array>
+    <array name="safranbolu_evleri">
+        <item>@drawable/evler1</item>
+        <item>@drawable/evler2</item>
+    </array>
+    <array name="cami_kilise">
+        <item>@drawable/camiler1</item>
+        <item>@drawable/camiler2</item>
+    </array>
+    <array name="han_hamam">
+        <item>@drawable/han1</item>
+    </array>
 
 
 

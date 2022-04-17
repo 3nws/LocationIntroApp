@@ -57,6 +57,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
@@ -172,10 +173,16 @@ public class MainActivity extends AppCompatActivity
                                     View v, int position, long id){
                 // Send intent to SingleViewActivity
                 Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
-                ArrayList<Integer> images = new ArrayList<>();
                 i.putExtra("title", titles[position]);
                 i.putExtra("details", details[position]);
-                images.add(R.drawable.three);
+                ArrayList<Integer> images = new ArrayList<>();
+                TypedArray places = getResources().obtainTypedArray(R.array.placeImages);
+                TypedArray itemDef;
+                int resId = places.getResourceId(position, 0);
+                itemDef = getResources().obtainTypedArray(resId);
+                for (int j = 0;j<itemDef.length();j++){
+                    images.add(itemDef.getResourceId(j, 0));
+                }
                 i.putIntegerArrayListExtra("images", images);
                 startActivity(i);
             }
