@@ -2,6 +2,7 @@ package com.example.location_intro_app;
 
 import android.content.Context;
 
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -13,10 +14,10 @@ import java.util.ArrayList;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
-    private ArrayList<Integer> images;
+    private ArrayList<Drawable> images;
 
     // Constructor
-    public ImageAdapter(Context c, ArrayList<Integer> images) {
+    public ImageAdapter(Context c, ArrayList<Drawable> images) {
         mContext = c;
         this.images = images;
     }
@@ -46,7 +47,7 @@ public class ImageAdapter extends BaseAdapter {
         {
             imageView = (ImageView) convertView;
         }
-        imageView.setImageResource(images.get(position));
+        imageView.setImageDrawable(images.get(position));
         return imageView;
     }
 }

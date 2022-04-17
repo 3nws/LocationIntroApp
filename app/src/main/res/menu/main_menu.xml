@@ -6,10 +6,6 @@
         android:title="Uydu stiline geç"
         app:showAsAction="never" />
     <item
-        android:id="@+id/detay"
-        android:title="detay"
-        app:showAsAction="never" />
-    <item
         android:id="@+id/options"
         android:title="Ayarlar"
         app:showAsAction="never" />

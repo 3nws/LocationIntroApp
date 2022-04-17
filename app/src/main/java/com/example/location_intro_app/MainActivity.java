@@ -2,6 +2,8 @@ package com.example.location_intro_app;
 
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Bundle;
 
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity
     private Location lastLocation;
 
 
-    ArrayList<Integer> images;
+    ArrayList<Drawable> gridImages;
     private MapFragment mapFragment;
 
     ZoomControls zoom;
@@ -152,14 +154,15 @@ public class MainActivity extends AppCompatActivity
         content.findViewById(R.id.backgroundId).setBackground(ContextCompat.getDrawable(this, R.drawable.bg));
 
 //        GRID TAB
-        images = new ArrayList<>();
-        images.add(R.drawable.one);
-        images.add(R.drawable.two);
-        images.add(R.drawable.three);
-        images.add(R.drawable.two);
-
+        gridImages = new ArrayList<>();
+        TypedArray imagesArray = getResources().obtainTypedArray(R.array.gridImages);
+        for (int i=0;i<imagesArray.length();i++){
+            gridImages.add(imagesArray.getDrawable(i));
+        }
         GridView gridview = findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this, images));
+        gridview.setAdapter(new ImageAdapter(this, gridImages));
+
+        String[] titles = getResources().getStringArray(R.array.geofenceTitles);
 
 //        INDIVIDUAL PLACES
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -168,8 +171,8 @@ public class MainActivity extends AppCompatActivity
                 // Send intent to SingleViewActivity
                 Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
                 ArrayList<Integer> images = new ArrayList<>();
-                images.add(R.drawable.one);
-                i.putExtra("title", "Place 1");
+                i.putExtra("title", titles[position]);
+                images.add(R.drawable.three);
                 i.putIntegerArrayListExtra("images", images);
                 startActivity(i);
             }
@@ -231,12 +234,6 @@ public class MainActivity extends AppCompatActivity
             }
             case R.id.options: {
                 Intent i = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(i);
-                return true;
-            }
-            case R.id.detay: {
-                Intent i = new Intent(MainActivity.this, DetailsActivity.class);
-                i.putIntegerArrayListExtra("images", images);
                 startActivity(i);
                 return true;
             }
@@ -499,11 +496,12 @@ public class MainActivity extends AppCompatActivity
     private void startGeofences() {
         Log.i(TAG, "startGeofences()");
         String[] geofenceLocations = getResources().getStringArray(R.array.geofenceLocations);
+        String[] geofenceTitles = getResources().getStringArray(R.array.geofenceTitles);
         ArrayList<Geofence> geofenceList = new ArrayList<>();
-        for (int i = 0; i < geofenceLocations.length; i+=3) {
+        for (int i = 0, j=0; i < geofenceLocations.length; i+=2, j++) {
             Double lat = Double.parseDouble(geofenceLocations[i]);
             Double lon = Double.parseDouble(geofenceLocations[i+1]);
-            String title = geofenceLocations[i+2];
+            String title = geofenceTitles[j];
             markerForGeofence(new LatLng(lat, lon), title);
             geofenceList.add(new Geofence.Builder()
                     .setRequestId(Integer.toString(i))
@@ -592,7 +590,7 @@ public class MainActivity extends AppCompatActivity
 
         String[] geofenceLocations = getResources().getStringArray(R.array.geofenceLocations);
         ArrayList<CircleOptions> circleOptions = new ArrayList<>();
-        for (int i = 0; i < geofenceLocations.length; i+=3) {
+        for (int i = 0; i < geofenceLocations.length; i+=2) {
             LatLng center = new LatLng(Double.parseDouble(geofenceLocations[i]), Double.parseDouble(geofenceLocations[i+1]));
             CircleOptions circleOption = new CircleOptions()
                     .center(center)

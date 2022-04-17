@@ -3,13 +3,24 @@
     <string-array name="geofenceLocations">
         <item>41.22568419</item>
         <item>32.66095127</item>
-        <item>Title 1</item>
         <item>41.21898436</item>
         <item>32.64955452</item>
-        <item>Title 2</item>
         <item>41.21321171</item>
         <item>32.63949919</item>
+    </string-array>
+    <string-array name="geofenceTitles">
+        <item>Title 1</item>
+        <item>Title 2</item>
         <item>Title 3</item>
+    </string-array>
+    <array name="gridImages">
+        <item>@drawable/one</item>
+        <item>@drawable/two</item>
+        <item>@drawable/three</item>
+    </array>
+    <string-array name="Images">
+        <item>@drawable/one</item>
+        <item>@drawable/two</item>
     </string-array>
     <string-array name="styles">
         <item>Standart</item>
