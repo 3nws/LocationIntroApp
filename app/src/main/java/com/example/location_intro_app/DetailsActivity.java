@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.location_intro_app.databinding.ActivityDetailsBinding;
 
@@ -23,6 +24,8 @@ public class DetailsActivity extends AppCompatActivity {
     private ArrayList<Integer> images;
 
     private String title;
+
+    private String details;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +42,10 @@ public class DetailsActivity extends AppCompatActivity {
         toolbar.inflateMenu(R.menu.main_menu);
         images = getIntent().getIntegerArrayListExtra("images");
         title = getIntent().getStringExtra("title");
+        details = getIntent().getStringExtra("details");
         toolBarLayout.setTitle(title);
+        TextView detailsView = findViewById(R.id.details);
+        detailsView.setText(details);
 
         ViewPager viewPager = findViewById(R.id.view_pager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(this, images);

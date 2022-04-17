@@ -163,6 +163,8 @@ public class MainActivity extends AppCompatActivity
         gridview.setAdapter(new ImageAdapter(this, gridImages));
 
         String[] titles = getResources().getStringArray(R.array.geofenceTitles);
+        String[] details = getResources().getStringArray(R.array.details);
+
 
 //        INDIVIDUAL PLACES
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -172,6 +174,7 @@ public class MainActivity extends AppCompatActivity
                 Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
                 ArrayList<Integer> images = new ArrayList<>();
                 i.putExtra("title", titles[position]);
+                i.putExtra("details", details[position]);
                 images.add(R.drawable.three);
                 i.putIntegerArrayListExtra("images", images);
                 startActivity(i);

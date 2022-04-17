@@ -9,18 +9,9 @@
         <item>32.63949919</item>
     </string-array>
     <string-array name="geofenceTitles">
-        <item>Title 1</item>
-        <item>Title 2</item>
-        <item>Title 3</item>
-    </string-array>
-    <array name="gridImages">
-        <item>@drawable/one</item>
-        <item>@drawable/two</item>
-        <item>@drawable/three</item>
-    </array>
-    <string-array name="Images">
-        <item>@drawable/one</item>
-        <item>@drawable/two</item>
+        <item>Safranbolu Evleri</item>
+        <item>Cami ve Kiliseler</item>
+        <item>Han ve Hamamlar</item>
     </string-array>
     <string-array name="styles">
         <item>Standart</item>
@@ -30,6 +21,50 @@
         <item>Gece</item>
         <item>Patlıcan</item>
     </string-array>
+    <array name="gridImages">
+        <item>@drawable/one</item>
+        <item>@drawable/two</item>
+        <item>@drawable/three</item>
+    </array>
+
+
+<!--    <array name="detailImages">-->
+<!--        <item>@drawable/one</item>-->
+<!--        <item>@drawable/two</item>-->
+<!--    </array>-->
+
+
+    <string-array name="details">
+        <item>
+            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
+        </item>
+        <item>
+            Karabük\'ün Safranbolu İlçesindeki St. Stefanos Kilisesi (Ulu Cami), Eski Cami (Gazi Süleymen Paşa Cami). Köprülü Mehmet Paşa Cami, Hidayetullah Cami, Taş Minare Cami, Dağdelen Cami, İzzet Mehmet Paşa Cami, Akçasu Cami, Eflani İlçesi Küre-i Hadit Cami görülmeye değer eserlerdir.
+        </item>
+        <item>
+            Cinci Hanı: Safranbolu\'da Çeşme Mahallesinde çarşının merkezindedir. Sultan İbrahim zamanında güçlenen ve zenginleşen, Rumeli Kazaskeri Cinci Hoca\'nın (Asıl adı Hüseyin) memleketi Safranbolu\'ya yaptırdığı görkemli bir yapıdır.
+
+            Cinci Hanı\'ndan başka Safranbolu\'da Pamukçu ve Tuzcu Hanları adıyla iki han daha bulunmaktadır. Eflani\'de 20. yy.ın başlarından kalma bir Katırcı Han bulunmaktadır.
+
+            Eski Hamam: Safranbolu\'da Çeşme mahallesindedir. Bizans döneminden kalmadır.
+
+            Yeni Hamam (Cinci Hamamı): Safranbolu\'da Çeşme Mahallesinde Çarşı içindedir. Bu hamamın da Cinci Hoca tarafından yaptırıldığı bilinmektedir.
+
+            Yazıköy Hamamı: Safranbolu İlçesi sınırlarında olup, hangi dönemde yapılmış olduğu bilinmemekle birlikte 1800\'lü yılların ortalarında yapıldığı tahmin edilmektedir.
+
+            Bulak Hamamı: Karabük merkez ilçede olup, tarihi kesin olarak bilinmemekle birlikte 1780 yılında yapıldığı tahmin edilmektedir. Osmanlı dönemi eseridir.
+        </item>
+    </string-array>
+
+
+
+
+
+
+
+
+
+
     <string name="title_activity_main">MainActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
