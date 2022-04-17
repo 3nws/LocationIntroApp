@@ -22,6 +22,8 @@ public class DetailsActivity extends AppCompatActivity {
 
     private ArrayList<Integer> images;
 
+    private String title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +34,12 @@ public class DetailsActivity extends AppCompatActivity {
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-        toolBarLayout.setTitle(getTitle());
 
+        setSupportActionBar(toolbar);
+        toolbar.inflateMenu(R.menu.main_menu);
         images = getIntent().getIntegerArrayListExtra("images");
+        title = getIntent().getStringExtra("title");
+        toolBarLayout.setTitle(title);
 
         ViewPager viewPager = findViewById(R.id.view_pager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(this, images);

@@ -151,6 +151,7 @@ public class MainActivity extends AppCompatActivity
         View content = layout.findViewById(R.id.backgroundId);
         content.findViewById(R.id.backgroundId).setBackground(ContextCompat.getDrawable(this, R.drawable.bg));
 
+//        GRID TAB
         images = new ArrayList<>();
         images.add(R.drawable.one);
         images.add(R.drawable.two);
@@ -160,6 +161,7 @@ public class MainActivity extends AppCompatActivity
         GridView gridview = findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this, images));
 
+//        INDIVIDUAL PLACES
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent,
                                     View v, int position, long id){
@@ -167,9 +169,7 @@ public class MainActivity extends AppCompatActivity
                 Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
                 ArrayList<Integer> images = new ArrayList<>();
                 images.add(R.drawable.one);
-                images.add(R.drawable.two);
-                images.add(R.drawable.three);
-                images.add(R.drawable.two);
+                i.putExtra("title", "Place 1");
                 i.putIntegerArrayListExtra("images", images);
                 startActivity(i);
             }
