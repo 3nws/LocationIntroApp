@@ -82,9 +82,8 @@
             <!-- Places Layout -->
             <LinearLayout
                 android:id="@+id/tab3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#5b89ff"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.Toolbar
@@ -95,10 +94,18 @@
                     android:minHeight="?attr/actionBarSize"
                     android:theme="?attr/actionBarTheme" />
 
-                <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="This is tab 3" />
+
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:numColumns="1"
+                    android:verticalSpacing="10dp"
+                    android:horizontalSpacing="10dp"
+                    android:gravity="center"
+                    />
+
+
             </LinearLayout>
 
         </FrameLayout>

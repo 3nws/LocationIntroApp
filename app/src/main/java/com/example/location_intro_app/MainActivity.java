@@ -22,6 +22,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.TabHost;
 
 import com.example.location_intro_app.databinding.ActivityMainBinding;
@@ -74,6 +76,8 @@ public class MainActivity extends AppCompatActivity
     private GoogleApiClient googleApiClient;
     private Location lastLocation;
 
+
+    ArrayList<Integer> images;
     private MapFragment mapFragment;
 
     ZoomControls zoom;
@@ -146,6 +150,30 @@ public class MainActivity extends AppCompatActivity
         View layout = findViewById(R.id.constraintId);
         View content = layout.findViewById(R.id.backgroundId);
         content.findViewById(R.id.backgroundId).setBackground(ContextCompat.getDrawable(this, R.drawable.bg));
+
+        images = new ArrayList<>();
+        images.add(R.drawable.one);
+        images.add(R.drawable.two);
+        images.add(R.drawable.three);
+        images.add(R.drawable.two);
+
+        GridView gridview = findViewById(R.id.gridview);
+        gridview.setAdapter(new ImageAdapter(this, images));
+
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent,
+                                    View v, int position, long id){
+                // Send intent to SingleViewActivity
+                Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
+                ArrayList<Integer> images = new ArrayList<>();
+                images.add(R.drawable.one);
+                images.add(R.drawable.two);
+                images.add(R.drawable.three);
+                images.add(R.drawable.two);
+                i.putIntegerArrayListExtra("images", images);
+                startActivity(i);
+            }
+        });
     }
 
     // Create GoogleApiClient instance
@@ -208,10 +236,6 @@ public class MainActivity extends AppCompatActivity
             }
             case R.id.detay: {
                 Intent i = new Intent(MainActivity.this, DetailsActivity.class);
-                ArrayList<Integer> images = new ArrayList<>();
-                images.add(R.drawable.one);
-                images.add(R.drawable.two);
-                images.add(R.drawable.three);
                 i.putIntegerArrayListExtra("images", images);
                 startActivity(i);
                 return true;
