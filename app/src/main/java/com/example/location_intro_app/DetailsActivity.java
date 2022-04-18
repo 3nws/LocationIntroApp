@@ -10,9 +10,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.location_intro_app.databinding.ActivityDetailsBinding;
+import com.google.android.material.tabs.TabLayout;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerFragment;
+
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
@@ -21,11 +25,11 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
 
     private ArrayList<Integer> images;
 
-    private String title;
-
     private String details;
 
     private String videoID;
+
+    private String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +40,14 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
 
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
 
         toolbar.inflateMenu(R.menu.main_menu);
         images = getIntent().getIntegerArrayListExtra("images");
         title = getIntent().getStringExtra("title");
         details = getIntent().getStringExtra("details");
-        toolBarLayout.setTitle(title);
+        toolbar.setTitle(title);
         TextView detailsView = findViewById(R.id.details);
         if (detailsView != null)
             detailsView.setText(details);

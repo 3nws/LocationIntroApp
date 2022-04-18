@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        zoom=findViewById(R.id.zoom);
+        zoom = findViewById(R.id.zoom);
 
         zoom.setOnZoomInClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomIn()));
         zoom.setOnZoomOutClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomOut()));
