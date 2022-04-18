@@ -8,13 +8,29 @@
     tools:context=".DetailsActivity"
     tools:showIn="@layout/activity_details">
 
-    <TextView
-        android:layout_width="384dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="10dp"
-        android:gravity="center"
-        android:id="@+id/details"
-        android:text="" />
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/youtubePlayerFragment"
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:id="@+id/details"
+            android:text="" />
+
+    </LinearLayout>
+
+
 
 </androidx.core.widget.NestedScrollView>

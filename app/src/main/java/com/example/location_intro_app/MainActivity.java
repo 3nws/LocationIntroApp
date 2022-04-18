@@ -177,8 +177,12 @@ public class MainActivity extends AppCompatActivity
                                     View v, int position, long id){
                 // Send intent to SingleViewActivity
                 Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
+                String videoID;
+                TypedArray videos = getResources().obtainTypedArray(R.array.videos);
+                videoID = videos.getString(position).split("=")[1];
                 i.putExtra("title", titles[position]);
                 i.putExtra("details", details[position]);
+                i.putExtra("videoID", videoID);
                 ArrayList<Integer> images = new ArrayList<>();
                 TypedArray places = getResources().obtainTypedArray(R.array.placeImages);
                 TypedArray itemDef;
