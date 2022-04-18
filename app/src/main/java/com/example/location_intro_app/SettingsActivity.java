@@ -1,6 +1,8 @@
 package com.example.location_intro_app;
 
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -21,6 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
                     .commit();
         }
         ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.MAGENTA));
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
