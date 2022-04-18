@@ -95,16 +95,27 @@
                     android:theme="?attr/actionBarTheme" />
 
 
-                <GridView
-                    android:id="@+id/gridview"
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:numColumns="2"
-                    android:layout_marginTop="20dp"
-                    android:verticalSpacing="10dp"
-                    android:horizontalSpacing="0dp"
-                    android:gravity="center"
-                    />
+                    android:layout_height="fill_parent">
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="BÜTÜN MEKANLAR" />
+
+                    <GridView
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gridView"
+                        android:layout_width="match_parent"
+                        android:numColumns="1"
+                        android:verticalSpacing="0dp">
+                    </GridView>
+                </LinearLayout>
 
 
             </LinearLayout>

@@ -1,53 +1,78 @@
 package com.example.location_intro_app;
 
-import android.content.Context;
-
+import java.util.ArrayList;
+import android.app.Activity;
 import android.graphics.drawable.Drawable;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import java.util.ArrayList;
+public class ImageAdapter extends BaseAdapter
+{
+    private String[] titles;
+    private ArrayList<Drawable> gridImages;
+    private Activity activity;
 
-public class ImageAdapter extends BaseAdapter {
-    private Context mContext;
-    private ArrayList<Drawable> images;
-
-    // Constructor
-    public ImageAdapter(Context c, ArrayList<Drawable> images) {
-        mContext = c;
-        this.images = images;
+    public ImageAdapter(Activity activity,String[] titles, ArrayList<Drawable> gridImages) {
+        super();
+        this.titles = titles;
+        this.gridImages = gridImages;
+        this.activity = activity;
     }
 
+    @Override
     public int getCount() {
-        return images.size();
+        // TODO Auto-generated method stub
+        return titles.length;
     }
 
-    public Object getItem(int position) {
-        return null;
+    @Override
+    public String getItem(int position) {
+        // TODO Auto-generated method stub
+        return titles[position];
     }
 
+    @Override
     public long getItemId(int position) {
+        // TODO Auto-generated method stub
         return 0;
     }
 
-    // create a new ImageView for each item referenced by the Adapter
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView;
+    public static class ViewHolder
+    {
+        public ImageView imgView;
+        public TextView txtViewTitle;
+    }
 
-        if (convertView == null) {
-            imageView = new ImageView(mContext);
-            imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            imageView.setPadding(2, 8, 2, 8);
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        // TODO Auto-generated method stub
+        ViewHolder view;
+        LayoutInflater inflator = activity.getLayoutInflater();
+
+        if(convertView==null)
+        {
+            view = new ViewHolder();
+            convertView = inflator.inflate(R.layout.gridview_row, null);
+
+            view.txtViewTitle = (TextView) convertView.findViewById(R.id.textView1);
+            view.imgView = (ImageView) convertView.findViewById(R.id.imageView1);
+
+            convertView.setTag(view);
         }
         else
         {
-            imageView = (ImageView) convertView;
+            view = (ViewHolder) convertView.getTag();
         }
-        imageView.setImageDrawable(images.get(position));
-        return imageView;
+
+        view.txtViewTitle.setText(titles[position]);
+        view.imgView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        view.imgView.setPadding(2, 0, 2, 0);
+        view.imgView.setImageDrawable(gridImages.get(position));
+
+        return convertView;
     }
 }

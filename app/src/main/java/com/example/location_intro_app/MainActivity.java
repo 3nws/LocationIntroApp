@@ -164,11 +164,11 @@ public class MainActivity extends AppCompatActivity
             gridImages.add(imagesArray.getDrawable(i));
         }
         imagesArray.recycle();
-        GridView gridview = findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this, gridImages));
-
         String[] titles = getResources().getStringArray(R.array.geofenceTitles);
         String[] details = getResources().getStringArray(R.array.details);
+        GridView gridview = findViewById(R.id.gridView);
+        gridview.setAdapter(new ImageAdapter(this, titles, gridImages));
+
 
 
 //        INDIVIDUAL PLACES
