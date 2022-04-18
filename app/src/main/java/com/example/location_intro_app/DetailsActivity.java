@@ -1,32 +1,17 @@
 package com.example.location_intro_app;
 
-import static android.provider.MediaStore.Video.Thumbnails.VIDEO_ID;
-
-import android.content.res.Configuration;
 import android.os.Bundle;
-
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.location_intro_app.databinding.ActivityDetailsBinding;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerFragment;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Properties;
 
 public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
 
@@ -71,14 +56,6 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
         YouTubePlayerFragment youTubePlayerFragment = (YouTubePlayerFragment) getFragmentManager()
                 .findFragmentById(R.id.youtubePlayerFragment);
 
-//        Properties properties = new Properties();
-//        InputStream inputStream =
-//                Objects.requireNonNull(this.getClass().getClassLoader()).getResourceAsStream("local.properties");
-//        try {
-//            properties.load(inputStream);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
         youTubePlayerFragment.initialize("AIzaSyC1AtaTAZ5B3imcXECMjuk8iDlPMlxIKsU", this);
     }
 
