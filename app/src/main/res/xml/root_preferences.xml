@@ -4,7 +4,7 @@
     <PreferenceCategory app:title="Harita">
 
         <ListPreference
-            android:defaultValue="Style 1"
+            android:defaultValue="Standart"
             android:entries="@array/styles"
             android:entryValues="@array/styles"
             android:key="list_preference_1"

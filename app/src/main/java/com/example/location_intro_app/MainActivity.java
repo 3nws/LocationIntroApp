@@ -350,7 +350,7 @@ public class MainActivity extends AppCompatActivity
             return;
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        mapStyle = prefs.getString("list_preference_1", "<unset>");
+        mapStyle = prefs.getString("list_preference_1", "Standart");
 
         try {
             // Customise the styling of the base map using a JSON object defined
