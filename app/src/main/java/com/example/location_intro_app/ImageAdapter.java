@@ -2,6 +2,7 @@ package com.example.location_intro_app;
 
 import java.util.ArrayList;
 import android.app.Activity;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,7 +70,8 @@ public class ImageAdapter extends BaseAdapter
         }
 
         view.txtViewTitle.setText(titles[position]);
-        view.imgView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        view.txtViewTitle.setShadowLayer(24,4,4, Color.BLACK);
+        view.imgView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         view.imgView.setPadding(2, 0, 2, 0);
         view.imgView.setImageDrawable(gridImages.get(position));
 

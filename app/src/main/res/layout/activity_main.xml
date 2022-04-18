@@ -101,19 +101,21 @@
                     android:layout_height="fill_parent">
 
 
-                    <TextView
-                        android:id="@+id/textView"
+                    <ImageView
+                        android:id="@+id/dashboard"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="BÜTÜN MEKANLAR" />
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/black_overlay"
+                        />
 
                     <GridView
                         android:layout_height="wrap_content"
                         android:id="@+id/gridView"
                         android:layout_width="match_parent"
-                        android:numColumns="1"
-                        android:verticalSpacing="0dp">
+                        android:layout_weight="1"
+                        android:numColumns="2"
+                        android:verticalSpacing="5dp">
                     </GridView>
                 </LinearLayout>
 
