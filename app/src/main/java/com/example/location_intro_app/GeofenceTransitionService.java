@@ -27,8 +27,6 @@ public class GeofenceTransitionService extends IntentService {
 
     private static final String TAG = GeofenceTransitionService.class.getSimpleName();
 
-    public static final int GEOFENCE_NOTIFICATION_ID = 0;
-
     public GeofenceTransitionService() {
         super(TAG);
     }
