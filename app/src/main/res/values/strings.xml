@@ -9,12 +9,15 @@
         <item>32.63949919</item>
         <item>41.214091</item>
         <item>32.651897</item>
+        <item>41.20500911</item>
+        <item>32.65688833</item>
     </string-array>
     <string-array name="geofenceTitles">
         <item>Safranbolu Evleri</item>
         <item>Cami ve Kiliseler</item>
         <item>Han ve Hamamlar</item>
         <item>Tıp fakültesi</item>
+        <item>Dr. Necmettin Şeyhoğlu Stadyumu</item>
     </string-array>
     <string-array name="details">
         <item>
@@ -47,6 +50,9 @@
         <item>
             Karabük üniversitesi Tıp Fakültesi
         </item>
+        <item>
+            Dr. Necmettin Şeyhoğlu Stadyumu
+        </item>
     </string-array>
     <string-array name="styles">
         <item>Standart</item>
@@ -61,18 +67,21 @@
         <item>@drawable/camiler1</item>
         <item>@drawable/han1</item>
         <item>@drawable/tip1</item>
+        <item>@drawable/stadyum1</item>
     </array>
     <array name="placeImages">
         <item>@array/safranbolu_evleri</item>
         <item>@array/cami_kilise</item>
         <item>@array/han_hamam</item>
         <item>@array/tip</item>
+        <item>@array/stadyum</item>
     </array>
     <string-array name="videos">
         <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
         <item>https://www.youtube.com/watch?v=-VEnxSfd63c</item>
         <item>https://www.youtube.com/watch?v=OIsnejl5Sr8</item>
         <item>https://www.youtube.com/watch?v=-6tKZc2k_m8</item>
+        <item>https://www.youtube.com/watch?v=bPejdFxcYz4</item>
     </string-array>
     <array name="safranbolu_evleri">
         <item>@drawable/evler1</item>
@@ -87,6 +96,10 @@
     </array>
     <array name="tip">
         <item>@drawable/tip1</item>
+    </array>
+    <array name="stadyum">
+        <item>@drawable/stadyum1</item>
+        <item>@drawable/stadyum2</item>
     </array>
 
 
