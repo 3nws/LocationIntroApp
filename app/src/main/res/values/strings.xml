@@ -7,11 +7,14 @@
         <item>32.64955452</item>
         <item>41.21321171</item>
         <item>32.63949919</item>
+        <item>41.214091</item>
+        <item>32.651897</item>
     </string-array>
     <string-array name="geofenceTitles">
         <item>Safranbolu Evleri</item>
         <item>Cami ve Kiliseler</item>
         <item>Han ve Hamamlar</item>
+        <item>Tıp fakültesi</item>
     </string-array>
     <string-array name="details">
         <item>
@@ -33,6 +36,9 @@
 
             Bulak Hamamı: Karabük merkez ilçede olup, tarihi kesin olarak bilinmemekle birlikte 1780 yılında yapıldığı tahmin edilmektedir. Osmanlı dönemi eseridir.
         </item>
+        <item>
+            Karabük üniversitesi Tıp Fakültesi
+        </item>
     </string-array>
     <string-array name="styles">
         <item>Standart</item>
@@ -46,16 +52,19 @@
         <item>@drawable/evler1</item>
         <item>@drawable/camiler1</item>
         <item>@drawable/han1</item>
+        <item>@drawable/tip1</item>
     </array>
     <array name="placeImages">
         <item>@array/safranbolu_evleri</item>
         <item>@array/cami_kilise</item>
         <item>@array/han_hamam</item>
+        <item>@array/tip</item>
     </array>
     <string-array name="videos">
         <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
         <item>https://www.youtube.com/watch?v=-VEnxSfd63c</item>
         <item>https://www.youtube.com/watch?v=OIsnejl5Sr8</item>
+        <item>https://www.youtube.com/watch?v=-6tKZc2k_m8</item>
     </string-array>
     <array name="safranbolu_evleri">
         <item>@drawable/evler1</item>
@@ -67,6 +76,9 @@
     </array>
     <array name="han_hamam">
         <item>@drawable/han1</item>
+    </array>
+    <array name="tip">
+        <item>@drawable/tip1</item>
     </array>
 
 
