@@ -5,6 +5,8 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
+
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.location_intro_app.databinding.ActivityDetailsBinding;
@@ -36,7 +38,6 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
 
-        setSupportActionBar(toolbar);
         toolbar.inflateMenu(R.menu.main_menu);
         images = getIntent().getIntegerArrayListExtra("images");
         title = getIntent().getStringExtra("title");

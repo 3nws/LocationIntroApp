@@ -22,7 +22,9 @@
             android:layout_height="300dp"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@style/toolbarTitle"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="true"
             app:toolbarId="@+id/toolbar">
 
             <androidx.appcompat.widget.Toolbar
@@ -31,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:minHeight="?attr/actionBarSize"
+                android:shadowColor="@color/black_overlay"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
