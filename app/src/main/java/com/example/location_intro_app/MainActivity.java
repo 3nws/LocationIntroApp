@@ -104,15 +104,15 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar3 = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar1);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("ANASAYFA");
+            getSupportActionBar().setTitle("");
         }
         setSupportActionBar(toolbar2);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("HARİTA");
+            getSupportActionBar().setTitle("");
         }
         setSupportActionBar(toolbar3);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("MEKANLAR");
+            getSupportActionBar().setTitle("");
         }
         toolbar1.inflateMenu(R.menu.main_menu);
         toolbar2.inflateMenu(R.menu.main_menu);

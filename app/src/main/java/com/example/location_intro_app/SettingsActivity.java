@@ -23,7 +23,6 @@ public class SettingsActivity extends AppCompatActivity {
                     .commit();
         }
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setBackgroundDrawable(new ColorDrawable(Color.MAGENTA));
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
