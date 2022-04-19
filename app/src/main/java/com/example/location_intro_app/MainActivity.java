@@ -125,13 +125,13 @@ public class MainActivity extends AppCompatActivity
         //Tab 1
         TabHost.TabSpec spec = host.newTabSpec("Tab One");
         spec.setContent(R.id.tab1);
-        spec.setIndicator("ANASAYFA", getResources().getDrawable(R.drawable.home));
+        spec.setIndicator("", getResources().getDrawable(R.drawable.home));
         host.addTab(spec);
 
         //Tab 2
         spec = host.newTabSpec("Tab Two");
         spec.setContent(R.id.tab2);
-        spec.setIndicator("HARİTA", getResources().getDrawable(R.drawable.map));
+        spec.setIndicator("", getResources().getDrawable(R.drawable.map));
         host.addTab(spec);
 
         // initialize GoogleMaps
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity
         //Tab 3
         spec = host.newTabSpec("Tab Three");
         spec.setContent(R.id.tab3);
-        spec.setIndicator("MEKANLAR", getResources().getDrawable(R.drawable.mosque));
+        spec.setIndicator("", getResources().getDrawable(R.drawable.mosque));
         host.addTab(spec);
 
         TextView v1 = findViewById(R.id.textView1);
