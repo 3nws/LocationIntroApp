@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity
     private GoogleMap map;
     private GoogleApiClient googleApiClient;
 
-
     ArrayList<Drawable> gridImages;
     private MapFragment mapFragment;
 
@@ -152,10 +151,6 @@ public class MainActivity extends AppCompatActivity
         v2.setShadowLayer(24,4,4,Color.BLACK);
         v3.setShadowLayer(24,4,4,Color.BLACK);
 
-        View layout = findViewById(R.id.constraintId);
-        View content = layout.findViewById(R.id.backgroundId);
-        content.findViewById(R.id.backgroundId).setBackground(ContextCompat.getDrawable(this, R.drawable.bg));
-
 //        GRID TAB
         gridImages = new ArrayList<>();
         TypedArray imagesArray = getResources().obtainTypedArray(R.array.gridImages);
@@ -167,7 +162,6 @@ public class MainActivity extends AppCompatActivity
         String[] details = getResources().getStringArray(R.array.details);
         GridView gridview = findViewById(R.id.gridView);
         gridview.setAdapter(new ImageAdapter(this, titles, gridImages));
-
 
 
 //        INDIVIDUAL PLACES

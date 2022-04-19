@@ -12,6 +12,7 @@
     <ImageView
         android:id="@+id/backgroundId"
         android:layout_width="match_parent"
+        android:src="@drawable/gradient"
         android:layout_height="match_parent"/>
 
     <androidx.core.widget.NestedScrollView
@@ -39,6 +40,7 @@
                 android:gravity="center"
                 android:text="@string/tanitim_metni1"
                 android:textColor="@color/white"
+                android:textSize="18sp"
 
                 app:layout_constraintBottom_toTopOf="@+id/textView2"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +58,7 @@
                 android:gravity="center"
                 android:text="@string/tanitim_metni2"
                 android:textColor="@color/white"
+                android:textSize="18sp"
 
                 app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +75,7 @@
                 android:gravity="center"
                 android:text="@string/tanitim_metni3"
                 android:textColor="@color/white"
+                android:textSize="18sp"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
