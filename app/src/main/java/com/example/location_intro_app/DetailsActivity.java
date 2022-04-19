@@ -48,6 +48,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
         title = getIntent().getStringExtra("title");
         details = getIntent().getStringExtra("details");
         toolbar.setTitle(title);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         TextView detailsView = findViewById(R.id.details);
         if (detailsView != null)
             detailsView.setText(details);
