@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity
 
     private GoogleMap map;
     private GoogleApiClient googleApiClient;
-    private Location lastLocation;
 
 
     ArrayList<Drawable> gridImages;
@@ -295,7 +294,7 @@ public class MainActivity extends AppCompatActivity
                 if ( grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED ){
                     // Permission granted
-                    getLastKnownLocation();
+                    startLocationUpdates();
 
                 } else {
                     // Permission denied
@@ -400,7 +399,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onLocationChanged(Location location) {
-        lastLocation = location;
         writeActualLocation(location);
     }
 
@@ -408,7 +406,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         Log.i(TAG, "onConnected()");
-        getLastKnownLocation();
+        startLocationUpdates();
         startGeofences();
     }
 
@@ -424,31 +422,8 @@ public class MainActivity extends AppCompatActivity
         Log.w(TAG, "onConnectionFailed()");
     }
 
-    // Get last known location
-    private void getLastKnownLocation() {
-        Log.d(TAG, "getLastKnownLocation()");
-        if ( checkPermission() ) {
-            lastLocation = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
-            if ( lastLocation != null ) {
-                Log.i(TAG, "LasKnown location. " +
-                        "Long: " + lastLocation.getLongitude() +
-                        " | Lat: " + lastLocation.getLatitude());
-                writeLastLocation();
-                startLocationUpdates();
-            } else {
-                Log.w(TAG, "No location retrieved yet");
-                startLocationUpdates();
-            }
-        }
-        else askPermission();
-    }
-
     private void writeActualLocation(Location location) {
         markerLocation(new LatLng(location.getLatitude(), location.getLongitude()));
-    }
-
-    private void writeLastLocation() {
-        writeActualLocation(lastLocation);
     }
 
     private Marker locationMarker;
