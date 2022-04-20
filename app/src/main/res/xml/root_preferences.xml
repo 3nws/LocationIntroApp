@@ -12,4 +12,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="Coğrafi Sınır">
+
+        <EditTextPreference
+            android:key="radius"
+            android:title="Coğrafi Sınır Yarıçap"
+            android:persistent="true"
+            android:dialogTitle="Coğrafi Sınır Yarıçap"
+            android:defaultValue="300" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

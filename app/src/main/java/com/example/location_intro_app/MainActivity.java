@@ -36,6 +36,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ZoomControls;
 
 import androidx.annotation.NonNull;
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity
     ZoomControls zoom;
     public String mapStyle;
     SharedPreferences prefs;
+    float GEOFENCE_RADIUS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +90,14 @@ public class MainActivity extends AppCompatActivity
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         mapStyle = prefs.getString("list_preference_1", "<unset>");
+        GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "300"));
+        if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
+            Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen 20-300 arası bir değer girin.", Toast.LENGTH_LONG).show();
+            GEOFENCE_RADIUS = 300;
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("radius", "300");
+            editor.apply();
+        }
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -327,6 +337,14 @@ public class MainActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         SetMapStyle(map);
+        GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "300"));
+        if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
+            Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen 20-300 arası bir değer girin.", Toast.LENGTH_LONG).show();
+            GEOFENCE_RADIUS = 300;
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("radius", "300");
+            editor.apply();
+        }
     }
 
     private void SetMapStyle(GoogleMap googleMap) {
@@ -453,7 +471,6 @@ public class MainActivity extends AppCompatActivity
 
 
     private static final long GEO_DURATION = 60 * 60 * 1000;
-    private static final float GEOFENCE_RADIUS = 500.0f; // in meters
 
     private void startGeofences() {
         Log.i(TAG, "startGeofences()");
