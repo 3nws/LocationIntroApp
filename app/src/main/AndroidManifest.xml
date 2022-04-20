@@ -16,33 +16,43 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DetailsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_details"
-            android:screenOrientation="portrait"
+            android:name=".VideoActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".MainActivity">
+            android:label="@string/title_activity_video"
+            android:parentActivityName=".MainActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.location_intro_app.MainActivity"/>
+                android:value="com.example.location_intro_app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:label="@string/title_activity_details"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.location_intro_app.MainActivity" />
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.location_intro_app.MainActivity"/>
+                android:value="com.example.location_intro_app.MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:exported="true"
             android:label="@string/title_activity_main"
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

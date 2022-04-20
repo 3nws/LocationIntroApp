@@ -23,4 +23,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="Video">
+
+        <ListPreference
+            android:defaultValue="In app"
+            android:entries="@array/videoOptions"
+            android:entryValues="@array/videoOptions"
+            android:key="list_preference_2"
+            android:title="Video Oynatım Şekli" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

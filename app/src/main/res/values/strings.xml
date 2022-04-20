@@ -62,6 +62,10 @@
         <item>Gece</item>
         <item>Patlıcan</item>
     </string-array>
+    <string-array name="videoOptions">
+        <item>External app</item>
+        <item>In app</item>
+    </string-array>
     <array name="gridImages">
         <item>@drawable/evler1</item>
         <item>@drawable/camiler1</item>
