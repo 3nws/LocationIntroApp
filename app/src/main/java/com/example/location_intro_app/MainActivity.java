@@ -84,6 +84,9 @@ public class MainActivity extends AppCompatActivity
     SharedPreferences prefs;
     float GEOFENCE_RADIUS;
 
+    private ArrayList<CircleOptions> circleOptions;
+    private ArrayList<Circle> circles;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +101,9 @@ public class MainActivity extends AppCompatActivity
             editor.putString("radius", "300");
             editor.apply();
         }
+
+
+        circles = new ArrayList<>();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -544,15 +550,16 @@ public class MainActivity extends AppCompatActivity
     }
 
     // Draw Geofence circle on GoogleMap
-    private Circle geoFenceLimits;
     private void drawGeofence() {
         Log.d(TAG, "drawGeofence()");
 
-        if ( geoFenceLimits != null )
-            geoFenceLimits.remove();
-
+        if ( circles.size() > 0 ){
+            for (Circle c:circles) {
+                c.remove();
+            }
+        }
         String[] geofenceLocations = getResources().getStringArray(R.array.geofenceLocations);
-        ArrayList<CircleOptions> circleOptions = new ArrayList<>();
+        circleOptions = new ArrayList<>();
         for (int i = 0; i < geofenceLocations.length; i+=2) {
             LatLng center = new LatLng(Double.parseDouble(geofenceLocations[i]), Double.parseDouble(geofenceLocations[i+1]));
             CircleOptions circleOption = new CircleOptions()
@@ -560,9 +567,11 @@ public class MainActivity extends AppCompatActivity
                     .strokeColor(Color.argb(50, 70,70,70))
                     .fillColor( Color.argb(100, 150,150,150) )
                     .radius(GEOFENCE_RADIUS);
-            geoFenceLimits = map.addCircle(circleOption);
+            circleOptions.add(circleOption);
         }
-
+        for (CircleOptions c:circleOptions) {
+            circles.add(map.addCircle(c));
+        }
     }
 
 }
