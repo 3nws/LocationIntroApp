@@ -51,6 +51,7 @@ public class VideoActivity extends AppCompatActivity implements YouTubePlayer.On
         youTubePlayer.setFullscreenControlFlags(0);
         youTubePlayer.setFullscreen(true);
         youTubePlayer.setShowFullscreenButton(false);
+        youTubePlayer.play();
     }
 
     /**

@@ -63,8 +63,8 @@
         <item>Patlıcan</item>
     </string-array>
     <string-array name="videoOptions">
-        <item>External app</item>
-        <item>In app</item>
+        <item>Harici uygulamada aç</item>
+        <item>Uygulamada kal</item>
     </string-array>
     <array name="gridImages">
         <item>@drawable/evler1</item>

@@ -26,7 +26,7 @@
     <PreferenceCategory app:title="Video">
 
         <ListPreference
-            android:defaultValue="In app"
+            android:defaultValue="Uygulamada kal"
             android:entries="@array/videoOptions"
             android:entryValues="@array/videoOptions"
             android:key="list_preference_2"
