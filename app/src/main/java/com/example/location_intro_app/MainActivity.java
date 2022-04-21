@@ -418,8 +418,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         Log.i(TAG, "onConnected()");
+        askPermission();
         startLocationUpdates();
         startGeofences();
+        drawGeofence();
     }
 
     // GoogleApiClient.ConnectionCallbacks suspended
