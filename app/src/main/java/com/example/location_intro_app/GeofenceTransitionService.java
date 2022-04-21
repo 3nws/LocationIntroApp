@@ -85,8 +85,7 @@ public class GeofenceTransitionService extends IntentService {
         } else{
             intent = new Intent(GeofenceTransitionService.this, VideoActivity.class);
         }
-
-        intent.putExtra("videoID", videoURLS[i]);
+        intent.putExtra("videoID", videoURLS[i].split("=")[1]);
         startActivity(intent);
     }
 

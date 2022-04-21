@@ -2,17 +2,21 @@ package com.example.location_intro_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerFragment;
+import com.google.android.youtube.player.YouTubeStandalonePlayer;
 
 public class VideoActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
 
 
     private String videoID;
+    private String[] videoURLSdef = {"a","b"};
+    private String[] videoURLS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +46,7 @@ public class VideoActivity extends AppCompatActivity implements YouTubePlayer.On
 
 
         if(!wasRestored) {
-            youTubePlayer.cueVideo(videoID);
+            youTubePlayer.loadVideo(videoID);
         }
         youTubePlayer.setFullscreenControlFlags(0);
         youTubePlayer.setFullscreen(true);
