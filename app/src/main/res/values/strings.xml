@@ -87,24 +87,24 @@
         <item>https://www.youtube.com/watch?v=-6tKZc2k_m8</item>
         <item>https://www.youtube.com/watch?v=bPejdFxcYz4</item>
     </string-array>
-    <array name="safranbolu_evleri">
-        <item>@drawable/evler1</item>
-        <item>@drawable/evler2</item>
-    </array>
-    <array name="cami_kilise">
-        <item>@drawable/camiler1</item>
-        <item>@drawable/camiler2</item>
-    </array>
-    <array name="han_hamam">
-        <item>@drawable/han1</item>
-    </array>
-    <array name="tip">
-        <item>@drawable/tip1</item>
-    </array>
-    <array name="stadyum">
-        <item>@drawable/stadyum1</item>
-        <item>@drawable/stadyum2</item>
-    </array>
+    <string-array name="safranbolu_evleri">
+        <item>https://i.imgur.com/9j81DR9.jpg</item>
+        <item>https://i.imgur.com/UL2yyip.jpg</item>
+    </string-array>
+    <string-array name="cami_kilise">
+        <item>https://i.imgur.com/tqHeq4I.jpg</item>
+        <item>https://i.imgur.com/zVhp8fL.jpg</item>
+    </string-array>
+    <string-array name="han_hamam">
+        <item>https://i.imgur.com/L4yjBel.jpg</item>
+    </string-array>
+    <string-array name="tip">
+        <item>https://i.imgur.com/rEjSJ2M.jpg</item>
+    </string-array>
+    <string-array name="stadyum">
+        <item>https://i.imgur.com/WQXu0D8.jpg</item>
+        <item>https://i.imgur.com/FnNPOcJ.jpg</item>
+    </string-array>
 
 
     <string name="title_activity_main">MainActivity</string>

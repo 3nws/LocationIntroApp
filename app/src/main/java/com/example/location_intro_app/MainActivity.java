@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity
     SharedPreferences prefs;
     float GEOFENCE_RADIUS;
 
+    TabHost host;
+
     private ArrayList<CircleOptions> circleOptions;
     private ArrayList<Circle> circles;
 
@@ -133,7 +135,7 @@ public class MainActivity extends AppCompatActivity
         toolbar3.inflateMenu(R.menu.main_menu);
 
 
-        TabHost host = findViewById(R.id.tabHost);
+        host = findViewById(R.id.tabHost);
         host.setup();
 
         //Tab 1
@@ -192,20 +194,30 @@ public class MainActivity extends AppCompatActivity
                 i.putExtra("title", titles[position]);
                 i.putExtra("details", details[position]);
                 i.putExtra("videoID", videoID);
-                ArrayList<Integer> images = new ArrayList<>();
+                ArrayList<String> images = new ArrayList<>();
                 TypedArray places = getResources().obtainTypedArray(R.array.placeImages);
                 TypedArray itemDef;
                 int resId = places.getResourceId(position, 0);
                 itemDef = getResources().obtainTypedArray(resId);
                 for (int j = 0;j<itemDef.length();j++){
-                    images.add(itemDef.getResourceId(j, 0));
+                    images.add(itemDef.getString(j));
                 }
-                i.putIntegerArrayListExtra("images", images);
                 places.recycle();
                 itemDef.recycle();
-                startActivity(i);
+                i.putStringArrayListExtra("images", images);
+                startActivityForResult(i, 2);
             }
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        // check if the request code is same as what is passed  here it is 2
+        if(requestCode==2)
+        {
+            host.setCurrentTab(Integer.parseInt(data.getStringExtra("tab")));
+        }
     }
 
     // Create GoogleApiClient instance

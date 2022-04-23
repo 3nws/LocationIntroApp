@@ -1,5 +1,6 @@
 package com.example.location_intro_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +24,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
 
     private ActivityDetailsBinding binding;
 
-    private ArrayList<Integer> images;
+    private ArrayList<String> images;
 
     private String details;
 
@@ -44,7 +45,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
 
         toolbar.inflateMenu(R.menu.main_menu);
-        images = getIntent().getIntegerArrayListExtra("images");
+        images = getIntent().getStringArrayListExtra("images");
         title = getIntent().getStringExtra("title");
         details = getIntent().getStringExtra("details");
         toolbar.setTitle(title);
@@ -66,6 +67,20 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
         youTubePlayerFragment.initialize("AIzaSyC1AtaTAZ5B3imcXECMjuk8iDlPMlxIKsU", this);
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return false;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("tab","2");
+        setResult(2,intent);
+        finish();
+    }
+
     /**
      *
      * @param provider The provider which was used to initialize the YouTubePlayer
@@ -85,6 +100,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
             youTubePlayer.cueVideo(videoID);
         }
         youTubePlayer.setFullscreenControlFlags(0);
+        youTubePlayer.setFullscreen(false);
     }
 
     /**
