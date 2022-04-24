@@ -23,6 +23,30 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:layout_width="75dp"
+                android:id="@+id/textToSpeechBtn"
+                android:layout_height="75dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="100dp"
+                android:src="@drawable/mic"
+                />
+
+            <TextView
+                android:id="@+id/ttsText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Text to Speech"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
         <TextView
             android:layout_width="384dp"
             android:layout_height="wrap_content"

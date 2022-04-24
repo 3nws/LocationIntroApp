@@ -7,7 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
+import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.location_intro_app.databinding.ActivityDetailsBinding;
@@ -19,6 +23,8 @@ import com.google.android.youtube.player.YouTubePlayerFragment;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
 
 public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
 
@@ -30,7 +36,11 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
 
     private String videoID;
 
+    private TextToSpeech ttobj;
+
     private String title;
+
+    ImageButton btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,11 +70,70 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
             viewPager.setAdapter(adapter);
         }
 
+        ttobj=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                ttobj.setLanguage(Locale.US);
+            }
+        });
+
+
+        btn = findViewById(R.id.textToSpeechBtn);
+        btn.setOnClickListener(view -> {
+            assert detailsView != null;
+            String toSpeak = detailsView.getText().toString();
+            speech(toSpeak);
+        });
+
         videoID = getIntent().getStringExtra("videoID");
         YouTubePlayerFragment youTubePlayerFragment = (YouTubePlayerFragment) getFragmentManager()
                 .findFragmentById(R.id.youtubePlayerFragment);
 
         youTubePlayerFragment.initialize("AIzaSyC1AtaTAZ5B3imcXECMjuk8iDlPMlxIKsU", this);
+    }
+
+    private void speech(String charSequence) {
+
+        int position = 0;
+
+
+        int sizeOfChar= charSequence.length();
+        String testStri= charSequence.substring(position,sizeOfChar);
+
+
+        int next = 20;
+        int pos =0;
+        while(true) {
+            String temp="";
+            Log.e("in loop", "" + pos);
+
+            try {
+
+                temp = testStri.substring(pos, next);
+                HashMap<String, String> params = new HashMap<String, String>();
+                params.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, temp);
+                ttobj.speak(temp, TextToSpeech.QUEUE_ADD, params);
+
+                pos = pos + 20;
+                next = next + 20;
+
+            } catch (Exception e) {
+                temp = testStri.substring(pos, testStri.length());
+                ttobj.speak(temp, TextToSpeech.QUEUE_ADD, null);
+                break;
+
+            }
+
+        }
+
+    }
+
+    public void onPause(){
+        if(ttobj !=null){
+            ttobj.stop();
+            ttobj.shutdown();
+        }
+        super.onPause();
     }
 
     @Override
