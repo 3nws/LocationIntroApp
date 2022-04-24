@@ -1,6 +1,7 @@
 package com.example.location_intro_app;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.view.View;
@@ -38,9 +39,6 @@ public class ViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         ImageButton imageView = new ImageButton(context);
-        imageView.setOnClickListener(view -> {
-
-        });
         Picasso.get()
                 .load(images.get(position))
                 .fit()
@@ -48,6 +46,11 @@ public class ViewPagerAdapter extends PagerAdapter {
                 .into(imageView);
         container.addView(imageView);
 
+        imageView.setOnClickListener(view -> {
+            Intent i = new Intent(context, ImageActivity.class);
+            i.putExtra("image", images.get(position));
+            context.startActivity(i);
+        });
         return imageView;
     }
 
