@@ -21,6 +21,13 @@
             android:dialogTitle="Coğrafi Sınır Yarıçap"
             android:defaultValue="300" />
 
+        <EditTextPreference
+            android:key="altitude"
+            android:title="Altitude"
+            android:persistent="true"
+            android:dialogTitle="Altitude"
+            android:defaultValue="14" />
+
     </PreferenceCategory>
 
     <PreferenceCategory app:title="Video">

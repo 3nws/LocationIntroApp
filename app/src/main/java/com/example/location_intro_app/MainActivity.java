@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity
     public String mapStyle;
     SharedPreferences prefs;
     float GEOFENCE_RADIUS;
+    float altitude;
+    float zoomLevel;
 
     TabHost host;
 
@@ -96,11 +98,20 @@ public class MainActivity extends AppCompatActivity
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         mapStyle = prefs.getString("list_preference_1", "<unset>");
         GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "300"));
+        altitude = Float.parseFloat(prefs.getString("altitude", "300"));
+        zoomLevel = altitudeToZoom(altitude);
         if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
             Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen 20-300 arası bir değer girin.", Toast.LENGTH_LONG).show();
             GEOFENCE_RADIUS = 300;
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString("radius", "300");
+            editor.apply();
+        }
+        if (altitude<100) {
+            Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen >100 bir değer girin.", Toast.LENGTH_LONG).show();
+            altitude = 500;
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("altitude", "1000");
             editor.apply();
         }
 
@@ -351,17 +362,48 @@ public class MainActivity extends AppCompatActivity
         SetMapStyle(googleMap);
     }
 
+    public float getAltitude(float mapzoom){
+        //this equation is a transformation of the angular size equation solving for D. See: http://en.wikipedia.org/wiki/Forced_perspective
+        float googleearthaltitude;
+        float firstPartOfEq= (float)(.05 * ((591657550.5/(Math.pow(2,(mapzoom-1))))/2));//amount displayed is .05 meters and map scale =591657550.5/(Math.pow(2,(mapzoom-1))))
+        //this bit ^ essentially gets the h value in the angular size eq then divides it by 2
+        googleearthaltitude =(firstPartOfEq) * ((float) (Math.cos(Math.toRadians(85.362/2)))/(float) (Math.sin(Math.toRadians(85.362/2))));//85.362 is angle which google maps displays on a 5cm wide screen
+        return googleearthaltitude;
+    }
+
+    public float altitudeToZoom(float altitude) {
+        double A = 40487.57;
+        double B = 0.00007096758;
+        double C = 91610.74;
+        double D = -40467.74;
+
+        return (float) (D+(A-D)/(1+Math.pow(altitude/C, B)));
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
         SetMapStyle(map);
         GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "300"));
+        altitude = Float.parseFloat(prefs.getString("altitude", "1000"));
+        zoomLevel = altitudeToZoom(altitude);
         if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
             Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen 20-300 arası bir değer girin.", Toast.LENGTH_LONG).show();
             GEOFENCE_RADIUS = 300;
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString("radius", "300");
             editor.apply();
+        }
+        if (altitude<100) {
+            Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen >100 bir değer girin.", Toast.LENGTH_LONG).show();
+            altitude = 500;
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("altitude", "1000");
+            editor.apply();
+        }
+        if ( map!=null ) {
+            CameraUpdate cameraUpdate = CameraUpdateFactory.zoomTo(zoomLevel);
+            map.animateCamera(cameraUpdate);
         }
     }
 
@@ -469,8 +511,7 @@ public class MainActivity extends AppCompatActivity
             if ( locationMarker != null )
                 locationMarker.remove();
             locationMarker = map.addMarker(markerOptions);
-            float zoom = 14f;
-            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, zoom);
+            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, zoomLevel);
             map.animateCamera(cameraUpdate);
         }
     }
