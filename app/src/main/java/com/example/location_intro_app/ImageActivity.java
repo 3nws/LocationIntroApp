@@ -21,9 +21,6 @@ public class ImageActivity extends AppCompatActivity {
         iv = findViewById(R.id.imageView1);
         Picasso.get()
                 .load(imgUrl)
-                .fit()
-                .rotate(90)
-                .centerCrop()
                 .into(iv);
     }
 }
