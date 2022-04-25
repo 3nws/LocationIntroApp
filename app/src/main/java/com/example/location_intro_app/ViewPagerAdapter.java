@@ -46,6 +46,7 @@ public class ViewPagerAdapter extends PagerAdapter {
                 .into(imageView);
         container.addView(imageView);
 
+//        High res images instead maybe?
         imageView.setOnClickListener(view -> {
             Intent i = new Intent(context, ImageActivity.class);
             i.putExtra("image", images.get(position));

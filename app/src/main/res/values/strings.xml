@@ -1,59 +1,5 @@
 <resources>
-    <string name="app_name">Geofencing</string>
-    <string-array name="geofenceLocations">
-        <item>41.22568419</item>
-        <item>32.66095127</item>
-        <item>41.21898436</item>
-        <item>32.64955452</item>
-        <item>41.21321171</item>
-        <item>32.63949919</item>
-        <item>41.214091</item>
-        <item>32.651897</item>
-        <item>41.20500911</item>
-        <item>32.65688833</item>
-    </string-array>
-    <string-array name="geofenceTitles">
-        <item>Safranbolu Evleri</item>
-        <item>Cami ve Kiliseler</item>
-        <item>Han ve Hamamlar</item>
-        <item>Tıp fakültesi</item>
-        <item>Dr. Necmettin Şeyhoğlu Stadyumu</item>
-    </string-array>
-    <string-array name="details">
-        <item>
-            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
-            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
-            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
-            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
-            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
-            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
-            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
-            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
-            Kültür turizmi kapsamında Safranbolu\'yu Ülkemizde ve Dünyada ön plana çıkartan en önemli unsur geleneksel Türk mimarisi tarzındaki Safranbolu evleridir. Bu evler bir yandan kentsel konumlarıyla diğer yandan mimarileriyle dikkate değerlerdir. İlçe merkezinde 18 ve 19. yy. başlarında yapılmış yaklaşık 2000 geleneksel Türk evi bulunmaktadır. Evler Safranbolu\'nun iki ayrı kesiminde grublanmıştır. Birincisi şehir diye bilinen kışlık olarak kullanılan, ikincisi bağlar diye bilinen ve yazlık olarak kullanılan kesimdir.
-        </item>
-        <item>
-            Karabük\'ün Safranbolu İlçesindeki St. Stefanos Kilisesi (Ulu Cami), Eski Cami (Gazi Süleymen Paşa Cami). Köprülü Mehmet Paşa Cami, Hidayetullah Cami, Taş Minare Cami, Dağdelen Cami, İzzet Mehmet Paşa Cami, Akçasu Cami, Eflani İlçesi Küre-i Hadit Cami görülmeye değer eserlerdir.
-        </item>
-        <item>
-            Cinci Hanı: Safranbolu\'da Çeşme Mahallesinde çarşının merkezindedir. Sultan İbrahim zamanında güçlenen ve zenginleşen, Rumeli Kazaskeri Cinci Hoca\'nın (Asıl adı Hüseyin) memleketi Safranbolu\'ya yaptırdığı görkemli bir yapıdır.
-
-            Cinci Hanı\'ndan başka Safranbolu\'da Pamukçu ve Tuzcu Hanları adıyla iki han daha bulunmaktadır. Eflani\'de 20. yy.ın başlarından kalma bir Katırcı Han bulunmaktadır.
-
-            Eski Hamam: Safranbolu\'da Çeşme mahallesindedir. Bizans döneminden kalmadır.
-
-            Yeni Hamam (Cinci Hamamı): Safranbolu\'da Çeşme Mahallesinde Çarşı içindedir. Bu hamamın da Cinci Hoca tarafından yaptırıldığı bilinmektedir.
-
-            Yazıköy Hamamı: Safranbolu İlçesi sınırlarında olup, hangi dönemde yapılmış olduğu bilinmemekle birlikte 1800\'lü yılların ortalarında yapıldığı tahmin edilmektedir.
-
-            Bulak Hamamı: Karabük merkez ilçede olup, tarihi kesin olarak bilinmemekle birlikte 1780 yılında yapıldığı tahmin edilmektedir. Osmanlı dönemi eseridir.
-        </item>
-        <item>
-            Karabük üniversitesi Tıp Fakültesi
-        </item>
-        <item>
-            Dr. Necmettin Şeyhoğlu Stadyumu
-        </item>
-    </string-array>
+    <string name="app_name">DigiSafran</string>
     <string-array name="styles">
         <item>Standart</item>
         <item>Gümüş</item>
@@ -66,67 +12,140 @@
         <item>Harici uygulamada aç</item>
         <item>Uygulamada kal</item>
     </string-array>
-    <array name="gridImages">
-        <item>@drawable/evler1</item>
-        <item>@drawable/camiler1</item>
-        <item>@drawable/han1</item>
-        <item>@drawable/tip1</item>
-        <item>@drawable/stadyum1</item>
-    </array>
-    <array name="placeImages">
-        <item>@array/safranbolu_evleri</item>
-        <item>@array/cami_kilise</item>
-        <item>@array/han_hamam</item>
-        <item>@array/tip</item>
-        <item>@array/stadyum</item>
-    </array>
+
+
+<!--    START HERE-->
+    <string-array name="geofenceLocations">
+<!--        konak-->
+        <item>41.2455071</item>
+        <item>32.6905126</item>
+<!--        cinci han-->
+        <item>41.2447678</item>
+        <item>32.6933307</item>
+<!--        tabakhane-->
+        <item>41.2424884</item>
+        <item>32.6888444</item>
+<!--        yemeniciler-->
+        <item>41.2448288</item>
+        <item>32.6901181</item>
+<!--        demirciler-->
+        <item>41.2440873</item>
+        <item>32.6909086</item>
+    </string-array>
+    <string-array name="geofenceTitles">
+        <item>Safranbolu Tarihi Hukumet Konagi</item>
+        <item>Cinci Han</item>
+        <item>Tabakhane Müzesi</item>
+        <item>Yemeniciler Arastası</item>
+        <item>Demirciler Arastası</item>
+    </string-array>
     <string-array name="videos">
         <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=-VEnxSfd63c</item>
-        <item>https://www.youtube.com/watch?v=OIsnejl5Sr8</item>
-        <item>https://www.youtube.com/watch?v=-6tKZc2k_m8</item>
-        <item>https://www.youtube.com/watch?v=bPejdFxcYz4</item>
+        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
+        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
+        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
+        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
     </string-array>
-    <string-array name="safranbolu_evleri">
-        <item>https://i.imgur.com/9j81DR9.jpg</item>
-        <item>https://i.imgur.com/UL2yyip.jpg</item>
-        <item>https://i.imgur.com/tqHeq4I.jpg</item>
-        <item>https://i.imgur.com/zVhp8fL.jpg</item>
-        <item>https://i.imgur.com/L4yjBel.jpg</item>
-        <item>https://i.imgur.com/rEjSJ2M.jpg</item>
-        <item>https://i.imgur.com/WQXu0D8.jpg</item>
-        <item>https://i.imgur.com/FnNPOcJ.jpg</item>
-        <item>https://i.imgur.com/9j81DR9.jpg</item>
-        <item>https://i.imgur.com/UL2yyip.jpg</item>
-        <item>https://i.imgur.com/tqHeq4I.jpg</item>
-        <item>https://i.imgur.com/zVhp8fL.jpg</item>
-        <item>https://i.imgur.com/9j81DR9.jpg</item>
-        <item>https://i.imgur.com/UL2yyip.jpg</item>
-        <item>https://i.imgur.com/tqHeq4I.jpg</item>
-        <item>https://i.imgur.com/zVhp8fL.jpg</item>
-        <item>https://i.imgur.com/L4yjBel.jpg</item>
-        <item>https://i.imgur.com/rEjSJ2M.jpg</item>
-        <item>https://i.imgur.com/WQXu0D8.jpg</item>
-        <item>https://i.imgur.com/FnNPOcJ.jpg</item>
-        <item>https://i.imgur.com/9j81DR9.jpg</item>
-        <item>https://i.imgur.com/UL2yyip.jpg</item>
-        <item>https://i.imgur.com/tqHeq4I.jpg</item>
-        <item>https://i.imgur.com/zVhp8fL.jpg</item>
+    <string-array name="details">
+<!--        konak-->
+        <item>
+            Safranbolu Historical Government Mansion, which was built on the hill called the castle between 1904-1906, was used as a government mansion until 19 January 1976 and became unusable as a result of a fire that broke out on that date.
+            Restoration work started in 2000 by the Ministry of Culture and was completed in 2006 and opened to service as the City History Museum.
+            In the building, which is currently used as a museum, the entrance is paid and has 2 floors. On the lower floor, there are historical artifacts used by the people in Safranbolu, old pictures of Safranbolu, old manuscripts. On the upper floor, there is the office room and various artifacts. In the basement, the cellar, different tradesmen\'s branches are introduced with the materials they use, wax sculptures and pictures.
+        </item>
+<!--        cinci han-->
+        <item>
+            Cinci Inn was built by Karabaşzade Hüseyin Efendi (Cinci Hoca) from Safranbolu in 1645. Cinci Inn, which was used as a caravanserai until the 20th century, when the historical Silk Road began to lose its effectiveness, was used as a warehouse by Safranbolu tradesmen since the beginning of the 20th century, then after the necessary restoration, this place serves both as a hotel and a restaurant.
+            The lower floor porticos with pointed arches resting on the piers in the inn are covered with barrel vaults on both sides of the entrance and in front of the toilets on the opposite façade, and with cross vaults on the other parts. There are rooms behind the porticoes and except for the ones in the corners, these rooms open to the porticoes with a window and door.
+            There is a hearth and a niche inside the rooms, all of which are covered with barrel vaults. In the middle of the rectangular courtyard, there is an eleven-cornered pool, which was built later, which is understood to be octagonal originally.
+            Behind the portico covered with a barrel vault opposite the entrance and 7 m. The section at the end of the long hall is divided into lavatories covered with barrel vaults.
+            Behind the portico to the right of the entrance are barns and warehouses. With its 300-meter underground tunnel, it is located on a large canyon where the city\'s wastewater and sewers are disciplined.
+            The infrastructure project of this inn lasted for 20 years. The building is 23.50 × 11.50 m. It was built according to a two-storey portico order surrounding a rectangular courtyard. While the inn was being built, a bath and a tannery were built next to it, thinking that it would improve Safranbolu.
+        </item>
+<!--        tabak-->
+        <item>
+            It is Turkey\'s first and only excursion tannery in Safranbolu, which has a history of 800 years and has survived from nearly 200 tanneries. People used primitive methods to turn animal hides into leather in order to meet their basic needs such as covering and protection from the cold, and this has played an important role in the development of leatherwork over time.
+        </item>
+<!--        yemeniciler-->
+        <item>
+            Yemeniciler Arasta The Safranbolu Yemeniciler Bazaar Arasta, which is located in Safranbolu and consists of 48 wooden shops adjacent to each other, is one of the historical places of the region. Adjacent to Köprülü Mehmet Pasha Mosque is the old Guild Bazaar where shoes called “yemeni” are made. The restored bazaar is used for touristic purposes.
+        </item>
+<!--        demirciler-->
+        <item>
+            Blacksmiths\' Arastasi Blacksmithing is a traditional profession and craft, which is part of handicrafts whose raw material is metal, and is based on processing and shaping the iron mine with the help of simple hand tools. It is the only living guild bazaar where blacksmithing handicrafts are produced. Coppersmiths and tinsmiths also work in this bazaar.
+        </item>
     </string-array>
-    <string-array name="cami_kilise">
-        <item>https://i.imgur.com/tqHeq4I.jpg</item>
-        <item>https://i.imgur.com/zVhp8fL.jpg</item>
+    <array name="gridImages">
+        <item>@drawable/konak1</item>
+        <item>@drawable/han0</item>
+        <item>@drawable/tabak1</item>
+        <item>@drawable/yemeniciler1</item>
+        <item>@drawable/demirciler1</item>
+    </array>
+    <array name="placeImages">
+        <item>@array/konak</item>
+        <item>@array/cinci_hani</item>
+        <item>@array/tabak</item>
+        <item>@array/yemeniciler</item>
+        <item>@array/demirciler</item>
+    </array>
+    <string-array name="konak">
+        <item>https://i.imgur.com/zcpAnbr.jpg</item>
     </string-array>
-    <string-array name="han_hamam">
-        <item>https://i.imgur.com/L4yjBel.jpg</item>
+
+    <string-array name="cinci_hani">
+        <item>https://i.imgur.com/FyRmeep.jpg</item>
     </string-array>
-    <string-array name="tip">
-        <item>https://i.imgur.com/rEjSJ2M.jpg</item>
+
+    <string-array name="tabak">
+        <item>https://i.imgur.com/FhBKgzt.jpg</item>
     </string-array>
-    <string-array name="stadyum">
-        <item>https://i.imgur.com/WQXu0D8.jpg</item>
-        <item>https://i.imgur.com/FnNPOcJ.jpg</item>
+
+    <string-array name="yemeniciler">
+        <item>https://i.imgur.com/pSGFrHn.jpg</item>
     </string-array>
+
+    <string-array name="demirciler">
+        <item>https://i.imgur.com/mw9advH.jpg</item>
+    </string-array>
+
+<!--    END HERE-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <string name="title_activity_main">MainActivity</string>
@@ -144,7 +163,44 @@
         Bugünkü yapısını 17. ve 18. yüzyıllarda kazanan Safranbolu, Türk şehir yapısına uygun olarak, zamana ve ihtiyaca bağlı gelişen, birbirine eklenerek büyüyen ve doğaya uyum sağlayıp onu koruyan niteliği ile dikkat çekmektedir.
 
     </string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <string name="title_activity_settings">SettingsActivity</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
