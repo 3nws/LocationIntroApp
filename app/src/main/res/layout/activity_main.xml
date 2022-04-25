@@ -106,7 +106,7 @@
                         android:id="@+id/allPlaces"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
-                        android:text="BÜTÜN MEKANLAR"
+                        android:text="ALL PLACES"
                         android:layout_weight="0.5"
                         android:textColor="@color/white"
                         android:gravity="center"

@@ -96,20 +96,20 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        mapStyle = prefs.getString("list_preference_1", "<unset>");
+        mapStyle = prefs.getString("list_preference_1", "Standard");
         GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "300"));
-        altitude = Float.parseFloat(prefs.getString("altitude", "300"));
+        altitude = Float.parseFloat(prefs.getString("altitude", "1000"));
         zoomLevel = altitudeToZoom(altitude);
         if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
-            Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen 20-300 arası bir değer girin.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Invalid value! Please enter a value between 20-300.", Toast.LENGTH_LONG).show();
             GEOFENCE_RADIUS = 300;
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString("radius", "300");
             editor.apply();
         }
-        if (altitude<100) {
-            Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen >100 bir değer girin.", Toast.LENGTH_LONG).show();
-            altitude = 500;
+        if (altitude<300) {
+            Toast.makeText(getApplicationContext(), "Invalid value! Please enter a value greater than 300.", Toast.LENGTH_LONG).show();
+            altitude = 1000;
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString("altitude", "1000");
             editor.apply();
@@ -276,11 +276,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.toggleType: {
                 if (map.getMapType() == GoogleMap.MAP_TYPE_SATELLITE){
                     map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                    item.setTitle("Uydu stiline geç");
+                    item.setTitle("Switch to satellite view");
                 }
                 else{
                     map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-                    item.setTitle("Normal stile geç");
+                    item.setTitle("Switch to normal view");
                 }
                 return true;
             }
@@ -388,15 +388,15 @@ public class MainActivity extends AppCompatActivity
         altitude = Float.parseFloat(prefs.getString("altitude", "1000"));
         zoomLevel = altitudeToZoom(altitude);
         if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
-            Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen 20-300 arası bir değer girin.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Invalid value! Please enter a value between 20-300.", Toast.LENGTH_LONG).show();
             GEOFENCE_RADIUS = 300;
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString("radius", "300");
             editor.apply();
         }
-        if (altitude<100) {
-            Toast.makeText(getApplicationContext(), "Değer geçersiz! Lütfen >100 bir değer girin.", Toast.LENGTH_LONG).show();
-            altitude = 500;
+        if (altitude<300) {
+            Toast.makeText(getApplicationContext(), "Invalid value! Please enter a value greater than 300.", Toast.LENGTH_LONG).show();
+            altitude = 1000;
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString("altitude", "1000");
             editor.apply();
@@ -412,21 +412,21 @@ public class MainActivity extends AppCompatActivity
             return;
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        mapStyle = prefs.getString("list_preference_1", "Standart");
+        mapStyle = prefs.getString("list_preference_1", "Standard");
 
         try {
             // Customise the styling of the base map using a JSON object defined
             // in a raw resource file.
             int res;
-            if (mapStyle.equals("Gümüş")){
+            if (mapStyle.equals("Silver")){
                 res = R.raw.silver_style;
             } else if (mapStyle.equals("Retro")) {
                 res = R.raw.retro_style;
-            } else if (mapStyle.equals("Siyah Beyaz")) {
+            } else if (mapStyle.equals("Dark")) {
                 res = R.raw.dark_style;
-            } else if (mapStyle.equals("Gece")) {
+            } else if (mapStyle.equals("Night")) {
                 res = R.raw.night_style;
-            } else if (mapStyle.equals("Patlıcan")) {
+            } else if (mapStyle.equals("Aubergine")) {
                 res = R.raw.aubergine_style;
             } else {
                 res = R.raw.standard;

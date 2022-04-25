@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" >
     <item
         android:id="@+id/toggleType"
-        android:title="Uydu stiline geç"
+        android:title="Switch to satellite view"
         app:showAsAction="never" />
     <item
         android:id="@+id/options"
-        android:title="Ayarlar"
+        android:title="Options"
         app:showAsAction="never" />
     <item
         android:id="@+id/exit"
-        android:title="Çıkış"
+        android:title="Exit"
         app:showAsAction="never" />
 </menu>

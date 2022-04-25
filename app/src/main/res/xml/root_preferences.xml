@@ -1,25 +1,14 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="Harita">
+    <PreferenceCategory app:title="Map">
 
         <ListPreference
-            android:defaultValue="Standart"
+            android:defaultValue="Standard"
             android:entries="@array/styles"
             android:entryValues="@array/styles"
             android:key="list_preference_1"
-            android:title="Harita Stili" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory app:title="Coğrafi Sınır">
-
-        <EditTextPreference
-            android:key="radius"
-            android:title="Coğrafi Sınır Yarıçap"
-            android:persistent="true"
-            android:dialogTitle="Coğrafi Sınır Yarıçap"
-            android:defaultValue="300" />
+            android:title="Map Style" />
 
         <EditTextPreference
             android:key="altitude"
@@ -30,14 +19,25 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="Geofence">
+
+        <EditTextPreference
+            android:key="radius"
+            android:title="Geofence Radius"
+            android:persistent="true"
+            android:dialogTitle="Geofence Radius"
+            android:defaultValue="300" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory app:title="Video">
 
         <ListPreference
-            android:defaultValue="Uygulamada kal"
+            android:defaultValue="In app"
             android:entries="@array/videoOptions"
             android:entryValues="@array/videoOptions"
             android:key="list_preference_2"
-            android:title="Video Oynatım Şekli" />
+            android:title="Play videos in" />
 
     </PreferenceCategory>
 

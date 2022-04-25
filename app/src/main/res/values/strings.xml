@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">DigiSafran</string>
     <string-array name="styles">
-        <item>Standart</item>
-        <item>Gümüş</item>
+        <item>Standard</item>
+        <item>Silver</item>
         <item>Retro</item>
-        <item>Siyah Beyaz</item>
-        <item>Gece</item>
-        <item>Patlıcan</item>
+        <item>Dark</item>
+        <item>Night</item>
+        <item>Aubergine</item>
     </string-array>
     <string-array name="videoOptions">
-        <item>Harici uygulamada aç</item>
-        <item>Uygulamada kal</item>
+        <item>External app</item>
+        <item>In app</item>
     </string-array>
 
 
@@ -152,16 +152,15 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tanitim_metni1">
-        Safranbolu bozulmamış tarihi dokusu ve evleri ile ziyaret edenleri bir tarih yolculuğuna çıkarmaktadır.
+        Safranbolu takes visitors on a historical journey with its unspoilt historical texture and houses.
 
     </string>
     <string name="tanitim_metni2">
-        Türkiye’nin UNESCO Dünya Miras Listesi’ne ilk giren değerlerinden biri olan Safranbolu, 1994 yılından beri bu listede yer almaktadır.
+        Safranbolu, one of the first values of Turkey to be included in the UNESCO World Heritage List, has been on this list since 1994.
 
     </string>
     <string name="tanitim_metni3">
-        Bugünkü yapısını 17. ve 18. yüzyıllarda kazanan Safranbolu, Türk şehir yapısına uygun olarak, zamana ve ihtiyaca bağlı gelişen, birbirine eklenerek büyüyen ve doğaya uyum sağlayıp onu koruyan niteliği ile dikkat çekmektedir.
-
+        Safranbolu, which gained its current structure in the 17th and 18th centuries, draws attention with its quality that developed in accordance with the Turkish city structure, depending on time and needs, growing by adding to each other, adapting to nature and protecting it.
     </string>
 
 
