@@ -1,16 +1,25 @@
 package com.example.location_intro_app;
 
+import android.app.Application;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceManager;
+
+import java.util.prefs.Preferences;
 
 public class SettingsActivity extends AppCompatActivity {
+
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +35,7 @@ public class SettingsActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
@@ -45,4 +55,5 @@ public class SettingsActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

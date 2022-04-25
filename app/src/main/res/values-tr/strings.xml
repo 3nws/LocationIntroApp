@@ -1,18 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DigiSafran</string>
-    <string name="selected_language">English</string>
+    <string name="selected_language">Türkçe</string>
+
 
     <string-array name="styles">
-        <item>Standard</item>
-        <item>Silver</item>
+        <item>Standart</item>
+        <item>Gümüş</item>
         <item>Retro</item>
-        <item>Dark</item>
-        <item>Night</item>
-        <item>Aubergine</item>
+        <item>Siyah Beyaz</item>
+        <item>Gece</item>
+        <item>Patlıcan</item>
     </string-array>
     <string-array name="videoOptions">
-        <item>External app</item>
-        <item>In app</item>
+        <item>Harici uygulamada aç</item>
+        <item>Uygulamada kal</item>
     </string-array>
     <string-array name="languages">
         <item>English</item>
@@ -20,201 +22,72 @@
     </string-array>
 
 
-<!--    START HERE-->
-    <string-array name="geofenceLocations">
-<!--        konak-->
-        <item>41.2455071</item>
-        <item>32.6905126</item>
-<!--        cinci han-->
-        <item>41.2447678</item>
-        <item>32.6933307</item>
-<!--        tabakhane-->
-        <item>41.2424884</item>
-        <item>32.6888444</item>
-<!--        yemeniciler-->
-        <item>41.2448288</item>
-        <item>32.6901181</item>
-<!--        demirciler-->
-        <item>41.2440873</item>
-        <item>32.6909086</item>
-    </string-array>
-    <string-array name="geofenceTitles">
-        <item>Safranbolu Tarihi Hukumet Konagi</item>
-        <item>Cinci Han</item>
-        <item>Tabakhane Müzesi</item>
-        <item>Yemeniciler Arastası</item>
-        <item>Demirciler Arastası</item>
-    </string-array>
-    <string-array name="videos">
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-    </string-array>
     <string-array name="details">
-<!--        konak-->
+        <!--        konak-->
         <item>
-            Safranbolu Historical Government Mansion, which was built on the hill called the castle between 1904-1906, was used as a government mansion until 19 January 1976 and became unusable as a result of a fire that broke out on that date.
-            Restoration work started in 2000 by the Ministry of Culture and was completed in 2006 and opened to service as the City History Museum.
-            In the building, which is currently used as a museum, the entrance is paid and has 2 floors. On the lower floor, there are historical artifacts used by the people in Safranbolu, old pictures of Safranbolu, old manuscripts. On the upper floor, there is the office room and various artifacts. In the basement, the cellar, different tradesmen\'s branches are introduced with the materials they use, wax sculptures and pictures.
+            1904-1906 yılları arasında kale olarak adlandırılan tepeye inşa edilen Hükûmet Konağı 19 Ocak 1976 yılına kadar hükûmet konağı olarak kullanılmış ve bu tarihte çıkan bir yangın sonucunda kullanılamaz hale gelmiştir. 2000 yılında Kültür Bakanlığı tarafından başlatılan restorasyon çalışmalarına başlanmış ve 2006 yılında tamamlanarak, Kent Tarihi Müzesi olarak hizmete açılmıştır. Şuan müze olarak kullanılan binada girişler ücretli olup 2 katlıdır Alt katta Safranbolu‘da halkın kullandığı tarihi eser niteliğinde malzemeler Safranbolu’nun eski resimleri, eski el yazması kitaplar yer almaktadır. Üst katta makam odası ve çeşitli eserler yer alır. En alt kat yani mahsende farklı esnaf kolları kullandıkları malzemelerle birlikte balmumu heykeller ve resimlerle tanıtılmaktadır.
         </item>
-<!--        cinci han-->
+        <!--        cinci han-->
         <item>
-            Cinci Inn was built by Karabaşzade Hüseyin Efendi (Cinci Hoca) from Safranbolu in 1645. Cinci Inn, which was used as a caravanserai until the 20th century, when the historical Silk Road began to lose its effectiveness, was used as a warehouse by Safranbolu tradesmen since the beginning of the 20th century, then after the necessary restoration, this place serves both as a hotel and a restaurant.
-            The lower floor porticos with pointed arches resting on the piers in the inn are covered with barrel vaults on both sides of the entrance and in front of the toilets on the opposite façade, and with cross vaults on the other parts. There are rooms behind the porticoes and except for the ones in the corners, these rooms open to the porticoes with a window and door.
-            There is a hearth and a niche inside the rooms, all of which are covered with barrel vaults. In the middle of the rectangular courtyard, there is an eleven-cornered pool, which was built later, which is understood to be octagonal originally.
-            Behind the portico covered with a barrel vault opposite the entrance and 7 m. The section at the end of the long hall is divided into lavatories covered with barrel vaults.
-            Behind the portico to the right of the entrance are barns and warehouses. With its 300-meter underground tunnel, it is located on a large canyon where the city\'s wastewater and sewers are disciplined.
-            The infrastructure project of this inn lasted for 20 years. The building is 23.50 × 11.50 m. It was built according to a two-storey portico order surrounding a rectangular courtyard. While the inn was being built, a bath and a tannery were built next to it, thinking that it would improve Safranbolu.
+            Cinci Hanı Safranbolulu Karabaşzade Hüseyin Efendi (Cinci Hoca) tarafından 1645 yılında yapılmıştır. Tarihi İpekyolu\'nun etkinliğini yitirmeye başladığı 20\'nci yüzyıla kadar kervansaray olarak kullanılan Cinci Hanı, 20\'nci yüzyıl başlarından itibaren Safranbolu esnafı tarafından depo olarak kullanılmış daha sonra gerekli restorasyonu yapılaraktan sonrası Burası hem otel hem restoran olarak hizmet veriyor. Han da bulunan pâyeler üzerine oturan sivri kemerli alt kat revakları girişin iki yanında bulunan ve karşısındaki cephede helâların önüne gelen kısımda beşik tonozla, diğer kısımlarda ise tamamen çapraz tonozla örtülmüştür. Revakların arkasında odalar bulunmaktadır ve köşelerdekiler hariç bu odalar bir pencere ve kapı ile revaklara açılmaktadır. Tamamı beşik tonozla örtülü olan odaların içlerinde bulunan birer ocak ve niş vardır. Dikdörtgen avlunun ortasında ise orijinalinin sekiz köşeli olduğu anlaşılan sonradan yapılma olan on bir köşeli bir havuz yer almaktadır. Girişin karşısındaki beşik tonozla örtülü revakın arkasında ve 7 m. uzunluğundaki holün sonunda bulunan kısım beşik tonozla örtülü helâlara ayrılmıştır. Girişin sağında kalan revakın arkasında ahır ve depolar bulunmaktadır. 300 metrelik yer altı tüneliyle kentin atık suları ile kanalizasyonların disipline edildiği büyük bir kanyonun üzerinde yer alıyor. Bu hanın 20 yıl altyapı projesi sürmüştür Yapı, 23,50 × 11,50 m. boyutlarındaki dikdörtgen bir avlunun etrafını çeviren iki kat revak düzenine göre kurulmuştur. Han yapılırken Safranbolu\'yu geliştireceğini düşünerek yanına hamam ve tabakhane yapılmıştır.
         </item>
-<!--        tabak-->
+        <!--        tabak-->
         <item>
-            It is Turkey\'s first and only excursion tannery in Safranbolu, which has a history of 800 years and has survived from nearly 200 tanneries. People used primitive methods to turn animal hides into leather in order to meet their basic needs such as covering and protection from the cold, and this has played an important role in the development of leatherwork over time.
+            Safranbolu\'da 800 yıllık geçmişe sahip ve 200\'e yakın tabakhaneden bugüne ulaşabilmiş, Türkiye\' nin ilk ve tek gezi tabakhanesidir. insanlar örtünme ve soğuktan korunma gibi temel gereksinimlerini gidermek amacı ile hayvan postlarını deri haline getirebilmek için ilkel yöntemler kullanmışlar ve bu durum zaman içerisinde dericiliğin gelişmesinde önemli bir rol oynamıştır.
         </item>
-<!--        yemeniciler-->
+        <!--        yemeniciler-->
         <item>
-            Yemeniciler Arasta The Safranbolu Yemeniciler Bazaar Arasta, which is located in Safranbolu and consists of 48 wooden shops adjacent to each other, is one of the historical places of the region. Adjacent to Köprülü Mehmet Pasha Mosque is the old Guild Bazaar where shoes called “yemeni” are made. The restored bazaar is used for touristic purposes.
+            Safranbolu\’da yer alan ve birbirine bitişik 48 ahşap dükkandan oluşan Safranbolu Yemeniciler Çarşısı Arastası, bölgenin tarihi yerlerinin başında gelmektedir. Köprülü Mehmet Paşa Cami\'sine bitişik ,“yemeni” denilen ayakkabının yapıldığı eski Lonca Çarşısı\'dır. Restore edilen çarşı turistik amaçlı kullanılmaktadır.
         </item>
-<!--        demirciler-->
+        <!--        demirciler-->
         <item>
-            Blacksmiths\' Arastasi Blacksmithing is a traditional profession and craft, which is part of handicrafts whose raw material is metal, and is based on processing and shaping the iron mine with the help of simple hand tools. It is the only living guild bazaar where blacksmithing handicrafts are produced. Coppersmiths and tinsmiths also work in this bazaar.
+            Demircilik, hammaddesi maden olan el sanatları bünyesinde yer alan ve demir madenini ısıtarak basit el aletleri yardımıyla işleme ve biçimlendirmeye dayanan geleneksel bir meslek ve zanaattır Safranbolu’da bunun demirciler Arastası İzzet Mehmet Paşa Camisi altından geçen Akçasu deresinin iki yakasına kurulan çarşı sıcak, soğuk demircilik el sanatlarının üretildiği yaşayan tek lonca çarşısıdır. Bakırcı ve kalaycı esnafları da bu çarşı içerisinde çalışmaktadır.
         </item>
     </string-array>
-    <array name="gridImages">
-        <item>@drawable/konak1</item>
-        <item>@drawable/han0</item>
-        <item>@drawable/tabak1</item>
-        <item>@drawable/yemeniciler1</item>
-        <item>@drawable/demirciler1</item>
-    </array>
-    <array name="placeImages">
-        <item>@array/konak</item>
-        <item>@array/cinci_hani</item>
-        <item>@array/tabak</item>
-        <item>@array/yemeniciler</item>
-        <item>@array/demirciler</item>
-    </array>
-    <string-array name="konak">
-        <item>https://i.imgur.com/zcpAnbr.jpg</item>
-        <item>https://i.imgur.com/RQk6pCg.jpg</item>
-        <item>https://i.imgur.com/QdsIpcC.jpg</item>
-        <item>https://i.imgur.com/oPAdToH.jpg</item>
-        <item>https://i.imgur.com/7j9hjoL.jpg</item>
-        <item>https://i.imgur.com/466sKt1.jpg</item>
-        <item>https://i.imgur.com/P78LlEp.jpg</item>
-        <item>https://i.imgur.com/Yvz8oZD.jpg</item>
-        <item>https://i.imgur.com/OyI7HCs.jpg</item>
-    </string-array>
+    <string name="title_activity_main">Anasayfa</string>
 
-    <string-array name="cinci_hani">
-        <item>https://i.imgur.com/FyRmeep.jpg</item>
-        <item>https://i.imgur.com/PFjoYrW.jpg</item>
-        <item>https://i.imgur.com/OHQFAew.jpg</item>
-        <item>https://i.imgur.com/gJiibRM.jpg</item>
-        <item>https://i.imgur.com/33ZQNau.jpg</item>
-        <item>https://i.imgur.com/ZerGqtl.jpg</item>
-        <item>https://i.imgur.com/GKXf47j.jpg</item>
-        <item>https://i.imgur.com/Pe7B3Uk.jpg</item>
-        <item>https://i.imgur.com/cAZdEtB.jpg</item>
-        <item>https://i.imgur.com/1jt70Wm.jpg</item>
-        <item>https://i.imgur.com/vm7J0IU.jpg</item>
-        <item>https://i.imgur.com/srgN5wD.jpg</item>
-        <item>https://i.imgur.com/VepKwtD.jpg</item>
-    </string-array>
-
-    <string-array name="tabak">
-        <item>https://i.imgur.com/FhBKgzt.jpg</item>
-    </string-array>
-
-    <string-array name="yemeniciler">
-        <item>https://i.imgur.com/pSGFrHn.jpg</item>
-    </string-array>
-
-    <string-array name="demirciler">
-        <item>https://i.imgur.com/mw9advH.jpg</item>
-    </string-array>
-
-<!--    END HERE-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <string name="title_activity_main">MainActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tanitim_metni1">
-        Safranbolu takes visitors on a historical journey with its unspoilt historical texture and houses.
+        Safranbolu bozulmamış tarihi dokusu ve evleri ile ziyaret edenleri bir tarih yolculuğuna çıkarmaktadır.
 
     </string>
     <string name="tanitim_metni2">
-        Safranbolu, one of the first values of Turkey to be included in the UNESCO World Heritage List, has been on this list since 1994.
+        Türkiye\’nin UNESCO Dünya Miras Listesi\’ne ilk giren değerlerinden biri olan Safranbolu, 1994 yılından beri bu listede yer almaktadır.
 
     </string>
     <string name="tanitim_metni3">
-        Safranbolu, which gained its current structure in the 17th and 18th centuries, draws attention with its quality that developed in accordance with the Turkish city structure, depending on time and needs, growing by adding to each other, adapting to nature and protecting it.
+        Bugünkü yapısını 17. ve 18. yüzyıllarda kazanan Safranbolu, Türk şehir yapısına uygun olarak, zamana ve ihtiyaca bağlı gelişen, birbirine eklenerek büyüyen ve doğaya uyum sağlayıp onu koruyan niteliği ile dikkat çekmektedir.
     </string>
+
     <string name="gridTitle">
-        ALL PLACES
+        BÜTÜN MEKANLAR
     </string>
     <string name="map">
-        Map
+        Harita
     </string>
     <string name="mapStyle">
-        Map Style
+        Harita Stili
     </string>
     <string name="mapStyleDefault">
-        Standard
+        Standart
     </string>
     <string name="altitude">
-        Altitude
+        Yükseklik
     </string>
     <string name="geofence">
-        Geofence
+        Coğrafi Sınır
     </string>
     <string name="geofenceRadius">
-        Geofence Radius
+        Coğrafi Sınır Yarıçapı
     </string>
     <string name="playVideosIn">
-        Play videos in
+        Video oynatım şekli
     </string>
     <string name="appLanguage">
-        App Language
+        Uygulama Dili
     </string>
+
 
 
 
@@ -370,4 +243,5 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_image">ImageActivity</string>
+
 </resources>

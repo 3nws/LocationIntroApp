@@ -20,7 +20,7 @@
             android:exported="false" />
         <activity
             android:name=".VideoActivity"
-            android:configChanges="orientation|keyboardHidden"
+            android:configChanges="locale|layoutDirection|orientation|keyboardHidden"
             android:exported="false"
             android:label="@string/title_activity_video"
             android:parentActivityName=".MainActivity" >
@@ -30,7 +30,7 @@
         </activity>
         <activity
             android:name=".DetailsActivity"
-            android:configChanges="orientation|keyboardHidden"
+            android:configChanges="locale|layoutDirection|orientation|keyboardHidden"
             android:exported="false"
             android:label="@string/title_activity_details"
             android:parentActivityName=".MainActivity"
@@ -41,7 +41,7 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:configChanges="orientation|keyboardHidden"
+            android:configChanges="locale|layoutDirection|orientation|keyboardHidden"
             android:exported="false"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
@@ -52,7 +52,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:configChanges="orientation|keyboardHidden"
+            android:configChanges="locale|layoutDirection|orientation|keyboardHidden"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait" >

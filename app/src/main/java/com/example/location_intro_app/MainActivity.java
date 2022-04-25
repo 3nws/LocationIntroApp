@@ -1,6 +1,8 @@
 package com.example.location_intro_app;
 
+import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
@@ -21,6 +23,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.Layout;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -57,7 +61,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements
@@ -86,6 +93,9 @@ public class MainActivity extends AppCompatActivity
     float altitude;
     float zoomLevel;
 
+    Context context;
+    String languageChoice;
+
     TabHost host;
 
     private ArrayList<CircleOptions> circleOptions;
@@ -99,6 +109,7 @@ public class MainActivity extends AppCompatActivity
         mapStyle = prefs.getString("list_preference_1", "Standard");
         GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "300"));
         altitude = Float.parseFloat(prefs.getString("altitude", "1000"));
+
         zoomLevel = altitudeToZoom(altitude);
         if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
             Toast.makeText(getApplicationContext(), "Invalid value! Please enter a value between 20-300.", Toast.LENGTH_LONG).show();
@@ -180,6 +191,8 @@ public class MainActivity extends AppCompatActivity
         v2.setShadowLayer(24,4,4,Color.BLACK);
         v3.setShadowLayer(24,4,4,Color.BLACK);
 
+        setLocale();
+
 //        GRID TAB
         gridImages = new ArrayList<>();
         TypedArray imagesArray = getResources().obtainTypedArray(R.array.gridImages);
@@ -220,6 +233,8 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
@@ -386,6 +401,7 @@ public class MainActivity extends AppCompatActivity
         SetMapStyle(map);
         GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "300"));
         altitude = Float.parseFloat(prefs.getString("altitude", "1000"));
+        setLocale();
         zoomLevel = altitudeToZoom(altitude);
         if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
             Toast.makeText(getApplicationContext(), "Invalid value! Please enter a value between 20-300.", Toast.LENGTH_LONG).show();
@@ -405,6 +421,24 @@ public class MainActivity extends AppCompatActivity
             CameraUpdate cameraUpdate = CameraUpdateFactory.zoomTo(zoomLevel);
             map.animateCamera(cameraUpdate);
         }
+    }
+
+    private void setLocale() {
+        languageChoice = prefs.getString("language", "English");
+        if (languageChoice.equals("English")){
+            context = LocaleHelper.setLocale(MainActivity.this, "en");
+        }else{
+            context = LocaleHelper.setLocale(MainActivity.this, "tr");
+        }
+        TextView v1 = findViewById(R.id.textView1);
+        TextView v2 = findViewById(R.id.textView2);
+        TextView v3 = findViewById(R.id.textView3);
+        TextView v4 = findViewById(R.id.allPlaces);
+        v1.setText(context.getResources().getString(R.string.tanitim_metni1));
+        v2.setText(context.getResources().getString(R.string.tanitim_metni2));
+        v3.setText(context.getResources().getString(R.string.tanitim_metni3));
+        v4.setText(context.getResources().getString(R.string.gridTitle));
+
     }
 
     private void SetMapStyle(GoogleMap googleMap) {
