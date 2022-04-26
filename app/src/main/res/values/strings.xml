@@ -21,6 +21,7 @@
     <string name="satellite">Switch to satellite view</string>
     <string name="options">Options</string>
     <string name="exit">Exit</string>
+    <string name="ttsText">Text to speech</string>
 
 
 <!--    START HERE-->

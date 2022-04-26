@@ -23,6 +23,7 @@
     <string name="satellite">Uydu görünümüne geç</string>
     <string name="options">Ayarlar</string>
     <string name="exit">Çıkış</string>
+    <string name="ttsText">Metni dinle</string>
 
 
     <string-array name="details">

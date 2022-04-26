@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Text to Speech"
+                android:text="@string/ttsText"
                 android:textColor="@color/white" />
 
         </LinearLayout>

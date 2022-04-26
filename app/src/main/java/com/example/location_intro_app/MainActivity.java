@@ -216,6 +216,7 @@ public class MainActivity extends AppCompatActivity
                                     View v, int position, long id){
                 // Send intent to SingleViewActivity
                 String[] details = context.getResources().getStringArray(R.array.details);
+                String ttsText = context.getResources().getString(R.string.ttsText);
                 Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
                 String videoID;
                 TypedArray videos = getResources().obtainTypedArray(R.array.videos);
@@ -223,6 +224,7 @@ public class MainActivity extends AppCompatActivity
                 i.putExtra("title", titles[position]);
                 i.putExtra("details", details[position]);
                 i.putExtra("videoID", videoID);
+                i.putExtra("ttsText", ttsText);
                 ArrayList<String> images = new ArrayList<>();
                 TypedArray places = getResources().obtainTypedArray(R.array.placeImages);
                 TypedArray itemDef;

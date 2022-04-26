@@ -40,6 +40,8 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
 
     private String title;
 
+    private String ttsText;
+
     ImageButton btn;
 
     @Override
@@ -58,6 +60,9 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
         images = getIntent().getStringArrayListExtra("images");
         title = getIntent().getStringExtra("title");
         details = getIntent().getStringExtra("details");
+        ttsText = getIntent().getStringExtra("ttsText");
+        TextView tts = findViewById(R.id.ttsText);
+        tts.setText(ttsText);
         toolbar.setTitle(title);
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         TextView detailsView = findViewById(R.id.details);
