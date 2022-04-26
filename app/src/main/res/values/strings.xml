@@ -18,6 +18,9 @@
         <item>English</item>
         <item>Türkçe</item>
     </string-array>
+    <string name="satellite">Switch to satellite view</string>
+    <string name="options">Options</string>
+    <string name="exit">Exit</string>
 
 
 <!--    START HERE-->

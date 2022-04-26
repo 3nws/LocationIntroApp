@@ -15,7 +15,7 @@
             android:title="@string/altitude"
             android:persistent="true"
             android:dialogTitle="@string/altitude"
-            android:defaultValue="14" />
+            android:defaultValue="1000" />
 
     </PreferenceCategory>
 

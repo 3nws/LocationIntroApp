@@ -80,7 +80,7 @@ public class GeofenceTransitionService extends IntentService {
         videoURLS = getResources().getStringArray(R.array.videos);
         // Intent to start the main Activity
         Intent intent;
-        if (videoOption.equals("Harici uygulamada aç")) {
+        if (videoOption.equals("Harici uygulamada aç") || videoOption.equals("External app")) {
             intent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURLS[i]));
         } else{
             intent = new Intent(GeofenceTransitionService.this, VideoActivity.class);

@@ -1,5 +1,6 @@
 package com.example.location_intro_app;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -92,6 +93,7 @@ public class MainActivity extends AppCompatActivity
     float GEOFENCE_RADIUS;
     float altitude;
     float zoomLevel;
+    Locale current;
 
     Context context;
     String languageChoice;
@@ -192,6 +194,7 @@ public class MainActivity extends AppCompatActivity
         v3.setShadowLayer(24,4,4,Color.BLACK);
 
         setLocale();
+        current = getResources().getConfiguration().locale;
 
 //        GRID TAB
         gridImages = new ArrayList<>();
@@ -291,11 +294,19 @@ public class MainActivity extends AppCompatActivity
             case R.id.toggleType: {
                 if (map.getMapType() == GoogleMap.MAP_TYPE_SATELLITE){
                     map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                    item.setTitle("Switch to satellite view");
+                    if (current==new Locale("en")){
+                        item.setTitle("Switch to satellite view");
+                    }else {
+                        item.setTitle("Uydu görünümüne geç");
+                    }
                 }
                 else{
                     map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-                    item.setTitle("Switch to normal view");
+                    if (current==new Locale("en")) {
+                        item.setTitle("Switch to normal view");
+                    }else {
+                        item.setTitle("Normal görünüme geç");
+                    }
                 }
                 return true;
             }
@@ -421,6 +432,21 @@ public class MainActivity extends AppCompatActivity
             CameraUpdate cameraUpdate = CameraUpdateFactory.zoomTo(zoomLevel);
             map.animateCamera(cameraUpdate);
         }
+        invalidateOptionsMenu();
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem toggle = menu.findItem(R.id.toggleType);
+        MenuItem options = menu.findItem(R.id.options);
+        MenuItem exit = menu.findItem(R.id.exit);
+        String uydu = context.getResources().getString(R.string.satellite);
+        String ayar = context.getResources().getString(R.string.options);
+        String cikis = context.getResources().getString(R.string.exit);
+        toggle.setTitle(uydu);
+        options.setTitle(ayar);
+        exit.setTitle(cikis);
+        return super.onPrepareOptionsMenu(menu);
     }
 
     private void setLocale() {
@@ -440,7 +466,6 @@ public class MainActivity extends AppCompatActivity
         v2.setText(context.getResources().getString(R.string.tanitim_metni2));
         v3.setText(context.getResources().getString(R.string.tanitim_metni3));
         v4.setText(context.getResources().getString(R.string.gridTitle));
-
     }
 
     private void SetMapStyle(GoogleMap googleMap) {
