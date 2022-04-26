@@ -201,7 +201,6 @@ public class MainActivity extends AppCompatActivity
         }
         imagesArray.recycle();
         String[] titles = getResources().getStringArray(R.array.geofenceTitles);
-        String[] details = getResources().getStringArray(R.array.details);
         GridView gridview = findViewById(R.id.gridView);
         gridview.setAdapter(new ImageAdapter(this, titles, gridImages));
 
@@ -211,6 +210,7 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent,
                                     View v, int position, long id){
                 // Send intent to SingleViewActivity
+                String[] details = context.getResources().getStringArray(R.array.details);
                 Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
                 String videoID;
                 TypedArray videos = getResources().obtainTypedArray(R.array.videos);
@@ -426,8 +426,10 @@ public class MainActivity extends AppCompatActivity
     private void setLocale() {
         languageChoice = prefs.getString("language", "English");
         if (languageChoice.equals("English")){
+            Locale.setDefault(new Locale("en"));
             context = LocaleHelper.setLocale(MainActivity.this, "en");
         }else{
+            Locale.setDefault(new Locale("tr"));
             context = LocaleHelper.setLocale(MainActivity.this, "tr");
         }
         TextView v1 = findViewById(R.id.textView1);
