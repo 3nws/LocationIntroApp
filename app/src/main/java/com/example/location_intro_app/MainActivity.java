@@ -13,6 +13,7 @@ import android.os.Bundle;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.util.SharedPreferencesUtils;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -195,6 +196,7 @@ public class MainActivity extends AppCompatActivity
 
         setLocale();
         current = getResources().getConfiguration().locale;
+        System.out.println("Current locale: " + current);
 
 //        GRID TAB
         gridImages = new ArrayList<>();
@@ -278,13 +280,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -294,18 +289,18 @@ public class MainActivity extends AppCompatActivity
             case R.id.toggleType: {
                 if (map.getMapType() == GoogleMap.MAP_TYPE_SATELLITE){
                     map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                    if (current==new Locale("en")){
-                        item.setTitle("Switch to satellite view");
-                    }else {
+                    if (current.toString().equals("tr")){
                         item.setTitle("Uydu görünümüne geç");
+                    }else {
+                        item.setTitle("Switch to satellite view");
                     }
                 }
                 else{
                     map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-                    if (current==new Locale("en")) {
-                        item.setTitle("Switch to normal view");
-                    }else {
+                    if (current.toString().equals("tr")) {
                         item.setTitle("Normal görünüme geç");
+                    }else {
+                        item.setTitle("Switch to normal view");
                     }
                 }
                 return true;
@@ -434,6 +429,14 @@ public class MainActivity extends AppCompatActivity
         }
         invalidateOptionsMenu();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
