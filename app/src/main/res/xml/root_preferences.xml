@@ -10,13 +10,6 @@
             android:key="list_preference_1"
             android:title="@string/mapStyle" />
 
-        <EditTextPreference
-            android:key="altitude"
-            android:title="@string/altitude"
-            android:persistent="true"
-            android:dialogTitle="@string/altitude"
-            android:defaultValue="1000" />
-
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/geofence">
@@ -26,7 +19,7 @@
             android:title="@string/geofenceRadius"
             android:persistent="true"
             android:dialogTitle="@string/geofenceRadius"
-            android:defaultValue="100" />
+            android:defaultValue="50" />
 
     </PreferenceCategory>
 
@@ -44,7 +37,7 @@
     <PreferenceCategory app:title="Language">
 
         <ListPreference
-            android:defaultValue="English"
+            android:defaultValue="Turkish"
             android:entries="@array/languages"
             android:entryValues="@array/languages"
             android:key="language"

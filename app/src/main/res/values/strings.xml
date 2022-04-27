@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DigiSafran</string>
+    <string name="app_name">DijiSafran</string>
     <string name="selected_language">English</string>
 
     <string-array name="styles">
