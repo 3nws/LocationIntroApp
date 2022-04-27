@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity
     ArrayList<Drawable> gridImages;
     private MapFragment mapFragment;
 
-    ZoomControls zoom;
     public String mapStyle;
     SharedPreferences prefs;
     float GEOFENCE_RADIUS;
@@ -134,11 +133,6 @@ public class MainActivity extends AppCompatActivity
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        zoom = findViewById(R.id.zoom);
-
-        zoom.setOnZoomInClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomIn()));
-        zoom.setOnZoomOutClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomOut()));
 
         Toolbar toolbar1 = findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar1);
@@ -369,6 +363,7 @@ public class MainActivity extends AppCompatActivity
         map.setOnMapClickListener(this);
         map.setOnMarkerClickListener(this);
         map.getUiSettings().setZoomControlsEnabled(true);
+        map.getUiSettings().setCompassEnabled(true);
         SetMapStyle(googleMap);
     }
 
