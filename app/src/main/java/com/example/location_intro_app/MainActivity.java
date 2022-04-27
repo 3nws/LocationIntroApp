@@ -439,15 +439,15 @@ public class MainActivity extends AppCompatActivity
             // Customise the styling of the base map using a JSON object defined
             // in a raw resource file.
             int res;
-            if (mapStyle.equals("Silver")){
+            if (mapStyle.equals("Silver") || mapStyle.equals("Gümüş")){
                 res = R.raw.silver_style;
             } else if (mapStyle.equals("Retro")) {
                 res = R.raw.retro_style;
-            } else if (mapStyle.equals("Dark")) {
+            } else if (mapStyle.equals("Dark") || mapStyle.equals("Siyah Beyaz")) {
                 res = R.raw.dark_style;
-            } else if (mapStyle.equals("Night")) {
+            } else if (mapStyle.equals("Night") || mapStyle.equals("Gece")) {
                 res = R.raw.night_style;
-            } else if (mapStyle.equals("Aubergine")) {
+            } else if (mapStyle.equals("Aubergine") || mapStyle.equals("Patlıcan")) {
                 res = R.raw.aubergine_style;
             } else {
                 res = R.raw.standard;
