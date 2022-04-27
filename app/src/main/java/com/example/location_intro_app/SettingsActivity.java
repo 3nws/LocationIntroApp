@@ -1,16 +1,22 @@
 package com.example.location_intro_app;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceManager;
+
+import java.util.Locale;
 
 public class SettingsActivity extends AppCompatActivity {
 
     Context context;
+    SharedPreferences settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +32,24 @@ public class SettingsActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
+        settings = PreferenceManager.getDefaultSharedPreferences(this);
+        if (settings.getString("language","").equals("English")) {
+            Locale locale = new Locale("en");
+            Locale.setDefault(locale);
+            Configuration config = new Configuration();
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config,
+                    getBaseContext().getResources().getDisplayMetrics());
+            settings.edit().putString("language", "English").apply();
+        } else {
+            Locale locale = new Locale("tr");
+            Locale.setDefault(locale);
+            Configuration config = new Configuration();
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config,
+                    getBaseContext().getResources().getDisplayMetrics());
+            settings.edit().putString("language", "Turkish").apply();
+        }
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
