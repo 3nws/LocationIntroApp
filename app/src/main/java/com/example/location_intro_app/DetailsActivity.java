@@ -94,7 +94,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
         YouTubePlayerFragment youTubePlayerFragment = (YouTubePlayerFragment) getFragmentManager()
                 .findFragmentById(R.id.youtubePlayerFragment);
 
-        youTubePlayerFragment.initialize("AIzaSyC1AtaTAZ5B3imcXECMjuk8iDlPMlxIKsU", this);
+        youTubePlayerFragment.initialize("AIzaSyABad-G7xVD3InlwWlsOqJBNqulcEAk1-w", this);
     }
 
     private void speech(String charSequence) {
