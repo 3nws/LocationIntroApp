@@ -16,18 +16,28 @@
         android:orientation="vertical">
 
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="?attr/colorPrimary"
+            android:gravity="top"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
         <TabWidget
             android:id="@android:id/tabs"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:background="@color/colorAccent"
-            android:layout_alignParentBottom="true"></TabWidget>
+            android:layout_marginTop="35dp"
+            android:background="@color/colorAccent"></TabWidget>
 
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginBottom="50dp">
+            android:layout_marginTop="85dp">
+
 
             <!-- Home Layout -->
             <LinearLayout
@@ -37,16 +47,10 @@
                 android:background="@color/white"
                 android:orientation="vertical">
 
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="?attr/colorPrimary"
-                    android:minHeight="?attr/actionBarSize"
-                    android:theme="?attr/actionBarTheme" />
 
-                <include layout="@layout/content_tab1"
-                    android:id="@+id/tab1Content"/>
+                <include
+                    android:id="@+id/tab1Content"
+                    layout="@layout/content_tab1" />
 
             </LinearLayout>
 
@@ -59,13 +63,13 @@
                 android:orientation="vertical">
 
                 <!-- GoogleMap fragment -->
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="?attr/colorPrimary"
-                    android:minHeight="?attr/actionBarSize"
-                    android:theme="?attr/actionBarTheme" />
+<!--                <androidx.appcompat.widget.Toolbar-->
+<!--                    android:id="@+id/toolbar2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="?attr/colorPrimary"-->
+<!--                    android:minHeight="?attr/actionBarSize"-->
+<!--                    android:theme="?attr/actionBarTheme" />-->
 
                 <fragment
                     android:name="com.google.android.gms.maps.MapFragment"
@@ -88,13 +92,13 @@
                 android:layout_height="fill_parent"
                 android:orientation="vertical">
 
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="?attr/colorPrimary"
-                    android:minHeight="?attr/actionBarSize"
-                    android:theme="?attr/actionBarTheme" />
+<!--                <androidx.appcompat.widget.Toolbar-->
+<!--                    android:id="@+id/toolbar3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="?attr/colorPrimary"-->
+<!--                    android:minHeight="?attr/actionBarSize"-->
+<!--                    android:theme="?attr/actionBarTheme" />-->
 
 
                 <LinearLayout

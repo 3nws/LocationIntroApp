@@ -141,23 +141,23 @@ public class MainActivity extends AppCompatActivity
         zoom.setOnZoomOutClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomOut()));
 
         Toolbar toolbar1 = findViewById(R.id.toolbar1);
-        Toolbar toolbar2 = findViewById(R.id.toolbar2);
-        Toolbar toolbar3 = findViewById(R.id.toolbar3);
+//        Toolbar toolbar2 = findViewById(R.id.toolbar2);
+//        Toolbar toolbar3 = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar1);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("");
         }
-        setSupportActionBar(toolbar2);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("");
-        }
-        setSupportActionBar(toolbar3);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("");
-        }
+//        setSupportActionBar(toolbar2);
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setTitle("");
+//        }
+//        setSupportActionBar(toolbar3);
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setTitle("");
+//        }
         toolbar1.inflateMenu(R.menu.main_menu);
-        toolbar2.inflateMenu(R.menu.main_menu);
-        toolbar3.inflateMenu(R.menu.main_menu);
+//        toolbar2.inflateMenu(R.menu.main_menu);
+//        toolbar3.inflateMenu(R.menu.main_menu);
 
 
         host = findViewById(R.id.tabHost);
