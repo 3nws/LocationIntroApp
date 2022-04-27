@@ -110,15 +110,15 @@ public class MainActivity extends AppCompatActivity
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         mapStyle = prefs.getString("list_preference_1", "Standard");
-        GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "300"));
+        GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "100"));
         altitude = Float.parseFloat(prefs.getString("altitude", "1000"));
 
         zoomLevel = altitudeToZoom(altitude);
         if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
             Toast.makeText(getApplicationContext(), "Invalid value! Please enter a value between 20-300.", Toast.LENGTH_LONG).show();
-            GEOFENCE_RADIUS = 300;
+            GEOFENCE_RADIUS = 100;
             SharedPreferences.Editor editor = prefs.edit();
-            editor.putString("radius", "300");
+            editor.putString("radius", "100");
             editor.apply();
         }
         if (altitude<300) {
@@ -141,24 +141,11 @@ public class MainActivity extends AppCompatActivity
         zoom.setOnZoomOutClickListener(view -> map.moveCamera(CameraUpdateFactory.zoomOut()));
 
         Toolbar toolbar1 = findViewById(R.id.toolbar1);
-//        Toolbar toolbar2 = findViewById(R.id.toolbar2);
-//        Toolbar toolbar3 = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar1);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("");
         }
-//        setSupportActionBar(toolbar2);
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().setTitle("");
-//        }
-//        setSupportActionBar(toolbar3);
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().setTitle("");
-//        }
         toolbar1.inflateMenu(R.menu.main_menu);
-//        toolbar2.inflateMenu(R.menu.main_menu);
-//        toolbar3.inflateMenu(R.menu.main_menu);
-
 
         host = findViewById(R.id.tabHost);
         host.setup();
@@ -407,15 +394,15 @@ public class MainActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         SetMapStyle(map);
-        GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "300"));
+        GEOFENCE_RADIUS = Float.parseFloat(prefs.getString("radius", "100"));
         altitude = Float.parseFloat(prefs.getString("altitude", "1000"));
         setLocale();
         zoomLevel = altitudeToZoom(altitude);
         if (GEOFENCE_RADIUS<20 || GEOFENCE_RADIUS>300) {
             Toast.makeText(getApplicationContext(), "Invalid value! Please enter a value between 20-300.", Toast.LENGTH_LONG).show();
-            GEOFENCE_RADIUS = 300;
+            GEOFENCE_RADIUS = 100;
             SharedPreferences.Editor editor = prefs.edit();
-            editor.putString("radius", "300");
+            editor.putString("radius", "100");
             editor.apply();
         }
         if (altitude<300) {
