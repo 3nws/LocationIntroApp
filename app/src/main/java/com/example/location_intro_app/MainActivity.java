@@ -257,8 +257,8 @@ public class MainActivity extends AppCompatActivity
 
         switch (item.getItemId()) {
             case R.id.toggleType: {
-                if (map.getMapType() == GoogleMap.MAP_TYPE_SATELLITE){
-                    map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                if (map.getMapType() == GoogleMap.MAP_TYPE_NORMAL){
+                    map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
                     if (current.toString().equals("tr")){
                         item.setTitle("Uydu görünümüne geç");
                     }else {
@@ -266,7 +266,7 @@ public class MainActivity extends AppCompatActivity
                     }
                 }
                 else{
-                    map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                    map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
                     if (current.toString().equals("tr")) {
                         item.setTitle("Normal görünüme geç");
                     }else {
