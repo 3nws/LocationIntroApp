@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.ListPreference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
@@ -33,7 +34,7 @@ public class SettingsActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
         settings = PreferenceManager.getDefaultSharedPreferences(this);
-        if (settings.getString("language","").equals("English")) {
+        if (settings.getString("language","English").equals("English")) {
             Locale locale = new Locale("en");
             Locale.setDefault(locale);
             Configuration config = new Configuration();

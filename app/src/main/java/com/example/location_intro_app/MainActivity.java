@@ -22,6 +22,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.MapStyleOptions;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.ListPreference;
 import androidx.preference.PreferenceManager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -260,17 +261,17 @@ public class MainActivity extends AppCompatActivity
                 if (map.getMapType() == GoogleMap.MAP_TYPE_NORMAL){
                     map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
                     if (current.toString().equals("tr")){
-                        item.setTitle("Uydu görünümüne geç");
+                        item.setTitle("Normal görünüme geç");
                     }else {
-                        item.setTitle("Switch to satellite view");
+                        item.setTitle("Switch to normal view");
                     }
                 }
                 else{
                     map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
                     if (current.toString().equals("tr")) {
-                        item.setTitle("Normal görünüme geç");
+                        item.setTitle("Uydu görünümüne geç");
                     }else {
-                        item.setTitle("Switch to normal view");
+                        item.setTitle("Switch to satellite view");
                     }
                 }
                 return true;
@@ -380,13 +381,27 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+        setLocale();
         MenuItem toggle = menu.findItem(R.id.toggleType);
         MenuItem options = menu.findItem(R.id.options);
         MenuItem exit = menu.findItem(R.id.exit);
-        String uydu = context.getResources().getString(R.string.satellite);
         String ayar = context.getResources().getString(R.string.options);
         String cikis = context.getResources().getString(R.string.exit);
-        toggle.setTitle(uydu);
+        boolean flag = map.getMapType() == GoogleMap.MAP_TYPE_NORMAL;
+        if (flag) {
+            System.out.println("TEST "+ current);
+            if (current.toString().equals("tr")) {
+                toggle.setTitle("Uydu görünümüne geç");
+            } else {
+                toggle.setTitle("Switch to satellite view");
+            }
+        }else{
+            if (current.toString().equals("tr")) {
+                toggle.setTitle("Normal görünüme geç");
+            }else {
+                toggle.setTitle("Switch to normal view");
+            }
+        }
         options.setTitle(ayar);
         exit.setTitle(cikis);
         return super.onPrepareOptionsMenu(menu);
@@ -397,9 +412,11 @@ public class MainActivity extends AppCompatActivity
         if (languageChoice.equals("English")){
             Locale.setDefault(new Locale("en"));
             context = LocaleHelper.setLocale(MainActivity.this, "en");
+            current = new Locale("en");
         }else{
             Locale.setDefault(new Locale("tr"));
             context = LocaleHelper.setLocale(MainActivity.this, "tr");
+            current = new Locale("tr");
         }
         TextView v1 = findViewById(R.id.textView1);
         TextView v2 = findViewById(R.id.textView2);

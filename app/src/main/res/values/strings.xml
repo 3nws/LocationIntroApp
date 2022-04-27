@@ -22,6 +22,8 @@
     <string name="options">Options</string>
     <string name="exit">Exit</string>
     <string name="ttsText">Text to speech</string>
+    <string name="langDefault">English</string>
+    <string name="videoDefault">In app</string>
 
 
 <!--    START HERE-->
