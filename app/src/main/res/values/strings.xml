@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DijiSafran</string>
+    <string name="app_name">DigiSafran</string>
     <string name="selected_language">English</string>
 
     <string-array name="styles">
@@ -32,8 +32,8 @@
         <item>41.2455071</item>
         <item>32.6905126</item>
 <!--        cinci han-->
-        <item>41.2447678</item>
-        <item>32.6933307</item>
+        <item>41.2452793</item>
+        <item>32.6919672</item>
 <!--        tabakhane-->
         <item>41.2424884</item>
         <item>32.6888444</item>
@@ -43,15 +43,35 @@
 <!--        demirciler-->
         <item>41.2440873</item>
         <item>32.6909086</item>
+        <!--    köprülü camii -->
+        <item>41.2447139</item>
+        <item>32.6930467</item>
+        <!--    eski belediye -->
+        <item>41.2446698</item>
+        <item>32.6931054</item>
+<!--        cam teras -->
+        <item>41.2795113</item>
+        <item>32.6825606</item>
+        <!--        ulu camii -->
+        <item>41.2483648</item>
+        <item>32.685976</item>
     </string-array>
     <string-array name="geofenceTitles">
-        <item>Safranbolu Tarihi Hukumet Konagi</item>
+        <item>Safranbolu Historical Government House</item>
         <item>Cinci Han</item>
-        <item>Tabakhane Müzesi</item>
-        <item>Yemeniciler Arastası</item>
-        <item>Demirciler Arastası</item>
+        <item>Tabakhane Museum</item>
+        <item>Yemeniciler Arasta</item>
+        <item>Blacksmiths\' Arasta</item>
+        <item>Koprulu Mehmet Pasha Mosque</item>
+        <item>Old Town Hall</item>
+        <item>Crystal Glass Terrace</item>
+        <item>Ulu Mosque - St. Stefan Church</item>
     </string-array>
     <string-array name="videos">
+        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
+        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
+        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
+        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
         <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
         <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
         <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
@@ -86,6 +106,28 @@
         <item>
             Blacksmiths\' Arastasi Blacksmithing is a traditional profession and craft, which is part of handicrafts whose raw material is metal, and is based on processing and shaping the iron mine with the help of simple hand tools. It is the only living guild bazaar where blacksmithing handicrafts are produced. Coppersmiths and tinsmiths also work in this bazaar.
         </item>
+        <!-- Köprülü camii-->
+        <item>
+            Köprülü Mehmet Pasha Mosque was built in 1661 by Mehmet Pasha. The mosque, which was previously restored in 1970 and 1995, was restored in 2019.\n\n
+            There is a large arched door at the entrance of the courtyard of the mosque. In the building located in the courtyard of the mosque, there is a fountain, a timetable, a library and a sundial. There are 95 Ottoman sundials and one is the sundial in Mehmet Pasha Mosque with a bridge.\n\n
+            The Köprülü Mehmet Pasha Mosque continues to be built among the people. In the story, the practice and fulfillment of the Ottoman Grand Vizier Köprülü Mehmet Pasha\'s training to be built in a mosque instead of the dervish lodge where he prayed for the first time in Safranbolu.
+        </item>
+        <!-- Eski Belediye-->
+        <item>
+            The Old Town Hall is located in the Old Bazaar next to historical monuments such as Köprülü Mehmet Pasha Mosque and Cinci Han. It was built by Refik Güler in 1922.
+        </item>
+        <!-- Kristal cam teras-->
+        <item>
+            Crystal Glass Terrace was built on Tokatlı Canyon. Its width is 11 meters, while its height is 80 meters. The glass terrace, which can carry an average of 75 tons of weight, consists of 3 glasses of 3 cm thickness.\n\n
+            It has an area of approximately 100 square meters. The Crystal Glass Terrace has a simultaneous carrying limit of 400 people, but 30 people are allowed during the trip.\n\n
+            Thanks to the cafe located above the Crystal Glass Terrace, it is also possible to drink tea and coffee with the view.
+        </item>
+        <!-- Ulu camii-->
+        <item>
+            St. Stephen\'s Church, which remained from the Greeks, was built as a church in 1872 and converted into a mosque in 1956 and its name was changed to Ulu Mosque.\n\n
+            Inside the building, there is an inscription written in Greek alphabet that witnessed the construction time. In this inscription, Queen Eudokia mentions that she got rid of the pain in her leg and that she built a church in the city of Theodor on April 8, 515.\n\n
+            Based on the city\'s old name of Theodoroupolis, there are rumors that Theodor was a Governor or an Ionian princess, although the clarity is not clear.
+        </item>
     </string-array>
     <array name="gridImages">
         <item>@drawable/konak1</item>
@@ -93,6 +135,10 @@
         <item>@drawable/tabak1</item>
         <item>@drawable/yemeniciler1</item>
         <item>@drawable/demirciler1</item>
+        <item>@drawable/koprulu1</item>
+        <item>@drawable/eskibel1</item>
+        <item>@drawable/camteras1</item>
+        <item>@drawable/ulucamii1</item>
     </array>
     <array name="placeImages">
         <item>@array/konak</item>
@@ -100,7 +146,12 @@
         <item>@array/tabak</item>
         <item>@array/yemeniciler</item>
         <item>@array/demirciler</item>
+        <item>@array/koprulu</item>
+        <item>@array/eskibel</item>
+        <item>@array/camteras</item>
+        <item>@array/ulucamii</item>
     </array>
+
     <string-array name="konak">
         <item>https://i.imgur.com/zcpAnbr.jpg</item>
         <item>https://i.imgur.com/RQk6pCg.jpg</item>
@@ -139,6 +190,22 @@
 
     <string-array name="demirciler">
         <item>https://i.imgur.com/mw9advH.jpg</item>
+    </string-array>
+
+    <string-array name="koprulu">
+        <item>https://i.imgur.com/fm1cNWb.jpg</item>
+    </string-array>
+
+    <string-array name="eskibel">
+        <item>https://i.imgur.com/hnGDYqA.png</item>
+    </string-array>
+
+    <string-array name="camteras">
+        <item>https://i.imgur.com/7Xmd7Rg.jpg</item>
+    </string-array>
+
+    <string-array name="ulucamii">
+        <item>https://i.imgur.com/EUlUpVp.jpg</item>
     </string-array>
 
 <!--    END HERE-->
@@ -195,7 +262,7 @@
         Safranbolu, which gained its current structure in the 17th and 18th centuries, draws attention with its quality that developed in accordance with the Turkish city structure, depending on time and needs, growing by adding to each other, adapting to nature and protecting it.
     </string>
     <string name="gridTitle">
-        ALL PLACES
+        ALL LANDMARKS
     </string>
     <string name="map">
         Map

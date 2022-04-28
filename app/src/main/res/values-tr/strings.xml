@@ -28,6 +28,19 @@
     <string name="videoDefault">Uygulamada kal</string>
 
 
+    <string-array name="geofenceTitles">
+        <item>Safranbolu Tarihi Hukumet Konagi</item>
+        <item>Cinci Han</item>
+        <item>Tabakhane Müzesi</item>
+        <item>Yemeniciler Arastası</item>
+        <item>Demirciler Arastası</item>
+        <item>Köprülü Mehmet Paşa Camii</item>
+        <item>Eski Belediye Binası</item>
+        <item>Kristam Cam Teras</item>
+        <item>Ulu Camii - Aziz Stefan Kilisesi</item>
+    </string-array>
+
+
     <string-array name="details">
         <!--        konak-->
         <item>
@@ -48,6 +61,28 @@
         <!--        demirciler-->
         <item>
             Demircilik, hammaddesi maden olan el sanatları bünyesinde yer alan ve demir madenini ısıtarak basit el aletleri yardımıyla işleme ve biçimlendirmeye dayanan geleneksel bir meslek ve zanaattır Safranbolu’da bunun demirciler Arastası İzzet Mehmet Paşa Camisi altından geçen Akçasu deresinin iki yakasına kurulan çarşı sıcak, soğuk demircilik el sanatlarının üretildiği yaşayan tek lonca çarşısıdır. Bakırcı ve kalaycı esnafları da bu çarşı içerisinde çalışmaktadır.
+        </item>
+        <!-- Köprülü camii-->
+        <item>
+            Köprülü Mehmet Paşa Cami 1661 yılında Mehmet Paşa tarafından yaptırılmıştır. Daha önce 1970 ve 1995\’te restore edilmiş olan Cami 2019 yılında tekrar restore edilmiştir.\n\n
+            Caminin avlu girişinde büyük kemerli kapı bulunmaktadır. Cami avlusunda bulunan binada şadırvan, muvakkithane, kütüphane ve güneş saati yer almaktadır. Osmanlı dönemine ait 95 tane güneş saati bulunmaktadır ve bir tanesi Köprülü Mehmet Paşa Cami\’deki güneş saatidir.\n\n
+            Köprülü Mehmet Pasa Cami\’nin halk arasında anlatılan yapılış hikayesi bulunmaktadır. Hikayede Osmanlı Sadrazamı Köprülü Mehmet Paşa\’nın Safranbolu\’ya sürgün edilmesinin ardından ilk namaz kıldığı tekkenin yerine, affedilmesi durumunda cami yaptıracağına dair adakta bulunması ve sözünü yerine getirmesi anlatılmaktadır.
+        </item>
+        <!-- Eski Belediye-->
+        <item>
+            Eski Belediye Binası Eskiçarşı\’da Köprülü Mehmet Paşa Cami, Cinci Hanı gibi tarihi yapıtların yanında bulunmaktadır. Refik güler tarafından 1922 yılında yaptırılmıştır.
+        </item>
+        <!-- Kristal cam teras-->
+        <item>
+            Kristal Cam Teras Tokatlı Kanyonu\’nun üzerine yapılmıştır. Genişliği 11 metre iken, yüksekliği 80 metredir. Ortalama 75 ton ağırlık taşıyabilen cam teras, 3 cm kalınlığında 3 tane camdan oluşmaktadır.\n\n
+            Yaklaşık 100 m²\’lik bir alanı vardır. Kristal Cam Teras eş zamanlı 400 kişiyi taşıma sınırına sahiptir ancak seyahat sırasında 30 kişinin girmesine izin verilmektedir.\n\n
+            Kristal Cam Teras\’ın yukarısında bulunan cafe sayesinde manzara eşliğinde çay, kahve içmek de mümkün oluyor.
+        </item>
+        <!-- Ulu camii-->
+        <item>
+            Rumlardan kalmış olan Aziz Stefan Kilisesi 1872 yılında kilise olarak yapılmış 1956 yılında camiye çevrilmiş ve ismi Ulu Cami olmuştur.\n\n
+            Yapının içerisinde Yunan alfabesiyle yazılmış yapım zamanına şahitlik etmiş kitabe bulunmaktadır. Bu kitabede Kraliçe Eudokia bacağındaki ağrılardan kurtulduğunu söz ederek buna ithafen 8 Nisan 515 tarihinde, Theodor\’un şehrinde bir kilise yaptırdığı anlatılmaktadır.\n\n
+            Kentin eski Theodoroupolis isminden yola çıkarak Theodor\’un -netliği belli olmamakla birlikte- zamanında Vali veya İon prensesi olduğuna dair rivayetler vardır.
         </item>
     </string-array>
     <string name="title_activity_main">Anasayfa</string>

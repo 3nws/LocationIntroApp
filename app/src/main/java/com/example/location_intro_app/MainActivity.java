@@ -28,6 +28,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Layout;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -174,7 +175,7 @@ public class MainActivity extends AppCompatActivity
             gridImages.add(imagesArray.getDrawable(i));
         }
         imagesArray.recycle();
-        String[] titles = getResources().getStringArray(R.array.geofenceTitles);
+        String[] titles = context.getResources().getStringArray(R.array.geofenceTitles);
         GridView gridview = findViewById(R.id.gridView);
         gridview.setAdapter(new ImageAdapter(this, titles, gridImages));
 
