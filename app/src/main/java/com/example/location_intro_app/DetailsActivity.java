@@ -32,6 +32,8 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
 
     private ArrayList<String> images;
 
+    private ArrayList<String> highResImages;
+
     private String details;
 
     private String videoID;
@@ -58,6 +60,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
 
         toolbar.inflateMenu(R.menu.main_menu);
         images = getIntent().getStringArrayListExtra("images");
+        highResImages = getIntent().getStringArrayListExtra("highResImages");
         title = getIntent().getStringExtra("title");
         details = getIntent().getStringExtra("details");
         ttsText = getIntent().getStringExtra("ttsText");
@@ -71,7 +74,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
 
         ViewPager viewPager = findViewById(R.id.view_pager);
         if (viewPager != null) {
-            ViewPagerAdapter adapter = new ViewPagerAdapter(this, images);
+            ViewPagerAdapter adapter = new ViewPagerAdapter(this, images, highResImages);
             viewPager.setAdapter(adapter);
         }
 

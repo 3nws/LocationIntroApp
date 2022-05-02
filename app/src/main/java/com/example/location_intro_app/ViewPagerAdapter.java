@@ -18,11 +18,12 @@ import java.util.ArrayList;
 
 public class ViewPagerAdapter extends PagerAdapter {
     private Context context;
-    private ArrayList<String> images;
+    private ArrayList<String> images, highResImages;
 
-    ViewPagerAdapter(Context context, ArrayList<String> images) {
+    ViewPagerAdapter(Context context, ArrayList<String> images, ArrayList<String> highResImages) {
         this.context = context;
         this.images = images;
+        this.highResImages = highResImages;
     }
 
     @Override
@@ -46,10 +47,9 @@ public class ViewPagerAdapter extends PagerAdapter {
                 .into(imageView);
         container.addView(imageView);
 
-//        High res images instead maybe?
         imageView.setOnClickListener(view -> {
             Intent i = new Intent(context, ImageActivity.class);
-            i.putExtra("image", images.get(position));
+            i.putExtra("image", highResImages.get(position));
             context.startActivity(i);
         });
         return imageView;

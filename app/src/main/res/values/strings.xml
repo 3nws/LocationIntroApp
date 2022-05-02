@@ -151,6 +151,17 @@
         <item>@array/camteras</item>
         <item>@array/ulucamii</item>
     </array>
+    <array name="highResPlaceImages">
+        <item>@array/konakH</item>
+        <item>@array/cinci_haniH</item>
+        <item>@array/tabakH</item>
+        <item>@array/yemenicilerH</item>
+        <item>@array/demircilerH</item>
+        <item>@array/kopruluH</item>
+        <item>@array/eskibelH</item>
+        <item>@array/camterasH</item>
+        <item>@array/ulucamiiH</item>
+    </array>
 
     <string-array name="konak">
         <item>https://i.imgur.com/zcpAnbr.jpg</item>
@@ -164,7 +175,35 @@
         <item>https://i.imgur.com/OyI7HCs.jpg</item>
     </string-array>
 
+    <string-array name="konakH">
+        <item>https://i.imgur.com/jIGIFSi.jpg</item>
+        <item>https://i.imgur.com/DUuDySG.jpg</item>
+        <item>https://i.imgur.com/8lGBXHL.jpg</item>
+        <item>https://i.imgur.com/zt8cZZe.jpg</item>
+        <item>https://i.imgur.com/gBbslAY.jpg</item>
+        <item>https://i.imgur.com/rPMBO85.jpg</item>
+        <item>https://i.imgur.com/JThovHZ.jpg</item>
+        <item>https://i.imgur.com/4XsDOMC.jpg</item>
+        <item>https://i.imgur.com/CUqIVdF.jpg</item>
+    </string-array>
+
     <string-array name="cinci_hani">
+        <item>https://i.imgur.com/FyRmeep.jpg</item>
+        <item>https://i.imgur.com/PFjoYrW.jpg</item>
+        <item>https://i.imgur.com/OHQFAew.jpg</item>
+        <item>https://i.imgur.com/gJiibRM.jpg</item>
+        <item>https://i.imgur.com/33ZQNau.jpg</item>
+        <item>https://i.imgur.com/ZerGqtl.jpg</item>
+        <item>https://i.imgur.com/GKXf47j.jpg</item>
+        <item>https://i.imgur.com/Pe7B3Uk.jpg</item>
+        <item>https://i.imgur.com/cAZdEtB.jpg</item>
+        <item>https://i.imgur.com/1jt70Wm.jpg</item>
+        <item>https://i.imgur.com/vm7J0IU.jpg</item>
+        <item>https://i.imgur.com/srgN5wD.jpg</item>
+        <item>https://i.imgur.com/VepKwtD.jpg</item>
+    </string-array>
+
+    <string-array name="cinci_haniH">
         <item>https://i.imgur.com/FyRmeep.jpg</item>
         <item>https://i.imgur.com/PFjoYrW.jpg</item>
         <item>https://i.imgur.com/OHQFAew.jpg</item>
@@ -184,7 +223,15 @@
         <item>https://i.imgur.com/FhBKgzt.jpg</item>
     </string-array>
 
+    <string-array name="tabakH">
+        <item>https://i.imgur.com/FhBKgzt.jpg</item>
+    </string-array>
+
     <string-array name="yemeniciler">
+        <item>https://i.imgur.com/pSGFrHn.jpg</item>
+    </string-array>
+
+    <string-array name="yemenicilerH">
         <item>https://i.imgur.com/pSGFrHn.jpg</item>
     </string-array>
 
@@ -192,7 +239,15 @@
         <item>https://i.imgur.com/mw9advH.jpg</item>
     </string-array>
 
+    <string-array name="demircilerH">
+        <item>https://i.imgur.com/mw9advH.jpg</item>
+    </string-array>
+
     <string-array name="koprulu">
+        <item>https://i.imgur.com/fm1cNWb.jpg</item>
+    </string-array>
+
+    <string-array name="kopruluH">
         <item>https://i.imgur.com/fm1cNWb.jpg</item>
     </string-array>
 
@@ -200,11 +255,23 @@
         <item>https://i.imgur.com/hnGDYqA.png</item>
     </string-array>
 
+    <string-array name="eskibelH">
+        <item>https://i.imgur.com/hnGDYqA.png</item>
+    </string-array>
+
     <string-array name="camteras">
         <item>https://i.imgur.com/7Xmd7Rg.jpg</item>
     </string-array>
 
+    <string-array name="camterasH">
+        <item>https://i.imgur.com/7Xmd7Rg.jpg</item>
+    </string-array>
+
     <string-array name="ulucamii">
+        <item>https://i.imgur.com/EUlUpVp.jpg</item>
+    </string-array>
+
+    <string-array name="ulucamiiH">
         <item>https://i.imgur.com/EUlUpVp.jpg</item>
     </string-array>
 

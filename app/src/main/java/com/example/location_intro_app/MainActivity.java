@@ -196,16 +196,25 @@ public class MainActivity extends AppCompatActivity
                 i.putExtra("videoID", videoID);
                 i.putExtra("ttsText", ttsText);
                 ArrayList<String> images = new ArrayList<>();
+                ArrayList<String> highResImages = new ArrayList<>();
                 TypedArray places = getResources().obtainTypedArray(R.array.placeImages);
+                TypedArray placesH = getResources().obtainTypedArray(R.array.highResPlaceImages);
                 TypedArray itemDef;
+                TypedArray itemDefH;
                 int resId = places.getResourceId(position, 0);
+                int resIdH = placesH.getResourceId(position, 0);
                 itemDef = getResources().obtainTypedArray(resId);
+                itemDefH = getResources().obtainTypedArray(resIdH);
                 for (int j = 0;j<itemDef.length();j++){
                     images.add(itemDef.getString(j));
+                    highResImages.add(itemDefH.getString(j));
                 }
                 places.recycle();
+                placesH.recycle();
                 itemDef.recycle();
+                itemDefH.recycle();
                 i.putStringArrayListExtra("images", images);
+                i.putStringArrayListExtra("highResImages", highResImages);
                 startActivityForResult(i, 2);
             }
         });
