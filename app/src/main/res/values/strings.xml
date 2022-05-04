@@ -297,10 +297,12 @@
 
     <string-array name="ulucamii">
         <item>https://i.imgur.com/EUlUpVp.jpg</item>
+        <item>https://i.imgur.com/UnC7iIT.jpg</item>
     </string-array>
 
     <string-array name="ulucamiiH">
         <item>https://i.imgur.com/hiEdZM5.jpg</item>
+        <item>https://i.imgur.com/UnC7iIT.jpg</item>
     </string-array>
 
 <!--    END HERE-->
