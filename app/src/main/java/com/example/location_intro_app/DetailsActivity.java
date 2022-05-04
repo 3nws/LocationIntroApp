@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.Voice;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -82,6 +83,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
             @Override
             public void onInit(int status) {
                 ttobj.setLanguage(Locale.US);
+                ttobj.setSpeechRate(Float.parseFloat("0.6"));
             }
         });
 
@@ -109,7 +111,7 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
         String testStri= charSequence.substring(position,sizeOfChar);
 
 
-        int next = 20;
+        int next = 255;
         int pos =0;
         while(true) {
             String temp="";
@@ -122,8 +124,8 @@ public class DetailsActivity extends AppCompatActivity implements YouTubePlayer.
                 params.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, temp);
                 ttobj.speak(temp, TextToSpeech.QUEUE_ADD, params);
 
-                pos = pos + 20;
-                next = next + 20;
+                pos = pos + 255;
+                next = next + 255;
 
             } catch (Exception e) {
                 temp = testStri.substring(pos, testStri.length());
