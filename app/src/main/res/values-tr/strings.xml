@@ -26,6 +26,9 @@
     <string name="ttsText">Metni dinle</string>
     <string name="langDefault">English</string>
     <string name="videoDefault">Uygulamada kal</string>
+    <string name="enableGps">GPS şu anda kapalı, aktifleştirmek ister misiniz?</string>
+    <string name="no">Hayır</string>
+    <string name="yes">Evet</string>
 
 
     <string-array name="geofenceTitles">

@@ -24,6 +24,9 @@
     <string name="ttsText">Text to speech</string>
     <string name="langDefault">English</string>
     <string name="videoDefault">In app</string>
+    <string name="enableGps">Your GPS seems to be disabled, do you want to enable it?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
 
 
 <!--    START HERE-->

@@ -2,12 +2,14 @@ package com.example.location_intro_app;
 
 import android.content.ClipData;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -21,11 +23,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.MapStyleOptions;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceManager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.provider.Settings;
 import android.text.Layout;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -83,6 +87,8 @@ public class MainActivity extends AppCompatActivity
     private ActivityMainBinding binding;
 
     private static final String TAG = MainActivity.class.getSimpleName();
+
+    LocationManager manager;
 
     private GoogleMap map;
     private GoogleApiClient googleApiClient;
@@ -145,6 +151,8 @@ public class MainActivity extends AppCompatActivity
         spec.setIndicator("", getResources().getDrawable(R.drawable.map));
         host.addTab(spec);
 
+
+        manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
         // initialize GoogleMaps
         initGMaps();
 
@@ -218,6 +226,35 @@ public class MainActivity extends AppCompatActivity
                 startActivityForResult(i, 2);
             }
         });
+    }
+
+    public void enableGps(){
+
+        if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
+            buildAlertMessageNoGps();
+        }
+        startLocationUpdates();
+    }
+
+    private void buildAlertMessageNoGps() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        String enableGpsMessage = context.getResources().getString(R.string.enableGps);;
+        String no = context.getResources().getString(R.string.no);;
+        String yes = context.getResources().getString(R.string.yes);
+        builder.setMessage(enableGpsMessage)
+                .setCancelable(false)
+                .setPositiveButton(yes, new DialogInterface.OnClickListener() {
+                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                    }
+                })
+                .setNegativeButton(no, new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        dialog.cancel();
+                    }
+                });
+        final AlertDialog alert = builder.create();
+        alert.show();
     }
 
 
@@ -329,7 +366,7 @@ public class MainActivity extends AppCompatActivity
                 if ( grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED ){
                     // Permission granted
-                    startLocationUpdates();
+                    enableGps();
 
                 } else {
                     // Permission denied
@@ -379,6 +416,7 @@ public class MainActivity extends AppCompatActivity
             editor.apply();
         }
         invalidateOptionsMenu();
+        startLocationUpdates();
     }
 
     @Override
@@ -491,6 +529,11 @@ public class MainActivity extends AppCompatActivity
 
     // Start location Updates
     private void startLocationUpdates(){
+        if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
+            return;
+        }
+        if ( !googleApiClient.isConnected() )
+            return;
         locationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(UPDATE_INTERVAL)
