@@ -26,6 +26,7 @@ import com.google.android.gms.location.GeofencingEvent;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 public class GeofenceTransitionService extends IntentService {
@@ -39,6 +40,10 @@ public class GeofenceTransitionService extends IntentService {
     }
 
     private String videoOption;
+
+    Context context;
+
+    Locale current;
 
     SharedPreferences prefs;
 
@@ -55,6 +60,17 @@ public class GeofenceTransitionService extends IntentService {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         videoOption = prefs.getString("list_preference_2", "External app");
 
+        String languageChoice = prefs.getString("language", "English");
+        if (languageChoice.equals("English")){
+            Locale.setDefault(new Locale("en"));
+            context = LocaleHelper.setLocale(GeofenceTransitionService.this, "en");
+            current = new Locale("en");
+        }else{
+            Locale.setDefault(new Locale("tr"));
+            context = LocaleHelper.setLocale(GeofenceTransitionService.this, "tr");
+            current = new Locale("tr");
+        }
+
         createNotificationChannel();
         mBuilder = new NotificationCompat.Builder(this, "42");
 
@@ -67,11 +83,12 @@ public class GeofenceTransitionService extends IntentService {
             int idx = getGeofenceTransitionVideoIndex(geoFenceTransition, triggeringGeofences ) / 2;
             // Play video and log
             mBuilder.setSmallIcon(R.mipmap.ic_launcher);
-            String[] titles = getResources().getStringArray(R.array.geofenceTitles);
-            String[] details = getResources().getStringArray(R.array.details);
-            String notificationText = getResources().getString(R.string.notText) + " " + titles[idx];
-            mBuilder.setContentTitle(getResources().getString(R.string.app_name));
+            String[] titles = context.getResources().getStringArray(R.array.geofenceTitles);
+            String[] details = context.getResources().getStringArray(R.array.details);
+            String notificationText = context.getResources().getString(R.string.notText) + " " + titles[idx];
+            mBuilder.setContentTitle(context.getResources().getString(R.string.app_name));
             mBuilder.setContentText(notificationText);
+            mBuilder.setAutoCancel(true);
 
             Intent resultIntent = new Intent(this, DetailsActivity.class);
             TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
