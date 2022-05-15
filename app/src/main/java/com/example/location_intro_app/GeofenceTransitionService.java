@@ -2,6 +2,7 @@ package com.example.location_intro_app;
 
 import android.app.IntentService;
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
@@ -11,6 +12,7 @@ import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -30,7 +32,7 @@ public class GeofenceTransitionService extends IntentService {
 
     private static final String TAG = GeofenceTransitionService.class.getSimpleName();
 
-    NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
+    NotificationCompat.Builder mBuilder;
 
     public GeofenceTransitionService() {
         super(TAG);
@@ -53,13 +55,16 @@ public class GeofenceTransitionService extends IntentService {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         videoOption = prefs.getString("list_preference_2", "External app");
 
+        createNotificationChannel();
+        mBuilder = new NotificationCompat.Builder(this, "42");
+
         int geoFenceTransition = geofencingEvent.getGeofenceTransition();
         // Check if the transition type is of interest
         if (geoFenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER) {
             // Get the geofence that were triggered
             List<Geofence> triggeringGeofences = geofencingEvent.getTriggeringGeofences();
 
-            int idx = getGeofenceTransitionVideoIndex(geoFenceTransition, triggeringGeofences );
+            int idx = getGeofenceTransitionVideoIndex(geoFenceTransition, triggeringGeofences ) / 2;
             // Play video and log
             mBuilder.setSmallIcon(R.mipmap.ic_launcher);
             String[] titles = getResources().getStringArray(R.array.geofenceTitles);
@@ -67,10 +72,10 @@ public class GeofenceTransitionService extends IntentService {
             String notificationText = getResources().getString(R.string.notText) + " " + titles[idx];
             mBuilder.setContentTitle(getResources().getString(R.string.app_name));
             mBuilder.setContentText(notificationText);
+
             Intent resultIntent = new Intent(this, DetailsActivity.class);
             TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
             stackBuilder.addParentStack(DetailsActivity.class);
-
             String ttsText = getResources().getString(R.string.ttsText);
             String videoID;
             TypedArray videos = getResources().obtainTypedArray(R.array.videos);
@@ -102,10 +107,27 @@ public class GeofenceTransitionService extends IntentService {
             stackBuilder.addNextIntent(resultIntent);
             PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
             mBuilder.setContentIntent(resultPendingIntent);
-            NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
+            NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
             mNotificationManager.notify(42, mBuilder.build());
+
             playVideo(idx);
+        }
+    }
+
+    private void createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "digiSafranNotChannel";
+            String description = "Digisafran notification channel";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("42", name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
         }
     }
 
@@ -121,7 +143,6 @@ public class GeofenceTransitionService extends IntentService {
     }
 
     private void playVideo(int i) {
-        i /= 2;
         String[] videoURLS;
         videoURLS = getResources().getStringArray(R.array.videos);
         // Intent to start the main Activity
