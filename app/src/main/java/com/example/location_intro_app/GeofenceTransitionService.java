@@ -30,6 +30,8 @@ public class GeofenceTransitionService extends IntentService {
 
     private static final String TAG = GeofenceTransitionService.class.getSimpleName();
 
+    NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
+
     public GeofenceTransitionService() {
         super(TAG);
     }
@@ -59,6 +61,50 @@ public class GeofenceTransitionService extends IntentService {
 
             int idx = getGeofenceTransitionVideoIndex(geoFenceTransition, triggeringGeofences );
             // Play video and log
+            mBuilder.setSmallIcon(R.mipmap.ic_launcher);
+            String[] titles = getResources().getStringArray(R.array.geofenceTitles);
+            String[] details = getResources().getStringArray(R.array.details);
+            String notificationText = getResources().getString(R.string.notText) + " " + titles[idx];
+            mBuilder.setContentTitle(getResources().getString(R.string.app_name));
+            mBuilder.setContentText(notificationText);
+            Intent resultIntent = new Intent(this, DetailsActivity.class);
+            TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+            stackBuilder.addParentStack(DetailsActivity.class);
+
+            String ttsText = getResources().getString(R.string.ttsText);
+            String videoID;
+            TypedArray videos = getResources().obtainTypedArray(R.array.videos);
+            videoID = videos.getString(idx).split("=")[1];
+            resultIntent.putExtra("title", titles[idx]);
+            resultIntent.putExtra("details", details[idx]);
+            resultIntent.putExtra("videoID", videoID);
+            resultIntent.putExtra("ttsText", ttsText);
+            ArrayList<String> images = new ArrayList<>();
+            ArrayList<String> highResImages = new ArrayList<>();
+            TypedArray places = getResources().obtainTypedArray(R.array.placeImages);
+            TypedArray placesH = getResources().obtainTypedArray(R.array.highResPlaceImages);
+            TypedArray itemDef;
+            TypedArray itemDefH;
+            int resId = places.getResourceId(idx, 0);
+            int resIdH = placesH.getResourceId(idx, 0);
+            itemDef = getResources().obtainTypedArray(resId);
+            itemDefH = getResources().obtainTypedArray(resIdH);
+            for (int j = 0;j<itemDef.length();j++){
+                images.add(itemDef.getString(j));
+                highResImages.add(itemDefH.getString(j));
+            }
+            places.recycle();
+            placesH.recycle();
+            itemDef.recycle();
+            itemDefH.recycle();
+            resultIntent.putStringArrayListExtra("images", images);
+            resultIntent.putStringArrayListExtra("highResImages", highResImages);
+            stackBuilder.addNextIntent(resultIntent);
+            PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
+            mBuilder.setContentIntent(resultPendingIntent);
+            NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+            mNotificationManager.notify(42, mBuilder.build());
             playVideo(idx);
         }
     }

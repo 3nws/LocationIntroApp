@@ -27,6 +27,7 @@
     <string name="enableGps">Your GPS seems to be disabled, do you want to enable it?</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
+    <string name="notText">You are close to: </string>
 
 
 <!--    START HERE-->

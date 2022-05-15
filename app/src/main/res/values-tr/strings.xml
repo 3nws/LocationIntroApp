@@ -29,6 +29,7 @@
     <string name="enableGps">GPS şu anda kapalı, aktifleştirmek ister misiniz?</string>
     <string name="no">Hayır</string>
     <string name="yes">Evet</string>
+    <string name="notText">Şuraya yakınsınız: </string>
 
 
     <string-array name="geofenceTitles">
