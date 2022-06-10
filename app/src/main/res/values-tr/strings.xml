@@ -33,76 +33,27 @@
 
 
     <string-array name="geofenceTitles">
-        <item>Safranbolu Tarihi Hukumet Konagi</item>
-        <item>Cinci Han</item>
-        <item>Tabakhane Müzesi</item>
-        <item>Yemeniciler Arastası</item>
-        <item>Demirciler Arastası</item>
-        <item>Köprülü Mehmet Paşa Camii</item>
-        <item>Eski Belediye Binası</item>
-        <item>Kristal Cam Teras</item>
-        <item>Ulu Camii - Aziz Stefan Kilisesi</item>
+<!--        TITLES GO HERE-->
     </string-array>
 
 
     <string-array name="details">
-        <!--        konak-->
-        <item>
-            1904-1906 yılları arasında kale olarak adlandırılan tepeye inşa edilen Hükûmet Konağı 19 Ocak 1976 yılına kadar hükûmet konağı olarak kullanılmış ve bu tarihte çıkan bir yangın sonucunda kullanılamaz hale gelmiştir. 2000 yılında Kültür Bakanlığı tarafından başlatılan restorasyon çalışmalarına başlanmış ve 2006 yılında tamamlanarak, Kent Tarihi Müzesi olarak hizmete açılmıştır. Şuan müze olarak kullanılan binada girişler ücretli olup 2 katlıdır Alt katta Safranbolu‘da halkın kullandığı tarihi eser niteliğinde malzemeler Safranbolu’nun eski resimleri, eski el yazması kitaplar yer almaktadır. Üst katta makam odası ve çeşitli eserler yer alır. En alt kat yani mahsende farklı esnaf kolları kullandıkları malzemelerle birlikte balmumu heykeller ve resimlerle tanıtılmaktadır.
-        </item>
-        <!--        cinci han-->
-        <item>
-            Cinci Hanı Safranbolulu Karabaşzade Hüseyin Efendi (Cinci Hoca) tarafından 1645 yılında yapılmıştır. Tarihi İpekyolu\'nun etkinliğini yitirmeye başladığı 20\'nci yüzyıla kadar kervansaray olarak kullanılan Cinci Hanı, 20\'nci yüzyıl başlarından itibaren Safranbolu esnafı tarafından depo olarak kullanılmış daha sonra gerekli restorasyonu yapılaraktan sonrası Burası hem otel hem restoran olarak hizmet veriyor. Han da bulunan pâyeler üzerine oturan sivri kemerli alt kat revakları girişin iki yanında bulunan ve karşısındaki cephede helâların önüne gelen kısımda beşik tonozla, diğer kısımlarda ise tamamen çapraz tonozla örtülmüştür. Revakların arkasında odalar bulunmaktadır ve köşelerdekiler hariç bu odalar bir pencere ve kapı ile revaklara açılmaktadır. Tamamı beşik tonozla örtülü olan odaların içlerinde bulunan birer ocak ve niş vardır. Dikdörtgen avlunun ortasında ise orijinalinin sekiz köşeli olduğu anlaşılan sonradan yapılma olan on bir köşeli bir havuz yer almaktadır. Girişin karşısındaki beşik tonozla örtülü revakın arkasında ve 7 m. uzunluğundaki holün sonunda bulunan kısım beşik tonozla örtülü helâlara ayrılmıştır. Girişin sağında kalan revakın arkasında ahır ve depolar bulunmaktadır. 300 metrelik yer altı tüneliyle kentin atık suları ile kanalizasyonların disipline edildiği büyük bir kanyonun üzerinde yer alıyor. Bu hanın 20 yıl altyapı projesi sürmüştür Yapı, 23,50 × 11,50 m. boyutlarındaki dikdörtgen bir avlunun etrafını çeviren iki kat revak düzenine göre kurulmuştur. Han yapılırken Safranbolu\'yu geliştireceğini düşünerek yanına hamam ve tabakhane yapılmıştır.
-        </item>
-        <!--        tabak-->
-        <item>
-            Safranbolu\'da 800 yıllık geçmişe sahip ve 200\'e yakın tabakhaneden bugüne ulaşabilmiş, Türkiye\' nin ilk ve tek gezi tabakhanesidir. insanlar örtünme ve soğuktan korunma gibi temel gereksinimlerini gidermek amacı ile hayvan postlarını deri haline getirebilmek için ilkel yöntemler kullanmışlar ve bu durum zaman içerisinde dericiliğin gelişmesinde önemli bir rol oynamıştır.
-        </item>
-        <!--        yemeniciler-->
-        <item>
-            Safranbolu\’da yer alan ve birbirine bitişik 48 ahşap dükkandan oluşan Safranbolu Yemeniciler Çarşısı Arastası, bölgenin tarihi yerlerinin başında gelmektedir. Köprülü Mehmet Paşa Cami\'sine bitişik ,“yemeni” denilen ayakkabının yapıldığı eski Lonca Çarşısı\'dır. Restore edilen çarşı turistik amaçlı kullanılmaktadır.
-        </item>
-        <!--        demirciler-->
-        <item>
-            Demircilik, hammaddesi maden olan el sanatları bünyesinde yer alan ve demir madenini ısıtarak basit el aletleri yardımıyla işleme ve biçimlendirmeye dayanan geleneksel bir meslek ve zanaattır Safranbolu’da bunun demirciler Arastası İzzet Mehmet Paşa Camisi altından geçen Akçasu deresinin iki yakasına kurulan çarşı sıcak, soğuk demircilik el sanatlarının üretildiği yaşayan tek lonca çarşısıdır. Bakırcı ve kalaycı esnafları da bu çarşı içerisinde çalışmaktadır.
-        </item>
-        <!-- Köprülü camii-->
-        <item>
-            Köprülü Mehmet Paşa Cami 1661 yılında Mehmet Paşa tarafından yaptırılmıştır. Daha önce 1970 ve 1995\’te restore edilmiş olan Cami 2019 yılında tekrar restore edilmiştir.\n\n
-            Caminin avlu girişinde büyük kemerli kapı bulunmaktadır. Cami avlusunda bulunan binada şadırvan, muvakkithane, kütüphane ve güneş saati yer almaktadır. Osmanlı dönemine ait 95 tane güneş saati bulunmaktadır ve bir tanesi Köprülü Mehmet Paşa Cami\’deki güneş saatidir.\n\n
-            Köprülü Mehmet Pasa Cami\’nin halk arasında anlatılan yapılış hikayesi bulunmaktadır. Hikayede Osmanlı Sadrazamı Köprülü Mehmet Paşa\’nın Safranbolu\’ya sürgün edilmesinin ardından ilk namaz kıldığı tekkenin yerine, affedilmesi durumunda cami yaptıracağına dair adakta bulunması ve sözünü yerine getirmesi anlatılmaktadır.
-        </item>
-        <!-- Eski Belediye-->
-        <item>
-            Eski Belediye Binası Eskiçarşı\’da Köprülü Mehmet Paşa Cami, Cinci Hanı gibi tarihi yapıtların yanında bulunmaktadır. Refik güler tarafından 1922 yılında yaptırılmıştır.
-        </item>
-        <!-- Kristal cam teras-->
-        <item>
-            Kristal Cam Teras Tokatlı Kanyonu\’nun üzerine yapılmıştır. Genişliği 11 metre iken, yüksekliği 80 metredir. Ortalama 75 ton ağırlık taşıyabilen cam teras, 3 cm kalınlığında 3 tane camdan oluşmaktadır.\n\n
-            Yaklaşık 100 m²\’lik bir alanı vardır. Kristal Cam Teras eş zamanlı 400 kişiyi taşıma sınırına sahiptir ancak seyahat sırasında 30 kişinin girmesine izin verilmektedir.\n\n
-            Kristal Cam Teras\’ın yukarısında bulunan cafe sayesinde manzara eşliğinde çay, kahve içmek de mümkün oluyor.
-        </item>
-        <!-- Ulu camii-->
-        <item>
-            Rumlardan kalmış olan Aziz Stefan Kilisesi 1872 yılında kilise olarak yapılmış 1956 yılında camiye çevrilmiş ve ismi Ulu Cami olmuştur.\n\n
-            Yapının içerisinde Yunan alfabesiyle yazılmış yapım zamanına şahitlik etmiş kitabe bulunmaktadır. Bu kitabede Kraliçe Eudokia bacağındaki ağrılardan kurtulduğunu söz ederek buna ithafen 8 Nisan 515 tarihinde, Theodor\’un şehrinde bir kilise yaptırdığı anlatılmaktadır.\n\n
-            Kentin eski Theodoroupolis isminden yola çıkarak Theodor\’un -netliği belli olmamakla birlikte- zamanında Vali veya İon prensesi olduğuna dair rivayetler vardır.
-        </item>
+<!--        DETAILS GO HERE-->
     </string-array>
     <string name="title_activity_main">Anasayfa</string>
 
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tanitim_metni1">
-        Safranbolu bozulmamış tarihi dokusu ve evleri ile ziyaret edenleri bir tarih yolculuğuna çıkarmaktadır.
+<!--        TEXT-->
 
     </string>
     <string name="tanitim_metni2">
-        Türkiye\’nin UNESCO Dünya Miras Listesi\’ne ilk giren değerlerinden biri olan Safranbolu, 1994 yılından beri bu listede yer almaktadır.
+<!--        TEXT-->
 
     </string>
     <string name="tanitim_metni3">
-        Bugünkü yapısını 17. ve 18. yüzyıllarda kazanan Safranbolu, Türk şehir yapısına uygun olarak, zamana ve ihtiyaca bağlı gelişen, birbirine eklenerek büyüyen ve doğaya uyum sağlayıp onu koruyan niteliği ile dikkat çekmektedir.
+<!--        TEXT -->
     </string>
 
     <string name="gridTitle">

@@ -32,33 +32,7 @@
 
 <!--    START HERE-->
     <string-array name="geofenceLocations">
-<!--        konak-->
-        <item>41.2455071</item>
-        <item>32.6905126</item>
-<!--        cinci han-->
-        <item>41.2452793</item>
-        <item>32.6919672</item>
-<!--        tabakhane-->
-        <item>41.2424884</item>
-        <item>32.6888444</item>
-<!--        yemeniciler-->
-        <item>41.2448288</item>
-        <item>32.6901181</item>
-<!--        demirciler-->
-        <item>41.2440873</item>
-        <item>32.6909086</item>
-        <!--    köprülü camii -->
-        <item>41.2447139</item>
-        <item>32.6930467</item>
-        <!--    eski belediye -->
-        <item>41.2446698</item>
-        <item>32.6931054</item>
-<!--        cam teras -->
-        <item>41.2795113</item>
-        <item>32.6825606</item>
-        <!--        ulu camii -->
-        <item>41.2483648</item>
-        <item>32.685976</item>
+<!--        LOCATIONS GO HERE-->
     </string-array>
     <string-array name="geofenceTitles">
         <item>Safranbolu Historical Government House</item>
@@ -72,241 +46,91 @@
         <item>Ulu Mosque - St. Stefan Church</item>
     </string-array>
     <string-array name="videos">
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
-        <item>https://www.youtube.com/watch?v=VYawF7ck1Z8</item>
+<!--        VIDEOS GO HERE-->
     </string-array>
     <string-array name="details">
-<!--        konak-->
-        <item>
-            Safranbolu Historical Government Mansion, which was built on the hill called the castle between 1904-1906, was used as a government mansion until 19 January 1976 and became unusable as a result of a fire that broke out on that date.
-            Restoration work started in 2000 by the Ministry of Culture and was completed in 2006 and opened to service as the City History Museum.
-            In the building, which is currently used as a museum, the entrance is paid and has 2 floors. On the lower floor, there are historical artifacts used by the people in Safranbolu, old pictures of Safranbolu, old manuscripts. On the upper floor, there is the office room and various artifacts. In the basement, the cellar, different tradesmen\'s branches are introduced with the materials they use, wax sculptures and pictures.
-        </item>
-<!--        cinci han-->
-        <item>
-            Cinci Inn was built by Karabaşzade Hüseyin Efendi (Cinci Hoca) from Safranbolu in 1645. Cinci Inn, which was used as a caravanserai until the 20th century, when the historical Silk Road began to lose its effectiveness, was used as a warehouse by Safranbolu tradesmen since the beginning of the 20th century, then after the necessary restoration, this place serves both as a hotel and a restaurant.
-            The lower floor porticos with pointed arches resting on the piers in the inn are covered with barrel vaults on both sides of the entrance and in front of the toilets on the opposite façade, and with cross vaults on the other parts. There are rooms behind the porticoes and except for the ones in the corners, these rooms open to the porticoes with a window and door.
-            There is a hearth and a niche inside the rooms, all of which are covered with barrel vaults. In the middle of the rectangular courtyard, there is an eleven-cornered pool, which was built later, which is understood to be octagonal originally.
-            Behind the portico covered with a barrel vault opposite the entrance and 7 m. The section at the end of the long hall is divided into lavatories covered with barrel vaults.
-            Behind the portico to the right of the entrance are barns and warehouses. With its 300-meter underground tunnel, it is located on a large canyon where the city\'s wastewater and sewers are disciplined.
-            The infrastructure project of this inn lasted for 20 years. The building is 23.50 × 11.50 m. It was built according to a two-storey portico order surrounding a rectangular courtyard. While the inn was being built, a bath and a tannery were built next to it, thinking that it would improve Safranbolu.
-        </item>
-<!--        tabak-->
-        <item>
-            It is Turkey\'s first and only excursion tannery in Safranbolu, which has a history of 800 years and has survived from nearly 200 tanneries. People used primitive methods to turn animal hides into leather in order to meet their basic needs such as covering and protection from the cold, and this has played an important role in the development of leatherwork over time.
-        </item>
-<!--        yemeniciler-->
-        <item>
-            Yemeniciler Arasta The Safranbolu Yemeniciler Bazaar Arasta, which is located in Safranbolu and consists of 48 wooden shops adjacent to each other, is one of the historical places of the region. Adjacent to Köprülü Mehmet Pasha Mosque is the old Guild Bazaar where shoes called “yemeni” are made. The restored bazaar is used for touristic purposes.
-        </item>
-<!--        demirciler-->
-        <item>
-            Blacksmiths\' Arastasi Blacksmithing is a traditional profession and craft, which is part of handicrafts whose raw material is metal, and is based on processing and shaping the iron mine with the help of simple hand tools. It is the only living guild bazaar where blacksmithing handicrafts are produced. Coppersmiths and tinsmiths also work in this bazaar.
-        </item>
-        <!-- Köprülü camii-->
-        <item>
-            Köprülü Mehmet Pasha Mosque was built in 1661 by Mehmet Pasha. The mosque, which was previously restored in 1970 and 1995, was restored in 2019.\n\n
-            There is a large arched door at the entrance of the courtyard of the mosque. In the building located in the courtyard of the mosque, there is a fountain, a timetable, a library and a sundial. There are 95 Ottoman sundials and one is the sundial in Mehmet Pasha Mosque with a bridge.\n\n
-            The Köprülü Mehmet Pasha Mosque continues to be built among the people. In the story, the practice and fulfillment of the Ottoman Grand Vizier Köprülü Mehmet Pasha\'s training to be built in a mosque instead of the dervish lodge where he prayed for the first time in Safranbolu.
-        </item>
-        <!-- Eski Belediye-->
-        <item>
-            The Old Town Hall is located in the Old Bazaar next to historical monuments such as Köprülü Mehmet Pasha Mosque and Cinci Han. It was built by Refik Güler in 1922.
-        </item>
-        <!-- Kristal cam teras-->
-        <item>
-            Crystal Glass Terrace was built on Tokatlı Canyon. Its width is 11 meters, while its height is 80 meters. The glass terrace, which can carry an average of 75 tons of weight, consists of 3 glasses of 3 cm thickness.\n\n
-            It has an area of approximately 100 square meters. The Crystal Glass Terrace has a simultaneous carrying limit of 400 people, but 30 people are allowed during the trip.\n\n
-            Thanks to the cafe located above the Crystal Glass Terrace, it is also possible to drink tea and coffee with the view.
-        </item>
-        <!-- Ulu camii-->
-        <item>
-            St. Stephen\'s Church, which remained from the Greeks, was built as a church in 1872 and converted into a mosque in 1956 and its name was changed to Ulu Mosque.\n\n
-            Inside the building, there is an inscription written in Greek alphabet that witnessed the construction time. In this inscription, Queen Eudokia mentions that she got rid of the pain in her leg and that she built a church in the city of Theodor on April 8, 515.\n\n
-            Based on the city\'s old name of Theodoroupolis, there are rumors that Theodor was a Governor or an Ionian princess, although the clarity is not clear.
-        </item>
+<!--        DETAILS GO HERE-->
     </string-array>
     <array name="gridImages">
-        <item>@drawable/konak1</item>
-        <item>@drawable/han0</item>
-        <item>@drawable/tabak1</item>
-        <item>@drawable/yemeniciler1</item>
-        <item>@drawable/demirciler1</item>
-        <item>@drawable/koprulu1</item>
-        <item>@drawable/eskibel1</item>
-        <item>@drawable/camteras1</item>
-        <item>@drawable/ulucamii1</item>
+<!--        GRID IMAGES GO HERE-->
     </array>
     <array name="placeImages">
-        <item>@array/konak</item>
-        <item>@array/cinci_hani</item>
-        <item>@array/tabak</item>
-        <item>@array/yemeniciler</item>
-        <item>@array/demirciler</item>
-        <item>@array/koprulu</item>
-        <item>@array/eskibel</item>
-        <item>@array/camteras</item>
-        <item>@array/ulucamii</item>
+<!--        PLACE IMAGES GO HERE-->
     </array>
     <array name="highResPlaceImages">
-        <item>@array/konakH</item>
-        <item>@array/cinci_haniH</item>
-        <item>@array/tabakH</item>
-        <item>@array/yemenicilerH</item>
-        <item>@array/demircilerH</item>
-        <item>@array/kopruluH</item>
-        <item>@array/eskibelH</item>
-        <item>@array/camterasH</item>
-        <item>@array/ulucamiiH</item>
+<!--        HIGH RES PLACE IMAGES GO HERE-->
     </array>
 
     <string-array name="konak">
-        <item>https://i.imgur.com/zcpAnbr.jpg</item>
-        <item>https://i.imgur.com/RQk6pCg.jpg</item>
-        <item>https://i.imgur.com/QdsIpcC.jpg</item>
-        <item>https://i.imgur.com/oPAdToH.jpg</item>
-        <item>https://i.imgur.com/7j9hjoL.jpg</item>
-        <item>https://i.imgur.com/466sKt1.jpg</item>
-        <item>https://i.imgur.com/P78LlEp.jpg</item>
-        <item>https://i.imgur.com/Yvz8oZD.jpg</item>
-        <item>https://i.imgur.com/OyI7HCs.jpg</item>
+        <!--        PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="konakH">
-        <item>https://i.imgur.com/jIGIFSi.jpg</item>
-        <item>https://i.imgur.com/DUuDySG.jpg</item>
-        <item>https://i.imgur.com/8lGBXHL.jpg</item>
-        <item>https://i.imgur.com/zt8cZZe.jpg</item>
-        <item>https://i.imgur.com/gBbslAY.jpg</item>
-        <item>https://i.imgur.com/rPMBO85.jpg</item>
-        <item>https://i.imgur.com/JThovHZ.jpg</item>
-        <item>https://i.imgur.com/4XsDOMC.jpg</item>
-        <item>https://i.imgur.com/CUqIVdF.jpg</item>
+        <!--        HIGH RES PLACE IMAGES GO HERE-->
     </string-array>gen
 
     <string-array name="cinci_hani">
-        <item>https://i.imgur.com/FyRmeep.jpg</item>
-        <item>https://i.imgur.com/PFjoYrW.jpg</item>
-        <item>https://i.imgur.com/OHQFAew.jpg</item>
-        <item>https://i.imgur.com/gJiibRM.jpg</item>
-        <item>https://i.imgur.com/33ZQNau.jpg</item>
-        <item>https://i.imgur.com/ZerGqtl.jpg</item>
-        <item>https://i.imgur.com/GKXf47j.jpg</item>
-        <item>https://i.imgur.com/Pe7B3Uk.jpg</item>
-        <item>https://i.imgur.com/cAZdEtB.jpg</item>
-        <item>https://i.imgur.com/1jt70Wm.jpg</item>
-        <item>https://i.imgur.com/vm7J0IU.jpg</item>
-        <item>https://i.imgur.com/srgN5wD.jpg</item>
-        <item>https://i.imgur.com/VepKwtD.jpg</item>
+        <!--        PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="cinci_haniH">
-        <item>https://i.imgur.com/73YYO4m.jpg</item>
-        <item>https://i.imgur.com/13Tp1qC.jpg</item>
-        <item>https://i.imgur.com/21O0KSR.jpg</item>
-        <item>https://i.imgur.com/I6IPNmv.jpg</item>
-        <item>https://i.imgur.com/foCnh5O.jpg</item>
-        <item>https://i.imgur.com/4n2408S.jpg</item>
-        <item>https://i.imgur.com/Bsmtbnq.jpg</item>
-        <item>https://i.imgur.com/q3rhfRj.jpg</item>
-        <item>https://i.imgur.com/qKioJhc.jpg</item>
-        <item>https://i.imgur.com/8VgDpdK.jpg</item>
-        <item>https://i.imgur.com/OJUJzP8.jpg</item>
-        <item>https://i.imgur.com/UaAt5zO.jpg</item>
-        <item>https://i.imgur.com/weHRjHv.jpg</item>
+        <!--        HIGH RES PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="tabak">
-        <item>https://i.imgur.com/FhBKgzt.jpg</item>
+        <!--        PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="tabakH">
-        <item>https://i.imgur.com/vZKRxSe.jpg</item>
+        <!--        HIGH RES PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="yemeniciler">
-        <item>https://i.imgur.com/pSGFrHn.jpg</item>
+        <!--        PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="yemenicilerH">
-        <item>https://i.imgur.com/lB2gL1A.jpg</item>
+        <!--        HIGH RES PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="demirciler">
-        <item>https://i.imgur.com/mw9advH.jpg</item>
+        <!--        PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="demircilerH">
-        <item>https://i.imgur.com/Tlw1Sim.jpg</item>
+        <!--        HIGH RES PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="koprulu">
-        <item>https://i.imgur.com/8JJVlJ4.jpg</item>
-        <item>https://i.imgur.com/25M22FM.jpg</item>
-        <item>https://i.imgur.com/WNXrnsS.jpg</item>
-        <item>https://i.imgur.com/eL74utd.jpg</item>
-        <item>https://i.imgur.com/EvB4jwN.jpg</item>
-        <item>https://i.imgur.com/nsGGijF.jpg</item>
-        <item>https://i.imgur.com/4OhFbQ0.jpg</item>
-        <item>https://i.imgur.com/MFFZc4G.jpg</item>
-        <item>https://i.imgur.com/WluQ4eT.jpg</item>
-        <item>https://i.imgur.com/v0MCQ6D.jpg</item>
-        <item>https://i.imgur.com/QPaHFsk.jpg</item>
-        <item>https://i.imgur.com/kFjG3N5.jpg</item>
-        <item>https://i.imgur.com/7mJC9yd.jpg</item>
-        <item>https://i.imgur.com/P68Pr6a.jpg</item>
-        <item>https://i.imgur.com/bGHUky0.jpg</item>
+        <!--        PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="kopruluH">
-        <item>https://i.imgur.com/ZMXcp3t.jpg</item>
-        <item>https://i.imgur.com/ZM0oaTM.jpg</item>
-        <item>https://i.imgur.com/5JzzQqN.jpg</item>
-        <item>https://i.imgur.com/HAT4R4j.jpg</item>
-        <item>https://i.imgur.com/BY1Yq4H.jpg</item>
-        <item>https://i.imgur.com/E97CVpy.jpg</item>
-        <item>https://i.imgur.com/ZFqBdNG.jpg</item>
-        <item>https://i.imgur.com/XVC7v4s.jpg</item>
-        <item>https://i.imgur.com/Esf7IlA.jpg</item>
-        <item>https://i.imgur.com/A2uDqn5.jpg</item>
-        <item>https://i.imgur.com/T3V9PHx.jpg</item>
-        <item>https://i.imgur.com/Ym7Qq2g.jpg</item>
-        <item>https://i.imgur.com/l7lebNp.jpg</item>
-        <item>https://i.imgur.com/WF5Cm1G.jpg</item>
-        <item>https://i.imgur.com/hnIMyLc.jpg</item>
+        <!--        HIGH RES PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="eskibel">
-        <item>https://i.imgur.com/hnGDYqA.png</item>
+        <!--        PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="eskibelH">
-        <item>https://i.imgur.com/hnGDYqA.png</item>
+        <!--        HIGH RES PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="camteras">
-        <item>https://i.imgur.com/7Xmd7Rg.jpg</item>
+        <!--        PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="camterasH">
-        <item>https://i.imgur.com/fdCpW98.jpg</item>
+        <!--        HIGH RES PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="ulucamii">
-        <item>https://i.imgur.com/EUlUpVp.jpg</item>
-        <item>https://i.imgur.com/UnC7iIT.jpg</item>
+        <!--        PLACE IMAGES GO HERE-->
     </string-array>
 
     <string-array name="ulucamiiH">
-        <item>https://i.imgur.com/hiEdZM5.jpg</item>
-        <item>https://i.imgur.com/UnC7iIT.jpg</item>
+        <!--        HIGH RES PLACE IMAGES GO HERE-->
     </string-array>
 
 <!--    END HERE-->

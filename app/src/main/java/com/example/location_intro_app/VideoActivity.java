@@ -27,7 +27,7 @@ public class VideoActivity extends AppCompatActivity implements YouTubePlayer.On
         YouTubePlayerFragment youTubePlayerFragment = (YouTubePlayerFragment) getFragmentManager()
                 .findFragmentById(R.id.youtubePlayerFragment2);
 
-        youTubePlayerFragment.initialize("AIzaSyABad-G7xVD3InlwWlsOqJBNqulcEAk1-w", this);
+        youTubePlayerFragment.initialize("GOOGLE_API_KEY", this);
     }
 
     /**
