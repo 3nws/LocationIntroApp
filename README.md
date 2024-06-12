@@ -8,9 +8,3 @@ Create a travel app with geolocation.
 - The map follows the user and has different styles.
 - Has text to speech for the spot's details.
 - Has image gallery for each spot.
-
-Some screenshots:
-
-![Screenshot1](https://github.com/3nws/LocationIntroApp/blob/master/1.png?raw=true)
-
-![Screenshot2](https://github.com/3nws/LocationIntroApp/blob/master/2.png?raw=true)
